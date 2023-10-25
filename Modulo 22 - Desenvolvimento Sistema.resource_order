@@ -16,5 +16,8 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
+    {"name":"spr_chao","order":1,"path":"sprites/spr_chao/spr_chao.yy",},
+  ],
 }
