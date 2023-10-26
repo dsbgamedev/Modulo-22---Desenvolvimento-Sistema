@@ -4,8 +4,9 @@
 //Sistema de colisão e movimentação horizontal
 repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 {
+	var _velh = sign(velh);
 	//Checando se eu vou bater na parede
-	if(place_meeting(x + sign(velh), y, obj_chao ))//checa colisão com a parede (Sign retorna 1 ou -1)
+	if(place_meeting(x + _velh, y, obj_chao ))//checa colisão com a parede (Sign retorna 1 ou -1)
 	{
 		//Você via parar
 		velh = 0;
@@ -15,15 +16,25 @@ repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 	else//Não bati na parede
 	{
 		//Eu posso me mover nessa direção, 1 pixel por vez
-		x += sign(velh);
+		x += _velh;
 		
 	}
 }
 
-
-//Alterando o eixo X
-
-
+//Colisão vertical
+repeat(abs(velv))
+{
+	var _velv = sign(velv);
+	if (place_meeting(x, y + _velv, obj_chao))
+	{
+		_velv = 0;
+		break;
+	}
+	else
+	{
+		y += _velv;	
+	}
+}
 
 
 
