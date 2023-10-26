@@ -10,12 +10,25 @@ repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 	//Subindo a rampa
 	//Chequei se estou colidindo E
 	//Checando se na minha direção encima esta livre (Se eu nao estou colidindo)
-	if(place_meeting(x +_velh, y, obj_chao)
-	&& !place_empty(x + _velh, y - 1, obj_chao))
+	if(place_meeting(x +_velh, y, obj_chao)	&& !place_meeting(x + _velh, y - 1, obj_chao))
 	{
 		//show_message("Posso subir!");
 		//Subindo 1 pixel
 		y--;
+	}
+	
+	//Descendo rampa
+	//Se eu NÃO estou colidindo
+	//Se na minha frente e embaixo esta livre tambem  (não estou colidindo)
+	//Se na minha frente 2 degraus abaixo esta ocupado (estou colidindo)
+	if(!place_meeting(x + _velh, y, obj_chao) && 
+	!place_meeting(x + _velh, y + 1, obj_chao) &&
+	place_meeting(x + _velh, y + 2, obj_chao))
+	{
+		//Isso é uma rampa, eu devo descer
+		y++;
+		//show_message("Posso descer");
+		
 	}
 	
 	
