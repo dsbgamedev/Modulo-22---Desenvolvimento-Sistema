@@ -35,6 +35,8 @@
   },
   "resources": [
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"spr_rampa","path":"sprites/spr_rampa/spr_rampa.yy",},},
+    {"id":{"name":"obj_rampa","path":"objects/obj_rampa/obj_rampa.yy",},},
     {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_sprite","path":"sprites/spr_sprite/spr_sprite.yy",},},

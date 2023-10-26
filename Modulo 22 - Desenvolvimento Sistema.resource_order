@@ -17,6 +17,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_rampa","order":2,"path":"sprites/spr_rampa/spr_rampa.yy",},
+    {"name":"obj_rampa","order":2,"path":"objects/obj_rampa/obj_rampa.yy",},
     {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
     {"name":"spr_chao","order":1,"path":"sprites/spr_chao/spr_chao.yy",},
   ],

@@ -4,7 +4,21 @@
 //Sistema de colisão e movimentação horizontal
 repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 {
+	
 	var _velh = sign(velh);
+	
+	//Subindo a rampa
+	//Chequei se estou colidindo E
+	//Checando se na minha direção encima esta livre (Se eu nao estou colidindo)
+	if(place_meeting(x +_velh, y, obj_chao)
+	&& !place_empty(x + _velh, y - 1, obj_chao))
+	{
+		//show_message("Posso subir!");
+		//Subindo 1 pixel
+		y--;
+	}
+	
+	
 	//Checando se eu vou bater na parede
 	if(place_meeting(x + _velh, y, obj_chao ))//checa colisão com a parede (Sign retorna 1 ou -1)
 	{
