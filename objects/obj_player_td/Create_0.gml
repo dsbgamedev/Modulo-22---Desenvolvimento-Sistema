@@ -6,7 +6,7 @@ event_inherited();
 
 max_vel = 5;
 
-//mapeando a esquerda
+//Mapeando a esquerda
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
 keyboard_set_map(ord("W"), vk_up);
