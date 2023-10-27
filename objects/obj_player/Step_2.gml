@@ -2,11 +2,13 @@
 // You can write your code in this editor
 
 //Sistema de colisão e movimentação horizontal
-repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
+
+movimentcao = function()
+{
+	repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 {
 	
-	var _velh = sign(velh);
-	
+	var _velh = sign(velh);	
 	//Subindo a rampa
 	//Chequei se estou colidindo E
 	//Checando se na minha direção encima esta livre (Se eu nao estou colidindo)
@@ -28,10 +30,8 @@ repeat(abs(velh)) //Repete o codigo(ABS faz o valor sempre fica positivo)
 		//Isso é uma rampa, eu devo descer
 		y++;
 		//show_message("Posso descer");
-		
 	}
-	
-	
+
 	//Checando se eu vou bater na parede
 	if(place_meeting(x + _velh, y, obj_chao ))//checa colisão com a parede (Sign retorna 1 ou -1)
 	{
@@ -62,6 +62,13 @@ repeat(abs(velv))
 		y += _velv;	
 	}
 }
+
+}
+
+movimentcao();
+
+
+
 
 
 

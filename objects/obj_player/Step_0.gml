@@ -12,8 +12,6 @@ var _rigth = keyboard_check(ord("D"));
 //Aplicando os controle ao movimento
 velh = (_rigth - _left) * max_velh;
 
-
-
 //Checando se eu estou no chão
 if(_chao)
 {

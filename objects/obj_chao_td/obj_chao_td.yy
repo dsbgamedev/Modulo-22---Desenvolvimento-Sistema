@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rampa",
+  "name": "obj_chao_td",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Plataforma",
-    "path": "folders/Objects/Plataforma.yy",
+    "name": "TopDow",
+    "path": "folders/Objects/TopDow.yy",
   },
-  "parentObjectId": {
-    "name": "obj_chao",
-    "path": "objects/obj_chao/obj_chao.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rampa",
-    "path": "sprites/spr_rampa/spr_rampa.yy",
+    "name": "Sprite5",
+    "path": "sprites/Sprite5/Sprite5.yy",
   },
   "spriteMaskId": null,
   "visible": true,

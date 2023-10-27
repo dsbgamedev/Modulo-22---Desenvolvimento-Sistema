@@ -1,17 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rampa",
-  "eventList": [],
+  "name": "obj_player_td",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Plataforma",
-    "path": "folders/Objects/Plataforma.yy",
+    "name": "TopDow",
+    "path": "folders/Objects/TopDow.yy",
   },
   "parentObjectId": {
-    "name": "obj_chao",
-    "path": "objects/obj_chao/obj_chao.yy",
+    "name": "obj_entidade",
+    "path": "objects/obj_entidade/obj_entidade.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rampa",
-    "path": "sprites/spr_rampa/spr_rampa.yy",
+    "name": "spr_player",
+    "path": "sprites/spr_player/spr_player.yy",
   },
   "spriteMaskId": null,
   "visible": true,
