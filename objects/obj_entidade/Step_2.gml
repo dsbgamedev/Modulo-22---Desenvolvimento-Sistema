@@ -2,49 +2,52 @@
 // You can write your code in this editor
 
 //Colisão horizontal
-if(place_meeting(x + velh, y, obj_chao_td))
+if(place_meeting(x + velh, y, obj_chao_pl))
 {
-	//Pegando o sinal da velocidade horizontal
-	var _velh = sin(velh);	
-	//Enquanto eu NÃO estiver colidindo na parede no próximo pixel
-	//Então eu avanço 1 pixel
-	while(!place_empty(x + _velh, y, obj_chao_td))
+	//Pegando os dados do chão que eu vou bater
+	var _chao = instance_place(x +velh, y, obj_chao_pl);
+	
+	if(_chao)
 	{
-		//Avanço 1 pixel
-		x += _velh;	
+		//Checando se eu estou indo para a direita ou para esquerda
+		if(velh > 0)
+		{
+			//Estou indo para a direita	
+	       //Eu vou grudar na esquerda do chao
+		   x = _chao.bbox_left - sprite_width / 2;  
+		}
+		else//Estou indo para a esquerda
+		{
+			x = _chao.bbox_right + sprite_width / 2;
+		}
 	}
-	//Isso só quando o while deixar de rodar
-	//Vou zerar a minha velh
+	//Zerar a minha velocidade horizontal
 	velh = 0;
-
 }
 
-//Movimenta no eixo X
-x += velh;
-
-//Colisao vertical
-
-if(place_meeting(x, y + velv, obj_chao_td))
+//Colisão vertical
+if(place_meeting(x , y + velv, obj_chao_pl))
 {
-	var _velv = sign(velv);
-	//Enquanto eu nao estiver colidindo no próximo pixel, eu avanço 1 pixel
-	while(!place_empty(x, y + _velv, obj_chao_td))
-	{
-		//Avanço 1 pixel
-		y += _velv;
-	}
+	//Pegando os dados do chão que eu vou bater
+	var _chao = instance_place(x , y + velv, obj_chao_pl);
 	
+	if(_chao)
+	{
+		//Checando se eu estou indo para a direita ou para esquerda
+		if(velv > 0)
+		{
+			//Estou indo para a direita	
+	       //Eu vou grudar na esquerda do chao
+		   y = _chao.bbox_top - sprite_width / 2;  
+		}
+		else//Estou indo para a esquerda
+		{
+			x = _chao.bbox_bottom + sprite_width / 2;
+		}
+	}
+	//Zerar a minha velocidade horizontal
 	velv = 0;
 }
-
-//Movo o eixo y
-y += velv;
-
-
-
-
-
-
 
 
 

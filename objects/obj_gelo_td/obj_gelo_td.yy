@@ -1,18 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rampa",
-  "eventList": [],
+  "name": "obj_gelo_td",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Plataforma",
-    "path": "folders/Objects/Plataforma.yy",
+    "name": "TopDow",
+    "path": "folders/Objects/TopDow.yy",
   },
-  "parentObjectId": {
-    "name": "obj_chao",
-    "path": "objects/obj_chao/obj_chao.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rampa",
-    "path": "sprites/spr_rampa/spr_rampa.yy",
+    "name": "spr_gelo",
+    "path": "sprites/spr_gelo/spr_gelo.yy",
   },
   "spriteMaskId": null,
   "visible": true,

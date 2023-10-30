@@ -1,13 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_chao_td",
-  "eventList": [],
+  "name": "obj_player_pl",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "TopDow",
-    "path": "folders/Objects/TopDow.yy",
+    "name": "Plataforma",
+    "path": "folders/Objects/Plataforma.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -26,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_chao_td",
-    "path": "sprites/spr_chao_td/spr_chao_td.yy",
+    "name": "spr_sprite",
+    "path": "sprites/spr_sprite/spr_sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,

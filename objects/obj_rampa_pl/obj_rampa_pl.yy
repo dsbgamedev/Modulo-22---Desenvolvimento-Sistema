@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_chao",
+  "name": "obj_rampa_pl",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -9,7 +9,10 @@
     "name": "Plataforma",
     "path": "folders/Objects/Plataforma.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_chao_pl",
+    "path": "objects/obj_chao_pl/obj_chao_pl.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_chao",
-    "path": "sprites/spr_chao/spr_chao.yy",
+    "name": "spr_rampa",
+    "path": "sprites/spr_rampa/spr_rampa.yy",
   },
   "spriteMaskId": null,
   "visible": true,

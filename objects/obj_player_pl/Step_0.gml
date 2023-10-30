@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //Checando se eu estou no cHão
-var _chao = place_meeting(x, y + 1, obj_chao); //Quando for 1 estou no chão
+var _chao = place_meeting(x, y + 1, obj_chao_pl); //Quando for 1 estou no chão
 
 //Movimento
 var _jump = keyboard_check_pressed(vk_space);//Pula apenas quando eu aparetar o botao

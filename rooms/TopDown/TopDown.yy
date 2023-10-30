@@ -12,10 +12,12 @@
     {"name":"inst_5C5A94B6","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_2D0ECBA2","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_1AB8762D","path":"rooms/TopDown/TopDown.yy",},
+    {"name":"inst_6FF59781","path":"rooms/TopDown/TopDown.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6FF59781","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_gelo_td","path":"objects/obj_gelo_td/obj_gelo_td.yy",},"properties":[],"rotation":0.0,"scaleX":7.0,"scaleY":4.0,"x":1024.0,"y":224.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_591EA64B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_chao_td","path":"objects/obj_chao_td/obj_chao_td.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":28.000002,"x":0.0,"y":-64.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E227853","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_chao_td","path":"objects/obj_chao_td/obj_chao_td.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":28.000002,"x":1344.0,"y":-64.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C5A94B6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_chao_td","path":"objects/obj_chao_td/obj_chao_td.yy",},"properties":[],"rotation":0.0,"scaleX":48.000004,"scaleY":1.0,"x":-96.0,"y":736.0,},

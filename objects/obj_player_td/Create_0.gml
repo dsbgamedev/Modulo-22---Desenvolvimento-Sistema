@@ -4,7 +4,10 @@
 //herdando as informações do pai
 event_inherited();
 
-max_vel = 5;
+max_vel  = 5;
+meu_acel = .1;
+acel     = meu_acel;
+
 
 //Mapeando a esquerda
 keyboard_set_map(ord("A"), vk_left);
