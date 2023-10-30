@@ -5,7 +5,7 @@
 if(place_meeting(x + velh, y, obj_chao_pl))
 {
 	//Pegando os dados do chão que eu vou bater
-	var _chao = instance_place(x +velh, y, obj_chao_pl);
+	var _chao = instance_place(x + velh, y, obj_chao_pl);
 	
 	if(_chao)
 	{
@@ -16,7 +16,7 @@ if(place_meeting(x + velh, y, obj_chao_pl))
 	       //Eu vou grudar na esquerda do chao
 		   x = _chao.bbox_left - sprite_width / 2;  
 		}
-		else//Estou indo para a esquerda
+		else if(velv < 0)//Estou indo para a esquerda
 		{
 			x = _chao.bbox_right + sprite_width / 2;
 		}
@@ -40,12 +40,12 @@ if(place_meeting(x , y + velv, obj_chao_pl))
 	       //Eu vou grudar na esquerda do chao
 		   y = _chao.bbox_top - sprite_width / 2;  
 		}
-		else//Estou indo para a esquerda
+		else if(velv < 0)//Estou indo para a esquerda
 		{
-			x = _chao.bbox_bottom + sprite_width / 2;
+			y = _chao.bbox_bottom + sprite_width / 2;
 		}
 	}
-	//Zerar a minha velocidade horizontal
+	//Zerar a minha velocidade horizontal vertical
 	velv = 0;
 }
 
