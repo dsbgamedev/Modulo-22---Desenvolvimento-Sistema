@@ -38,12 +38,12 @@ if((_up xor _down) or (_left xor _right))
 	//show_debug_message(_dir);
 
 	//Pegando o valor do velh
-	var _max_velh = lengthdir_x(max_vel, _dir)
-
+	var _max_velh = lengthdir_x(max_vel, _dir);
 	velh = lerp(velh, _max_velh, acel); //0 ou 5
 	//Pegando o valro do velv
-	var _max_velv = lengthdir_y(max_vel, _dir)
+	var _max_velv = lengthdir_y(max_vel, _dir);
 	velv = lerp(velv, _max_velv, acel); //0 ou 5
+	//show_message(velv);
 }
 else   //Não estou apertando nenhuma tecla de movimento
 {
