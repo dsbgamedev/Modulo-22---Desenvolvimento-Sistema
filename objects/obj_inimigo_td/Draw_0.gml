@@ -10,6 +10,9 @@ if(debug)
 	draw_text(x, y - sprite_height, estado); 
 	draw_set_halign(-1);
 	draw_set_valign(-1);
+	
+	//Sabendo onde é o desitno dele
+	draw_circle(destino_x, destino_y, 16, false);
 }
 
 

@@ -8,6 +8,8 @@ tempo_estado = room_speed * 1;
 tempo = tempo_estado;
 
 estado = "parado";//variavel vai controlar todos estados
+destino_x = 0;
+destino_y = 0;
 debug = false;
 
 muda_estado = function()
@@ -56,8 +58,39 @@ controla_estado = function()
 		
 		#region andando
 		case "andando":
-		tempo--;
-		
+			//Estado andando
+			tempo--;
+			//Escolhendo ponto aleatorio na room
+			//Checando se eu ainda nao tenho destino
+			//Só escolho um destino se ainda nao tneho um
+			
+			//Checar a minha distancia par ao destino
+			var _dist = point_distance(x, y, destino_x, destino_y);
+			
+			if(destino_x == 0 || destino_y == 0 || _dist < max_vel * 2)
+			{
+			destino_x = random_range(0, room_width);
+			destino_y = random_range(0, room_height);
+			}	
+			//Andando em direção ao destinho
+			//Descobrindo a direção que eu devo ir
+			var _dir = point_direction( x, y, destino_x, destino_y);
+				
+			//Dando o valor do meu velh
+			velh = lengthdir_x(max_vel, _dir);
+			velv = lengthdir_y(max_vel, _dir);
+			
+			//Regra para mudar de estado
+			if(tempo <= 0)
+			{
+				tempo = tempo_estado;
+				estado = choose("parado","andando", "andando");
+				
+				//Resetando o meu destino
+				destino_x = 0;
+				destino_y = 0;
+			}
+			
 		break;
 		#endregion
 
