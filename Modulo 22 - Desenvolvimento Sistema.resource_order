@@ -23,15 +23,16 @@
   "ResourceOrderSettings": [
     {"name":"spr_rampa","order":1,"path":"sprites/spr_rampa/spr_rampa.yy",},
     {"name":"obj_chao_td","order":1,"path":"objects/obj_chao_td/obj_chao_td.yy",},
-    {"name":"spr_inimigo_td","order":3,"path":"sprites/spr_inimigo_td/spr_inimigo_td.yy",},
     {"name":"TopDown","order":1,"path":"rooms/TopDown/TopDown.yy",},
     {"name":"obj_gelo_td","order":3,"path":"objects/obj_gelo_td/obj_gelo_td.yy",},
     {"name":"spr_chao_td","order":1,"path":"sprites/spr_chao_td/spr_chao_td.yy",},
     {"name":"obj_rampa_pl","order":2,"path":"objects/obj_rampa_pl/obj_rampa_pl.yy",},
     {"name":"obj_entidade","order":2,"path":"objects/obj_entidade/obj_entidade.yy",},
-    {"name":"obj_inimigo_td","order":4,"path":"objects/obj_inimigo_td/obj_inimigo_td.yy",},
+    {"name":"spr_inimigo_td","order":4,"path":"sprites/spr_inimigo_td/spr_inimigo_td.yy",},
     {"name":"obj_player_pl","order":1,"path":"objects/obj_player_pl/obj_player_pl.yy",},
     {"name":"spr_sprite","order":2,"path":"sprites/spr_sprite/spr_sprite.yy",},
+    {"name":"obj_inimigo_td","order":4,"path":"objects/obj_inimigo_td/obj_inimigo_td.yy",},
+    {"name":"ibj_inimigo_td","order":3,"path":"objects/ibj_inimigo_td/ibj_inimigo_td.yy",},
     {"name":"spr_gelo_td","order":2,"path":"sprites/spr_gelo_td/spr_gelo_td.yy",},
   ],
 }

@@ -1,9 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
 
-event_inherited();
+max_vel = 1;
 
-velv = 1;
+estado = "parado";//variavel vai controlar todos estados
+debug = false;
+
+
+
+
 
 
 
