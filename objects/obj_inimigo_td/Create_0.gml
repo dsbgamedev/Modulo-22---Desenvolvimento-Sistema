@@ -4,16 +4,18 @@ event_inherited()
 
 max_vel = 1;
 
-tempo_estado = room_speed * 1;
-tempo        = tempo_estado;
+tempo_estado   = room_speed * 1;
+tempo          = tempo_estado;
 
-campo_visao  = 256;
+campo_visao    = 256;
+tempo_persegue = room_speed * 2;
+t_persegue     = tempo_persegue;
 
-estado       = "parado";//variavel vai controlar todos estados
-destino_x    = 0;
-destino_y    = 0;
-alvo         = noone;
-debug        = false;
+estado         = "parado";//variavel vai controlar todos estados
+destino_x      = 0;
+destino_y      = 0;
+alvo           = noone;
+debug          = false;
 
 olhando = function()
 {
@@ -47,12 +49,15 @@ muda_estado = function()
 }
 
 controla_estado = function()
-{
+{	
 	//Controlando os estados do inimigo
 	switch(estado)
 	{
 		#region parado
 		case "parado":
+		
+			   //Diminuindo o tempo de persegue
+			   
 			  //Diminuindo o tempo
 			  tempo--;
 			  image_blend = c_white;
@@ -153,8 +158,36 @@ controla_estado = function()
 				destino_x = 0;
 				destino_y = 0;
 			}
-				
+			
+			//Checando se estou muito próximo do player
+			if(_dist < 100)
+			{
+				estado = "ataque";
+				tempo = tempo_estado;
+			}
+			
 		break;	
+		#endregion
+		
+		#region ataque
+		case "ataque":
+			
+			//Ficando vermelho
+			image_blend = c_red;
+			
+			//Ficando mais rapido
+			var _dir = point_direction( x, y, destino_x, destino_y);
+			velh = lengthdir_x(max_vel * 3, _dir);
+			velv = lengthdir_y(max_vel * 3, _dir);
+			
+			//Se eu cheguei no meu destino , eu fico d eboa na lagoa
+			var _dist = point_direction(x,y, destino_x, destino_y);
+			if(_dist < 16)
+			{
+				estado = "parado";	
+			}
+			
+		break;
 		#endregion
 
 	}	
