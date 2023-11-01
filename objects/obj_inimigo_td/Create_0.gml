@@ -64,7 +64,7 @@ controla_estado = function()
 			//Checando se eu ainda nao tenho destino
 			//Só escolho um destino se ainda nao tneho um
 			
-			//Checar a minha distancia par ao destino
+			//Checar a minha distancia para o destino
 			var _dist = point_distance(x, y, destino_x, destino_y);
 			
 			if(destino_x == 0 || destino_y == 0 || _dist < max_vel * 2)
