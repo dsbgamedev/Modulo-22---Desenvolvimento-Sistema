@@ -22,7 +22,7 @@ olhando = function()
 	var _player = collision_circle(x,y, campo_visao, obj_player_td, false, true);
 	
 	//Se o player entrou no campo de visão, eu sigo ele
-	if(_player)
+	if(_player && t_persegue <= 0)
 	{
 		estado = "persegue";
 		alvo   = _player;
@@ -57,6 +57,7 @@ controla_estado = function()
 		case "parado":
 		
 			   //Diminuindo o tempo de persegue
+			   if(t_persegue > 0)  t_persegue --;
 			   
 			  //Diminuindo o tempo
 			  tempo--;
@@ -88,6 +89,8 @@ controla_estado = function()
 			//Checando se eu ainda nao tenho destino
 			//Só escolho um destino se ainda nao tneho um
 			image_blend = c_white
+			if(t_persegue > 0)  t_persegue --;
+			
 			//Checar a minha distancia para o destino
 			var _dist = point_distance(x, y, destino_x, destino_y);
 			
@@ -115,6 +118,7 @@ controla_estado = function()
 				destino_y = 0;
 			}
 			//Regra para ir para o estado de persegue
+			//Só posso perseguir o player SE mey tempo de espera acabou
 			olhando();
 			
 		break;
@@ -169,11 +173,21 @@ controla_estado = function()
 		break;	
 		#endregion
 		
+		#region carrega_ataque
+		case "carrega ataque":
+		
+		break;
+		#endregion
+		
 		#region ataque
 		case "ataque":
 			
 			//Ficando vermelho
 			image_blend = c_red;
+			
+			//Ataquei o player, eu reseto o t_persegue
+			//Dessa forma eu preciso esperar um tpeo para perseguir o player novamente
+			t_persegue = tempo_persegue;
 			
 			//Ficando mais rapido
 			var _dir = point_direction( x, y, destino_x, destino_y);
