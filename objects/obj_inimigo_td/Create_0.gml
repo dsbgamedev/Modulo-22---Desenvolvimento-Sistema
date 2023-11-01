@@ -141,6 +141,19 @@ controla_estado = function()
 			var _dir = point_direction(x,y, destino_x, destino_y);
 			velh = lengthdir_x(max_vel, _dir);
 			velv = lengthdir_y(max_vel, _dir);
+			
+			//Regra para deixa de seguir o player
+			var _dist = point_distance(x,y,destino_x, destino_y);
+			
+			//Player saiu do meu campo 
+			if(_dist > campo_visao + 70)
+			{
+				alvo = noone;
+				tempo = tempo_estado;
+				destino_x = 0;
+				destino_y = 0;
+			}
+				
 		break;	
 		#endregion
 
