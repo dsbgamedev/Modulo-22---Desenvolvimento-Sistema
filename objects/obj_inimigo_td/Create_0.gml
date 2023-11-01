@@ -2,12 +2,15 @@
 // You can write your code in this editor
 event_inherited()
 
-max_vel = 1;
+max_vel = 2;
 
 tempo_estado   = room_speed * 1;
 tempo          = tempo_estado;
 
-campo_visao    = 256;
+tempo_ataque   = room_speed * .5;
+t_ataque       = tempo_ataque;
+
+campo_visao    = 200;
 tempo_persegue = room_speed * 2;
 t_persegue     = tempo_persegue;
 
@@ -166,8 +169,8 @@ controla_estado = function()
 			//Checando se estou muito próximo do player
 			if(_dist < 100)
 			{
-				estado = "ataque";
-				tempo = tempo_estado;
+				estado = "carrega_ataque";		
+				tempo  = tempo_estado;
 			}
 			
 		break;	
@@ -176,6 +179,22 @@ controla_estado = function()
 		#region carrega_ataque
 		case "carrega ataque":
 		
+			t_ataque--;
+			velh   = 0;
+			velv   = 0;
+			
+			var _greem = (t_ataque / tempo_ataque) * 115; //retorna valor 0 e 1, 
+			var _blue  = (t_ataque / tempo_ataque) *  96;	
+				
+			//Alterando o image_blend
+			image_blend = make_color_rgb(255, _greem, _blue);
+				
+			if(t_ataque <= 0)
+			{
+				estado = "ataque";
+				t_ataque = tempo_ataque;
+			}
+			
 		break;
 		#endregion
 		
@@ -216,17 +235,4 @@ controla_estado = function()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// Inherit the parent event
-event_inherited();
 
