@@ -10,7 +10,8 @@ tempo = tempo_estado;
 estado = "parado";//variavel vai controlar todos estados
 destino_x = 0;
 destino_y = 0;
-debug = false;
+alvo      = noone;
+debug     = false;
 
 muda_estado = function()
 {
@@ -92,6 +93,35 @@ controla_estado = function()
 			}
 			
 		break;
+		#endregion
+		
+		#region persegue
+		case "persegue":
+			
+			//Uma cor diferente
+			image_blend = c_orange;
+			//Indo na direção do player
+			
+			alvo = obj_player_td;
+			
+			if(alvo)
+			{
+				destino_x = alvo.x;
+				destino_y = alvo.y;
+			}
+			else
+			{
+				//Vou para outro estado
+				estado = choose("parado","parado", "andando");
+				destino_x = 0;
+				destino_y = 0;
+				tempo     = tempo_estado;
+			}
+			
+			var _dir = point_direction(x,y, destino_x, destino_y);
+			velh = lengthdir_x(max_vel, _dir);
+			velv = lengthdir_y(max_vel, _dir);
+		break;	
 		#endregion
 
 	}	
