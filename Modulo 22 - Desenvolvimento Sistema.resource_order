@@ -19,6 +19,7 @@
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Player","order":5,"path":"folders/Sprites/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_rampa","order":1,"path":"sprites/spr_rampa/spr_rampa.yy",},
