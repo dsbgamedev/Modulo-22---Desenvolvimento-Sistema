@@ -13,6 +13,9 @@ if(debug)
 	
 	//Sabendo onde é o desitno dele
 	draw_circle(destino_x, destino_y, 16, false);
+	
+	//Desenhando meu campo de visão (Debug)
+	draw_circle(x,y, campo_visao, true);
 }
 
 

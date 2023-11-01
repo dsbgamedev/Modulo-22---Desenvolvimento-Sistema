@@ -5,13 +5,27 @@ event_inherited()
 max_vel = 1;
 
 tempo_estado = room_speed * 1;
-tempo = tempo_estado;
+tempo        = tempo_estado;
 
-estado = "parado";//variavel vai controlar todos estados
-destino_x = 0;
-destino_y = 0;
-alvo      = noone;
-debug     = false;
+campo_visao  = 256;
+
+estado       = "parado";//variavel vai controlar todos estados
+destino_x    = 0;
+destino_y    = 0;
+alvo         = noone;
+debug        = false;
+
+olhando = function()
+{
+	var _player = collision_circle(x,y, campo_visao, obj_player_td, false, true);
+	
+	//Se o player entrou no campo de visão, eu sigo ele
+	if(_player)
+	{
+		estado = "persegue";
+		alvo   = _player;
+	}
+}
 
 muda_estado = function()
 {
@@ -41,6 +55,7 @@ controla_estado = function()
 		case "parado":
 			  //Diminuindo o tempo
 			  tempo--;
+			  image_blend = c_white;
 			  //Ele deve ficar parado
 			  velh = 0;
 			  velv = 0;
@@ -53,6 +68,9 @@ controla_estado = function()
 				  //Reseta o tempo
 				  tempo = tempo_estado;
 			  }
+			  //Regra para ir para o estado de persegue
+			  olhando();
+			  
 			  
 		break;
 		#endregion
@@ -64,7 +82,7 @@ controla_estado = function()
 			//Escolhendo ponto aleatorio na room
 			//Checando se eu ainda nao tenho destino
 			//Só escolho um destino se ainda nao tneho um
-			
+			image_blend = c_white
 			//Checar a minha distancia para o destino
 			var _dist = point_distance(x, y, destino_x, destino_y);
 			
@@ -91,6 +109,8 @@ controla_estado = function()
 				destino_x = 0;
 				destino_y = 0;
 			}
+			//Regra para ir para o estado de persegue
+			olhando();
 			
 		break;
 		#endregion
