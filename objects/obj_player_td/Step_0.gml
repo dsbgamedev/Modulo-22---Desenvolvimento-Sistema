@@ -9,6 +9,13 @@ var _right = keyboard_check(vk_right);
 //velh = (_right - _left) * max_vel;
 //velv = (_down - _up) * max_vel;
 
+//Ajustando a face
+if(_up)      face = 1;
+if(_down)    face = 3;
+if(_left)    face = 2;
+if(_right)   face = 0;
+
+
 
 //Checando se eu estou no gelo
 //Vai retornar false (-4) e se eu não estou colidindo

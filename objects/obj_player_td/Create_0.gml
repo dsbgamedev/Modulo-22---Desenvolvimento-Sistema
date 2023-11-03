@@ -4,13 +4,17 @@
 //herdando as informações do pai
 event_inherited();
 
-max_vel    = 5;
-meu_acel   = .2;
-acel       = meu_acel;
+max_vel      = 5;
+meu_acel     = .2;
+acel         = meu_acel;
 
-estado     = noone;
-estado_txt = "parado";
-debug      = false;
+face	     = 0;
+sprite       = sprite_index;
+xscale = 1;
+estado       = noone;
+estado_txt   = "parado";
+
+debug        = false;
 
 //Mapeando a esquerda
 keyboard_set_map(ord("A"), vk_left);
@@ -43,26 +47,12 @@ estado_movendo = function()
 	
 	//Definindo a sprite correta
 	//Indo para baixo
-	if(velv > 0)
+	switch(face)
 	{
-		sprite_index = spr_idle_player_down;
-	}
-	else if(velv < 0)//Indo para cima
-	{
-		sprite_index = spr_idle_player_up;
-	}
-	
-	//Indo para direita
-	if(velh > 0)
-	{
-		sprite_index = spr_idle_player_right;
-		image_xscale = 1;
-	}
-	//Indo para esquerda
-	if(velh < 0)
-	{
-		sprite_index = spr_idle_player_right;
-		image_xscale = -1;
+		case 0: sprite = spr_idle_player_right; xscale = 1;break;
+		case 1: sprite = spr_idle_player_up;break;
+		case 2: sprite = spr_idle_player_right; xscale = -1;break;
+		case 3: sprite = spr_idle_player_down;break;
 	}
 	
 	//Saindo do estado de movendo

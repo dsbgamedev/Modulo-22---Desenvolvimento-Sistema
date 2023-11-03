@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_self();
+//Desenhar a minha sprite
+draw_sprite_ext(sprite, image_index,x,y, xscale,image_yscale,image_angle, image_blend, image_alpha);
 
 //Debug do estado
 if(debug)
