@@ -28,25 +28,22 @@ if(place_meeting(x + velh, y, obj_chao_td))
 x += velh;
 
 //Colisão vertical
-if(place_meeting(x , y + velv, obj_chao_td))
+//Pegando os dados do chão que eu vou bater
+var _chao = instance_place(x , y + velv, obj_chao_td);
+if(_chao)
 {
-	//Pegando os dados do chão que eu vou bater
-	var _chao = instance_place(x , y + velv, obj_chao_td);
-	
-	if(_chao)
+	//Checando se eu estou indo para a direita ou para esquerda
+	if(velv > 0)
 	{
-		//Checando se eu estou indo para a direita ou para esquerda
-		if(velv > 0)
-		{
-			//Estou indo para a direita	
-	       //Eu vou grudar na esquerda do chao
-		   y = _chao.bbox_top - sprite_height / 2;  
-		}
-		else if(velv < 0)//Estou indo para a esquerda
-		{
-			y = _chao.bbox_bottom + sprite_height / 2;
-		}
+		//Estou indo para a direita	
+	    //Eu vou grudar na esquerda do chao
+		y = _chao.bbox_top - sprite_height / 2;  
 	}
+	else if(velv < 0)//Estou indo para a esquerda
+	{
+		y = _chao.bbox_bottom + sprite_height / 2;
+	}
+
 	//Zerar a minha velocidade horizontal vertical
 	velv = 0;
 }
