@@ -51,6 +51,8 @@ else   //Não estou apertando nenhuma tecla de movimento
 	velh = lerp(velh, 0, acel);
 	velv = lerp(velv, 0, acel);
 }
+estado(); // Recebeu o metodo estado_parado e executa ele
+
 
 
 
