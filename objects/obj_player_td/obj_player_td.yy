@@ -33,12 +33,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Idle_down_strip4",
-    "path": "sprites/Idle_down_strip4/Idle_down_strip4.yy",
+    "name": "spr_idle_player_down",
+    "path": "sprites/spr_idle_player_down/spr_idle_player_down.yy",
   },
   "spriteMaskId": {
-    "name": "Idle_down_strip4",
-    "path": "sprites/Idle_down_strip4/Idle_down_strip4.yy",
+    "name": "spr_idle_player_down",
+    "path": "sprites/spr_idle_player_down/spr_idle_player_down.yy",
   },
   "visible": true,
 }
