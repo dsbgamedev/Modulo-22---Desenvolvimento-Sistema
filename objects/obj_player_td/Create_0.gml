@@ -20,12 +20,32 @@ keyboard_set_map(ord("S"), vk_down);
 
 estado_parado = function()
 {
-	estado_txt = "parado";	
+	estado_txt = "parado";
+	//Ficando parado
+	velh = 0;
+	velv = 0;
+	
+	var _up    = keyboard_check(vk_up);
+	var _down  = keyboard_check(vk_down);
+	var _left  = keyboard_check(vk_left);
+	var _right = keyboard_check(vk_right);
+	
+	//Saindo do estado de parado
+	if((_up xor _down) or (_left xor _right))
+	{
+		estado = estado_movendo;
+	}
 }
 
 estado_movendo = function()
 {
-	estado_txt = "movendo";	
+	estado_txt = "movendo";
+	
+	//Saindo do estado de movendo
+	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
+	{
+		estado = estado_parado;	
+	}
 }
 
 //Metodos dentro de metodos
