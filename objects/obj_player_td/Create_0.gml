@@ -41,6 +41,30 @@ estado_movendo = function()
 {
 	estado_txt = "movendo";
 	
+	//Definindo a sprite correta
+	//Indo para baixo
+	if(velv > 0)
+	{
+		sprite_index = spr_idle_player_down;
+	}
+	else if(velv < 0)//Indo para cima
+	{
+		sprite_index = spr_idle_player_up;
+	}
+	
+	//Indo para direita
+	if(velh > 0)
+	{
+		sprite_index = spr_idle_player_right;
+		image_xscale = 1;
+	}
+	//Indo para esquerda
+	if(velh < 0)
+	{
+		sprite_index = spr_idle_player_right;
+		image_xscale = -1;
+	}
+	
 	//Saindo do estado de movendo
 	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
 	{
