@@ -3,6 +3,25 @@
 
 alvo   = noone;
 estado = noone;
+escala = 1; // 1 é 100% do tamanho
+cam_w  = camera_get_view_width(view_camera[0]); 
+cam_h  = camera_get_view_height(view_camera[0]); 
+
+zoom = function()
+{
+	//Definindo o tamanho da minha view
+	camera_set_view_size(view_camera[0], cam_w * escala, cam_h * escala);
+	
+	//Alterando o valor da escala com a bolinha do mouse
+	if(mouse_wheel_down())
+	{
+		escala += .1;
+	}
+	else if(mouse_wheel_up())
+	{
+		escala -= .1;
+	}
+}
 
 //Seguindo o player
 segue_player = function()
@@ -17,6 +36,21 @@ segue_player = function()
 		estado = segue_nada;
 	}
 	
+	//Pegando o tamanho da camera
+	var _view_w = camera_get_view_width(view_camera[0]);
+	var _view_h = camera_get_view_height(view_camera[0]);
+	
+		
+	var _cam_x = x -_view_w / 2;
+	var _cam_y = y -_view_h / 2;
+	
+	//Impedindo que a camera mostre fora da room
+	_cam_x = clamp(_cam_x, 0, room_width  - _view_w);
+	_cam_y = clamp(_cam_y, 0, room_height - _view_h);
+	
+	//Definindo a posição da camera
+	camera_set_view_pos(view_camera[0], _cam_x, _cam_y);
+
 	x = lerp(x, alvo.x, .1);
 	y = lerp(y, alvo.y, .1);
 }
@@ -26,7 +60,14 @@ segue_nada = function()
 	alvo = noone;	
 }
 
+segue_inimigo = function()
+{
+	
+}
+
 estado = segue_player;
+
+
 
 
 
