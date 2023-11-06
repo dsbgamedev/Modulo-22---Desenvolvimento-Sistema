@@ -10,10 +10,10 @@ var _right = keyboard_check(vk_right);
 //velv = (_down - _up) * max_vel;
 
 //Ajustando a face
-if(_up)      face = 1;
-if(_down)    face = 3;
-if(_left)    face = 2;
-if(_right)   face = 0;
+if(_up)       face = 1;
+if(_down)     face = 3;
+if(_left)   { face = 2; xscale = -1; }
+if(_right)  { face = 0; xscale =  1; }
 
 
 
