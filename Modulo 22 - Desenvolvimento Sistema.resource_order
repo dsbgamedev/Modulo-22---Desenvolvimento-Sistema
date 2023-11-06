@@ -5,6 +5,7 @@
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+    {"name":"Cameras","order":5,"path":"folders/Objects/Cameras.yy",},
     {"name":"Plataforma","order":3,"path":"folders/Objects/Plataforma.yy",},
     {"name":"TopDow","order":4,"path":"folders/Objects/TopDow.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
@@ -35,7 +36,6 @@
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Cameras","order":5,"path":"folders/Objects/Cameras.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_frente_escudo_strip4","order":2,"path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},
