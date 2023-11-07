@@ -16,7 +16,7 @@ if(place_meeting(x + velh, y, obj_chao_td))
 	       //Eu vou grudar na esquerda do chao
 		   x = _chao.bbox_left - sprite_width / 2;  
 		}
-		else if(velv < 0)//Estou indo para a esquerda
+		else if(velh < 0)//Estou indo para a esquerda
 		{
 		   x = _chao.bbox_right + sprite_width / 2;
 		}
@@ -42,7 +42,7 @@ if(_chao)
 	}
 	else if(velv < 0)//Estou indo para a esquerda
 	{
-		y = _chao.bbox_bottom + sprite_height;
+		y = _chao.bbox_bottom + 8;
 	}
 
 	//Zerar a minha velocidade horizontal vertical
