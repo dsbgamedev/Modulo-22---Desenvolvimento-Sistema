@@ -20,7 +20,9 @@ sprites       = [
 			    //Sprites parado
 			    [spr_idle_player_right,spr_idle_player_up, spr_idle_player_right, spr_idle_player_down],
 			    //Sprites movendo
-			    [spr_run_player_right, spr_run_player_up, spr_run_player_right, spr_run_player_down] 	
+			    [spr_run_player_right, spr_run_player_up, spr_run_player_right, spr_run_player_down],
+				//Sprites Ataque
+				[spr_player_attack_right, spr_player_attack_up, spr_player_attack_right, spr_player_attack_down]
 			    ];
 			   
 sprites_index =	0;		   
@@ -30,6 +32,11 @@ keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("S"), vk_down);
+
+estado_ataque = function()
+{
+	estado_txt = "Ataque";
+}
 
 estado_parado = function()
 {

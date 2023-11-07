@@ -42,7 +42,7 @@ if(_chao)
 	}
 	else if(velv < 0)//Estou indo para a esquerda
 	{
-		y = _chao.bbox_bottom + 8;
+		y = _chao.bbox_bottom + 11;
 	}
 
 	//Zerar a minha velocidade horizontal vertical

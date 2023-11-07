@@ -36,11 +36,13 @@
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Attack","order":5,"path":"folders/Sprites/Player/Attack.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_frente_escudo_strip4","order":2,"path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},
     {"name":"spr_rampa","order":1,"path":"sprites/spr_rampa/spr_rampa.yy",},
     {"name":"obj_chao_td","order":1,"path":"objects/obj_chao_td/obj_chao_td.yy",},
+    {"name":"spr_player_attack_right","order":1,"path":"sprites/spr_player_attack_right/spr_player_attack_right.yy",},
     {"name":"spr_run_player_right","order":1,"path":"sprites/spr_run_player_right/spr_run_player_right.yy",},
     {"name":"run_right_strip544","order":4,"path":"sprites/run_right_strip544/run_right_strip544.yy",},
     {"name":"TopDown","order":1,"path":"rooms/TopDown/TopDown.yy",},
@@ -74,6 +76,7 @@
     {"name":"obj_inimigo_td","order":4,"path":"objects/obj_inimigo_td/obj_inimigo_td.yy",},
     {"name":"ibj_inimigo_td","order":3,"path":"objects/ibj_inimigo_td/ibj_inimigo_td.yy",},
     {"name":"Hit_up","order":2,"path":"sprites/Hit_up/Hit_up.yy",},
+    {"name":"spr_player_attack_up","order":2,"path":"sprites/spr_player_attack_up/spr_player_attack_up.yy",},
     {"name":"spr_gelo_td","order":2,"path":"sprites/spr_gelo_td/spr_gelo_td.yy",},
   ],
 }
