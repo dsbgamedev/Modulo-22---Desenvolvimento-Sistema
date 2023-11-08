@@ -91,6 +91,7 @@
     {"id":{"name":"Girando_up_Sheet_strip7","path":"sprites/Girando_up_Sheet_strip7/Girando_up_Sheet_strip7.yy",},},
     {"id":{"name":"attack_right_strip5","path":"sprites/attack_right_strip5/attack_right_strip5.yy",},},
     {"id":{"name":"Window_0","path":"sprites/Window_0/Window_0.yy",},},
+    {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_entidade","path":"objects/obj_entidade/obj_entidade.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_chao_pl","path":"objects/obj_chao_pl/obj_chao_pl.yy",},},
