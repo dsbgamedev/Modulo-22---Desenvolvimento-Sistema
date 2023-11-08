@@ -31,12 +31,12 @@
     {"name":"Tiles","order":5,"path":"folders/Sprites/Assets None/Tiles.yy",},
     {"name":"Plataforma","order":3,"path":"folders/Sprites/Plataforma.yy",},
     {"name":"Player","order":5,"path":"folders/Sprites/Player.yy",},
+    {"name":"Attack","order":5,"path":"folders/Sprites/Player/Attack.yy",},
     {"name":"Idle","order":3,"path":"folders/Sprites/Player/Idle.yy",},
     {"name":"Run","order":4,"path":"folders/Sprites/Player/Run.yy",},
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Attack","order":5,"path":"folders/Sprites/Player/Attack.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_frente_escudo_strip4","order":2,"path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},
