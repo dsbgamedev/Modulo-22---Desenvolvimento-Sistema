@@ -5,6 +5,7 @@ var _up    = keyboard_check(vk_up);
 var _down  = keyboard_check(vk_down);
 var _left  = keyboard_check(vk_left);
 var _right = keyboard_check(vk_right);
+attack     = keyboard_check_pressed(ord("C"));
 
 //velh = (_right - _left) * max_vel;
 //velv = (_down - _up) * max_vel;

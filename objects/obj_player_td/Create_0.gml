@@ -14,7 +14,9 @@ xscale		  = 1;
 estado		  = noone;
 estado_txt    = "parado";
 			
-debug		  = false;
+debug		  = true;
+
+attack        = false;
 
 sprites       = [ 
 			    //Sprites parado
@@ -32,10 +34,12 @@ keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("S"), vk_down);
+keyboard_set_map(ord("J"), ord("C"));
 
-estado_ataque = function()
+
+ajusta_sprite = function(_indice_array)
 {
-	estado_txt = "Ataque";
+	sprite = sprites[_indice_array][face];	
 }
 
 estado_parado = function()
@@ -51,12 +55,18 @@ estado_parado = function()
 	var _left  = keyboard_check(vk_left);
 	var _right = keyboard_check(vk_right);
 	
-	sprite     = sprites[sprites_index][face];
+	ajusta_sprite (sprites_index);
 	
 	//Saindo do estado de parado
 	if((_up xor _down) or (_left xor _right))
 	{
 		estado = estado_movendo;
+	}
+	
+	//Indo para o estado de ataque
+	if(attack)
+	{
+		estado = estado_ataque;
 	}
 }
 
@@ -66,13 +76,30 @@ estado_movendo = function()
 	sprites_index = 1;
 	//Definindo a sprite correta
 	//Indo para baixo
-	sprite     = sprites[sprites_index][face];
+	ajusta_sprite (sprites_index);
 	
 	//Saindo do estado de movendo
 	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
 	{
 		estado = estado_parado;	
 	}
+	
+	if(attack)
+	{
+		estado = estado_ataque;
+	}
+}
+
+estado_ataque = function()
+{
+	estado_txt = "Ataque";
+	
+	//Ajustando a sprite
+	ajusta_sprite(2);
+	
+	//Eu fico parado neste estado
+	velh       = 0;
+	velv       = 0;
 }
 
 //Metodos dentro de metodos
