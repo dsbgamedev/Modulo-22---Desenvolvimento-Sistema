@@ -18,6 +18,16 @@ debug		  = true;
 
 attack        = false;
 
+//Imagem atual da animação
+image_ind     = 0;
+//Velocidade da animação
+image_spd     = 6 / room_speed;
+//Quantidade de imagens na minha sprite
+image_numb    = 1;
+
+
+
+
 sprites       = [ 
 			    //Sprites parado
 			    [spr_idle_player_right,spr_idle_player_up, spr_idle_player_right, spr_idle_player_down],
@@ -40,6 +50,12 @@ keyboard_set_map(ord("J"), ord("C"));
 ajusta_sprite = function(_indice_array)
 {
 	sprite = sprites[_indice_array][face];	
+	
+	//Descobrindo o image number da sprite que eu estou usando
+	image_numb = sprite_get_number(sprite);
+	
+	//Aumentando o valor do imagem index com base no image speed
+	image_ind += image_spd;
 }
 
 estado_parado = function()
@@ -77,7 +93,7 @@ estado_movendo = function()
 	//Definindo a sprite correta
 	//Indo para baixo
 	ajusta_sprite (sprites_index);
-	
+		
 	//Saindo do estado de movendo
 	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
 	{

@@ -59,6 +59,10 @@ else   //Não estou apertando nenhuma tecla de movimento
 	velh = lerp(velh, 0, acel);
 	velv = lerp(velv, 0, acel);
 }
+
+//show_debug_message(image_number);//Verifica quantas imagens esta sendo usada
+//show_debug_message(imagem_index);//
+show_debug_message(image_numb);
 estado(); // Recebeu o metodo estado_parado e executa ele
 
 
