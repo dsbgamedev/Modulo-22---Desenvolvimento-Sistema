@@ -115,6 +115,12 @@ controla_player = function()
 	}
 }
 
+estado_defesa = function()
+{
+	
+
+}
+
 estado_parado = function()
 {
 	
