@@ -18,6 +18,8 @@ debug		  = true;
 
 attack        = false;
 
+shield        = false;
+
 //Imagem atual da animação
 image_ind     = 0;
 //Velocidade da animação
@@ -36,7 +38,9 @@ sprites       = [
 			    //Sprites movendo
 			    [spr_run_player_right, spr_run_player_up, spr_run_player_right, spr_run_player_down],
 				//Sprites Ataque
-				[spr_player_attack_right, spr_player_attack_up, spr_player_attack_right, spr_player_attack_down]
+				[spr_player_attack_right, spr_player_attack_up, spr_player_attack_right, spr_player_attack_down],
+				//Sprites Defesa
+				[spr_player_shield_right, spr_player_shield_up, spr_player_shield_right, spr_player_shield_down]
 			    ];
 			   
 sprites_index =	0;		   
@@ -47,6 +51,7 @@ keyboard_set_map(ord("D"), vk_right);
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("J"), ord("C"));
+keyboard_set_map(ord("L"), ord("Z"));
 
 
 ajusta_sprite = function(_indice_array)
@@ -81,7 +86,8 @@ controla_player = function()
 	var _down  = keyboard_check(vk_down);
 	var _left  = keyboard_check(vk_left);
 	var _right = keyboard_check(vk_right);
-	attack     = keyboard_check_pressed(ord("C"));
+	attack     = keyboard_check_pressed(ord("C"));//Pressed so roda uma vez
+	shield     = keyboard_check(ord("Z"));
 
 	//velh = (_right - _left) * max_vel;
 	//velv = (_down - _up) * max_vel;
@@ -115,11 +121,6 @@ controla_player = function()
 	}
 }
 
-estado_defesa = function()
-{
-	
-
-}
 
 estado_parado = function()
 {
@@ -150,6 +151,11 @@ estado_parado = function()
 	{
 		estado = estado_ataque;
 	}
+	//Indo para estado de defesa
+	if(shield)
+	{
+		estado = estado_defesa;
+	}
 }
 
 estado_movendo = function()
@@ -172,6 +178,10 @@ estado_movendo = function()
 	{
 		estado = estado_ataque;
 	}
+	if(shield)
+	{
+		estado = estado_defesa;
+	}
 }
 
 estado_ataque = function()
@@ -192,6 +202,26 @@ estado_ataque = function()
 	{
 		estado = estado_parado;
 	}
+}
+
+estado_defesa = function()
+{
+	estado_txt = "Defesa";
+	ajusta_sprite(3);
+	
+	//Controlando o player
+	controla_player();
+	
+	//Garantindo que eu estou parado
+	velh = 0;
+	velh = 0;
+	
+	//Saindo do estado de defesa
+	if(!shield)
+	{
+		estado = estado_parado;
+	}
+
 }
 
 //Metodos dentro de metodos
