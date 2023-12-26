@@ -246,10 +246,18 @@ estado_rolando = function()
 	{
 		//Se nao e igual é porque acabei de entrar no estado
 		//Achando a minha direção
-		var _dir = point_direction(0, 0, velh, velv);
-		velh     = lengthdir_x(roll_vel, _dir);
-		velv     = lengthdir_y(roll_vel, _dir);	
-		
+		//Só faço isso se o velh ou velv for diferente de 0
+		if(velh !=0 or velv !=0)
+		{
+			var _dir = point_direction(0, 0, velh, velv);
+			velh     = lengthdir_x(roll_vel, _dir);
+			velv     = lengthdir_y(roll_vel, _dir);	
+		}
+		else //Caso contrario olhe na direcao que voce esta olhando
+		{
+			velh     = lengthdir_x(roll_vel, face * 90);
+			velv     = lengthdir_y(roll_vel, face * 90);
+		}
 		//Pulando 1 frame
 		image_ind++;
 	}
@@ -257,12 +265,13 @@ estado_rolando = function()
 	estado_txt = "Rolando";
 	
 	ajusta_sprite(4);
-	
-			
+		
 	//Saindo do estado rool
 	if(image_ind + image_spd + 1 >= image_numb)
 	{
 		estado = estado_parado;
+		//Resetando a velocidade da animação
+		image_spd = 6 / room_speed;
 	}
 }
 
