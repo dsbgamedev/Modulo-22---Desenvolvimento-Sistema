@@ -4,9 +4,10 @@
 //herdando as informações do pai
 event_inherited();
 
-max_vel		  = 5;
+max_vel		  = 3;
 meu_acel	  = .2;
 acel		  = meu_acel;
+roll_vel      = 5;
 			
 face		  = 0;
 sprite		  = sprite_index;
@@ -17,8 +18,8 @@ estado_txt    = "parado";
 debug		  = true;
 
 attack        = false;
-
 shield        = false;
+roll          = false;
 
 //Imagem atual da animação
 image_ind     = 0;
@@ -40,7 +41,9 @@ sprites       = [
 				//Sprites Ataque
 				[spr_player_attack_right, spr_player_attack_up, spr_player_attack_right, spr_player_attack_down],
 				//Sprites Defesa
-				[spr_player_shield_right, spr_player_shield_up, spr_player_shield_right, spr_player_shield_down]
+				[spr_player_shield_right, spr_player_shield_up, spr_player_shield_right, spr_player_shield_down],
+				//Rolando
+				[spr_player_roll_right, spr_player_roll_up, spr_player_roll_right, spr_player_roll_down]
 			    ];
 			   
 sprites_index =	0;		   
@@ -52,6 +55,7 @@ keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("J"), ord("C"));
 keyboard_set_map(ord("L"), ord("Z"));
+keyboard_set_map(ord("K"), ord("X"));
 
 
 ajusta_sprite = function(_indice_array)
@@ -88,6 +92,7 @@ controla_player = function()
 	var _right = keyboard_check(vk_right);
 	attack     = keyboard_check_pressed(ord("C"));//Pressed so roda uma vez
 	shield     = keyboard_check(ord("Z"));
+	roll       = keyboard_check_pressed(ord("X"));
 
 	//velh = (_right - _left) * max_vel;
 	//velv = (_down - _up) * max_vel;
@@ -156,6 +161,11 @@ estado_parado = function()
 	{
 		estado = estado_defesa;
 	}
+	//Indo para o estado roll
+	if(roll)
+	{
+		estado = estado_rolando;
+	}
 }
 
 estado_movendo = function()
@@ -169,7 +179,7 @@ estado_movendo = function()
 	ajusta_sprite (sprites_index);
 		
 	//Saindo do estado de movendo
-	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
+	if(abs(velv) <= 0.1 && abs(velh) <= 0.1)
 	{
 		estado = estado_parado;	
 	}
@@ -181,6 +191,10 @@ estado_movendo = function()
 	if(shield)
 	{
 		estado = estado_defesa;
+	}
+	if(roll)
+	{
+		estado = estado_rolando;
 	}
 }
 
@@ -223,6 +237,35 @@ estado_defesa = function()
 	}
 
 }
+
+estado_rolando = function()
+{
+	image_spd = 12 / room_speed;
+	//Checando se eu ainda nao entrei no meu estado
+	if(estado_txt != "Rolando")
+	{
+		//Se nao e igual é porque acabei de entrar no estado
+		//Achando a minha direção
+		var _dir = point_direction(0, 0, velh, velv);
+		velh     = lengthdir_x(roll_vel, _dir);
+		velv     = lengthdir_y(roll_vel, _dir);	
+		
+		//Pulando 1 frame
+		image_ind++;
+	}
+	
+	estado_txt = "Rolando";
+	
+	ajusta_sprite(4);
+	
+			
+	//Saindo do estado rool
+	if(image_ind + image_spd + 1 >= image_numb)
+	{
+		estado = estado_parado;
+	}
+}
+
 
 //Metodos dentro de metodos
 estado = estado_parado;//Se nao usa parentese() eu não executo o metodo, ele vai apenas guardar.
