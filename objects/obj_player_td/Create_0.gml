@@ -240,7 +240,7 @@ estado_defesa = function()
 
 estado_rolando = function()
 {
-	image_spd = 12 / room_speed;
+	image_spd = 18 / room_speed;
 	//Checando se eu ainda nao entrei no meu estado
 	if(estado_txt != "Rolando")
 	{

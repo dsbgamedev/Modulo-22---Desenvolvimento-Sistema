@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Tilesets",
+  "name": "Tile",
   "bbox_bottom": 479,
   "bbox_left": 96,
   "bbox_right": 594,
@@ -13,26 +13,26 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8fffa0cd-d0a3-4b3b-b2e0-f71422caa4f9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"279336ca-5fd9-479b-8bf5-ecdbb538f362",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 600,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"03819775-a184-4e03-aa23-6eaa5a0293dd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4143c581-55b6-49c1-87de-29b35efa9ed9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Tiles",
-    "path": "folders/Sprites/Assets None/Tiles.yy",
+    "path": "folders/Sprites/Tiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Tilesets",
+    "name": "Tile",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8fffa0cd-d0a3-4b3b-b2e0-f71422caa4f9","path":"sprites/Tilesets/Tilesets.yy",},},},"Disabled":false,"id":"cc5ef3c2-b20b-4733-8186-c42aab7bafe8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"279336ca-5fd9-479b-8bf5-ecdbb538f362","path":"sprites/Tile/Tile.yy",},},},"Disabled":false,"id":"95059f9c-d600-4d64-8e83-36151b2d4a29","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
