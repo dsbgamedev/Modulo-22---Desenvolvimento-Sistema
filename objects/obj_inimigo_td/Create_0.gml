@@ -20,17 +20,6 @@ destino_y      = 0;
 alvo           = noone;
 debug          = false;
 
-olhando = function()
-{
-	var _player = collision_circle(x,y, campo_visao, obj_player_td, false, true);
-	
-	//Se o player entrou no campo de visão, eu sigo ele
-	if(_player && t_persegue <= 0)
-	{
-		estado = "persegue";
-		alvo   = _player;
-	}
-}
 
 muda_estado = function()
 {
@@ -50,6 +39,19 @@ muda_estado = function()
 	}
 
 }
+
+olhando = function()
+{
+	var _player = collision_circle(x,y, 201.2, obj_player_td, false, true);
+	
+	//Se o player entrou no campo de visão, eu sigo ele
+	if(_player && t_persegue <= 0)
+	{
+		estado = "persegue";
+		alvo   = _player;
+	}
+}
+
 
 controla_estado = function()
 {	

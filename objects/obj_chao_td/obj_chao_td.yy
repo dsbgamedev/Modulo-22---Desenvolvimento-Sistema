@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_chao_td",
-    "path": "sprites/spr_chao_td/spr_chao_td.yy",
+    "name": "spr_chao",
+    "path": "sprites/spr_chao/spr_chao.yy",
   },
   "spriteMaskId": null,
   "visible": true,

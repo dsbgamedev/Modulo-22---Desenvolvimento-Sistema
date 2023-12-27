@@ -240,16 +240,23 @@ estado_defesa = function()
 
 estado_rolando = function()
 {
-	image_spd = 18 / room_speed;
+	
+	
+	
 	//Checando se eu ainda nao entrei no meu estado
 	if(estado_txt != "Rolando")
 	{
+		//Pegando as teclas
+		var _up    = keyboard_check(vk_up);
+		var _down  = keyboard_check(vk_down);
+		var _left  = keyboard_check(vk_left);
+		var _right = keyboard_check(vk_right);
 		//Se nao e igual é porque acabei de entrar no estado
 		//Achando a minha direção
 		//Só faço isso se o velh ou velv for diferente de 0
-		if(velh !=0 or velv !=0)
+		if((_up xor _down) or (_right xor _left))
 		{
-			var _dir = point_direction(0, 0, velh, velv);
+			var _dir = point_direction(0, 0, _right - _left, _down - _up);
 			velh     = lengthdir_x(roll_vel, _dir);
 			velv     = lengthdir_y(roll_vel, _dir);	
 		}
@@ -265,6 +272,12 @@ estado_rolando = function()
 	estado_txt = "Rolando";
 	
 	ajusta_sprite(4);
+	
+	//Ajustando a velocidade da animação
+	//Definir um tempo para a animação
+	//E com base nesse tempo ele vai ajustar o image_spd
+	//30 frames
+	image_spd = sprite_get_number(sprite) / (room_speed / 3);
 		
 	//Saindo do estado rool
 	if(image_ind + image_spd + 1 >= image_numb)

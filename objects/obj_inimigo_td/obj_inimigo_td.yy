@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_inimigo_td",
-    "path": "sprites/spr_inimigo_td/spr_inimigo_td.yy",
+    "name": "spr_cogumelo_down",
+    "path": "sprites/spr_cogumelo_down/spr_cogumelo_down.yy",
   },
   "spriteMaskId": null,
   "visible": true,
