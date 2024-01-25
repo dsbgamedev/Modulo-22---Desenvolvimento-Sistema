@@ -15,7 +15,7 @@ xscale		  = 1;
 estado		  = noone;
 estado_txt    = "parado";
 			
-debug		  = true;
+debug		  = false;
 
 attack        = false;
 shield        = false;
@@ -29,8 +29,6 @@ image_spd     = 6 / room_speed;
 image_numb    = 1;
 
 troquei = false;
-
-
 
 
 sprites       = [ 
@@ -64,7 +62,7 @@ ajusta_sprite = function(_indice_array)
 	//Checando ase a sprite que eu estou usando é a que eu deveria estar usando
 	//Sprite de parado
 	//Sprite de ataque
-	//Isso quer dizer que eu acbaei de chegar nesse estado (se a minha sprite esta errada)
+	//Isso quer dizer que eu acabei de chegar nesse estado (se a minha sprite esta errada)
 	if(sprite != sprites[_indice_array][face])
 	{
 		//acabei de entrar no estado
@@ -113,7 +111,7 @@ controla_player = function()
 		//Pegando o valor do velh
 		var _max_velh = lengthdir_x(max_vel, _dir);
 		velh = lerp(velh, _max_velh, acel); //0 ou 5
-		//Pegando o valro do velv
+		//Pegando o valor do velv
 		var _max_velv = lengthdir_y(max_vel, _dir);
 		velv = lerp(velv, _max_velv, acel); //0 ou 5
 		//show_message(velv);

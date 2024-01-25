@@ -12,7 +12,7 @@ if(_gelo)
 {
 	acel = _gelo.meu_acel;
 }
-else //Se eu não colidi, o valormdo acel é o MEU acel
+else //Se eu não colidi, o valor do acel é o MEU acel
 {
 	acel = meu_acel;	
 }

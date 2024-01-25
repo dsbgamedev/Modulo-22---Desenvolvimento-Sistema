@@ -11,11 +11,11 @@ if(debug)
 	draw_set_halign(-1);
 	draw_set_valign(-1);
 	
-	//Sabendo onde é o desitno dele
-	draw_circle(destino_x, destino_y, 16, false);
+	//Sabendo onde é o destino dele (Debug)
+	draw_circle(destino_x, destino_y, 16,false);
 	
 	//Desenhando meu campo de visão (Debug)
-	draw_circle(x,y, campo_visao, true);
+	draw_circle(x,y,campo_visao, true);
 }
 
 
