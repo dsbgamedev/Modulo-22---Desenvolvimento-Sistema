@@ -22,6 +22,43 @@ debug          = false;
 
 image_speed    = 8 / room_speed;
 
+controla_sprite =  function ()
+{
+	var _dir = point_direction(0,0,velh,velv);
+	//Se estou indo par aa direita, eu olho para a direita
+
+	//Direita
+	var _face = _dir div 90;
+	show_debug_message(_face);
+	switch (_face)
+	{
+		case 0:
+		{
+			sprite_index = spr_cogumelo_right;
+			image_xscale = 1;
+			break;	
+		}
+		case 1:
+		{
+			sprite_index = spr_cogumelo_up;
+			break;	
+		}
+		case 2:
+		{
+			sprite_index = spr_cogumelo_right;
+			image_xscale = -1;
+			break;	
+		}
+		case 3:
+		{
+			sprite_index = spr_cogumelo_down;
+			break;	
+		}
+		
+	}
+	
+}
+
 muda_estado = function()
 {
 		//////DEBUG////////
@@ -120,6 +157,16 @@ controla_estado = function()
 			//Dando o valor do meu velh
 			 velh = lengthdir_x(max_vel, _dir);
 			 velv = lengthdir_y(max_vel, _dir);
+			 
+			 //Se eu bati em uma parede, eu paro!
+			 if(place_meeting(x + velh, y +velv, obj_chao_td))
+			 {
+				estado = "parado";	
+				//Resetando o meu destino
+				destino_x = 0;
+				destino_y = 0;
+				tempo = tempo_estado;
+			 }
 			 
 			//Regra para mudar de estado
 			if(tempo <= 0)

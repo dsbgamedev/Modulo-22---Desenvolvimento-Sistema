@@ -37,11 +37,11 @@ if(_chao)
 	{
 		//Estou indo para a direita	
 	    //Eu vou grudar na esquerda do chao
-		y = _chao.bbox_top - sprite_height / 2;  
+		y = _chao.bbox_top /*- sprite_height / 2*/;  
 	}
 	else if(velv < 0)//Estou indo para a esquerda
 	{
-		y = _chao.bbox_bottom + sprite_height / 2;
+		y = _chao.bbox_bottom + (y - bbox_top) /*sprite_height / 2*/;
 	}
 
 	//Zerar a minha velocidade horizontal vertical

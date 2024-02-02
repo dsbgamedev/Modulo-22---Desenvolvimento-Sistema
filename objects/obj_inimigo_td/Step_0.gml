@@ -4,6 +4,7 @@
 
 controla_estado();
 muda_estado();
+controla_sprite();
 
 
 

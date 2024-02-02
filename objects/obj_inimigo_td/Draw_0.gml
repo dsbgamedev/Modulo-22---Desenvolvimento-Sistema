@@ -1,6 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+//Desenhando a sombra
+//No 0 eu quero a escala em .5, no 1, 2 e 3 ela fica em .7
+
+var _scala = .5;
+if(image_index > 1)
+{
+	var _scala = .7;
+}
+
+draw_sprite_ext(spr_sombra, 0, x, y, _scala, _scala, 0, c_white, .2);
 draw_self();
+
 
 //Debug do meu estado
 if(debug)
