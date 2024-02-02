@@ -75,7 +75,6 @@ segue_inimigo = function()
 {
 	alvo = obj_inimigo_td;
 	
-	
 	segue_alvo();
 	
 	//Se eu apertei espaço eu vou seguir o player

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "tl_tile",
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"grama_agua","closed_edge":false,"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"Grama_agua","closed_edge":false,"tiles":[
         643,
         757,
         755,
@@ -21,7 +21,7 @@
         1100,
         791,
       ],},
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"Grama terra","closed_edge":false,"tiles":[
         679,
         380,
         378,

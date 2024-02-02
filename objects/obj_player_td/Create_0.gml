@@ -4,7 +4,7 @@
 //herdando as informações do pai
 event_inherited();
 
-max_vel		  = 3;
+max_vel		  =  3;
 meu_acel	  = .2;
 acel		  = meu_acel;
 roll_vel      = 5;
@@ -239,6 +239,7 @@ estado_defesa = function()
 estado_rolando = function()
 {
 	
+	//Pegando as teclas
 	
 	
 	//Checando se eu ainda nao entrei no meu estado
@@ -249,6 +250,7 @@ estado_rolando = function()
 		var _down  = keyboard_check(vk_down);
 		var _left  = keyboard_check(vk_left);
 		var _right = keyboard_check(vk_right);
+		
 		//Se nao e igual é porque acabei de entrar no estado
 		//Achando a minha direção
 		//Só faço isso se o velh ou velv for diferente de 0
@@ -269,12 +271,17 @@ estado_rolando = function()
 	
 	estado_txt = "Rolando";
 	
+	//Peguei a sprite certa
 	ajusta_sprite(4);
-	
+
+	//F com base nesse tempo ele vai ajustar o image_spd
+	//30 Frames
+	//Sabendo quantos frames a sprite tem
 	//Ajustando a velocidade da animação
 	//Definir um tempo para a animação
 	//E com base nesse tempo ele vai ajustar o image_spd
-	//30 frames
+	//3 frames
+	
 	image_spd = sprite_get_number(sprite) / (room_speed / 3);
 		
 	//Saindo do estado rool
@@ -289,8 +296,6 @@ estado_rolando = function()
 
 //Metodos dentro de metodos
 estado = estado_parado;//Se nao usa parentese() eu não executo o metodo, ele vai apenas guardar.
-
-
 
 
 /******Uma manei de fazer

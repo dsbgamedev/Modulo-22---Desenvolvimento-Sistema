@@ -7,7 +7,10 @@ max_vel        = 2;
 tempo_estado   = room_speed * 3;
 tempo          = tempo_estado;
 
-campo_visao    = 150;
+tempo_ataque   = room_speed * .5;
+t_ataque       = tempo_ataque
+
+campo_visao    = 100;
 tempo_persegue = room_speed * 2;
 t_persegue     = tempo_persegue;
 
@@ -15,10 +18,9 @@ estado         = "parado";
 destino_x      = 0;
 destino_y      = 0;
 alvo           = noone;
-
 debug          = false;
 
-
+image_speed    = 8 / room_speed;
 
 muda_estado = function()
 {
@@ -60,7 +62,7 @@ controla_estado = function()
 		#region parado
 		case "parado":
 				
-			
+			 image_speed = 6 / room_speed;
 			 //Diminuindo o tempo de persegue
 			 if(t_persegue > 0)	t_persegue--;
 			 //Diminuindo o tempo
@@ -88,13 +90,13 @@ controla_estado = function()
 		break;
 		#endregion
 	
-	
 		#region andando
 		case "andando":
 			 //Estado de andando
 			 tempo--;
 			 //Faz inimigo voltar a cor original
 			 image_blend = c_white;
+			 image_speed  = 8 / room_speed;
 			 //Diminuindo o tempo de persegue
 			 if(t_persegue > 0)	t_persegue--;
 			 
@@ -141,7 +143,7 @@ controla_estado = function()
 		
 			//Uma cor diferente
 			image_blend = c_orange;
-			
+			image_speed = 12 / room_speed;
 			//Indo na direção do player
 			if (alvo)
 			{
@@ -166,7 +168,7 @@ controla_estado = function()
 			var _dist = point_distance(x, y, destino_x, destino_y);
 			
 			//Se o player saiu do meu campo de visão + 70 pixel ou seja uma margem a mais
-			if(_dist > campo_visao + 70)
+			if(_dist > campo_visao + campo_visao / 2)
 			{
 				//Aqui eu paro de seguir...
 				alvo      = noone;
@@ -176,9 +178,9 @@ controla_estado = function()
 			}
 			
 			//Checando se estou muito proximo do player
-			if(_dist < 100)
+			if(_dist < campo_visao / 3)
 			{
-				estado = "ataque";
+				estado = "carrega_ataque";
 				//Aqui eu paro de atacar...
 				tempo	  = tempo_estado;
 			}
@@ -213,8 +215,23 @@ controla_estado = function()
 		
 		#region carrega_ataque
 		case "carrega_ataque":
-		
-		
+			
+			t_ataque--;
+			velh   = 0;
+			velv   = 0;
+			
+			var _green = (t_ataque / tempo_ataque) * 255;
+			var _blue  = (t_ataque / tempo_ataque) * 120;
+			
+			//Alterando o image_blend
+			image_blend = make_color_rgb(255, _green, _blue);
+			
+			if(t_ataque <= 0)
+			{
+				estado = "ataque";	
+				t_ataque = tempo_ataque;
+			}
+				
 		break;
 		#endregion
 			
