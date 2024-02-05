@@ -10,7 +10,8 @@ if(image_index > 1)
 	var _scala = .7;
 }
 
-draw_sprite_ext(spr_sombra, 0, x, y, _scala, _scala, 0, c_white, .2);
+//draw_sprite_ext(spr_sombra, 0, x, y, _scala, _scala, 0, c_white, .2);
+desenha_sombra(spr_sombra, _scala, , .2);//Script Funcoes, desenha_sombra
 draw_self();
 
 

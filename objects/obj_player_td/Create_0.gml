@@ -8,6 +8,7 @@ max_vel		  =  3;
 meu_acel	  = .2;
 acel		  = meu_acel;
 roll_vel      = 5;
+somb_scale    = .6;
 			
 face		  = 0;
 sprite		  = sprite_index;
@@ -175,24 +176,41 @@ estado_movendo = function()
 	//Definindo a sprite correta
 	//Indo para baixo
 	ajusta_sprite (sprites_index);
+	
+	//Ajustando a sombra
+	//Checar se a imagem esta no chão
+	if(clamp(image_ind, 1,3) == image_ind)
+	{
+		//Estou no chão
+		somb_scale = lerp(somb_scale, .6, .1);
+	}
+	else
+	{
+		somb_scale = lerp(somb_scale, .4, .1);
+	}
+		
 		
 	//Saindo do estado de movendo
 	if(abs(velv) <= 0.1 && abs(velh) <= 0.1)
 	{
 		estado = estado_parado;	
+		somb_scale = .6;
 	}
 	
 	if(attack)
 	{
 		estado = estado_ataque;
+		somb_scale = .6;
 	}
 	if(shield)
 	{
 		estado = estado_defesa;
+		somb_scale = .6;
 	}
 	if(roll)
 	{
 		estado = estado_rolando;
+		somb_scale = .6;
 	}
 }
 

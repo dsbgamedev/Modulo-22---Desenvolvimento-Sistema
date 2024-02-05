@@ -43,6 +43,7 @@
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"NPCs","order":9,"path":"folders/Sprites/NPCs.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_frente_escudo_strip4","order":1,"path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},
@@ -80,6 +81,7 @@
     {"name":"Idle_up_strip4","order":2,"path":"sprites/Idle_up_strip4/Idle_up_strip4.yy",},
     {"name":"spr_player_shield_right","order":1,"path":"sprites/spr_player_shield_right/spr_player_shield_right.yy",},
     {"name":"Hit_right","order":1,"path":"sprites/Hit_right/Hit_right.yy",},
+    {"name":"obj_npc","order":5,"path":"objects/obj_npc/obj_npc.yy",},
     {"name":"spr_inimigo_td","order":4,"path":"sprites/spr_inimigo_td/spr_inimigo_td.yy",},
     {"name":"Hit_up53","order":2,"path":"sprites/Hit_up53/Hit_up53.yy",},
     {"name":"run_up_strip8","order":2,"path":"sprites/run_up_strip8/run_up_strip8.yy",},
