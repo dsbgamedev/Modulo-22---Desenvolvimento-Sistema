@@ -43,7 +43,6 @@ segue_alvo = function()
 	
 	//Definindo a posição da camera(Movendo a camera depois que o playr se moveu)
 	//camera_set_view_pos(view_camera[0], _cam_x, _cam_y);
-	
 
 }
 //Seguindo o player
