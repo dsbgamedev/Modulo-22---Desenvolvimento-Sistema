@@ -1,9 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_self();
+ajusta_depth();
 
-desenha_sombra(spr_sombra, .8);
 
 
 

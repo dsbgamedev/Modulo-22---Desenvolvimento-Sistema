@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+//ajusta_depth();
+
+/*
 //Colisão horizontal
 if(place_meeting(x + velh, y, obj_chao_td))
 {

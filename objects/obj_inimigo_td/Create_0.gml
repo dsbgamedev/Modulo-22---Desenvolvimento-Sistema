@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited()
+event_inherited();
 
 max_vel        = 2;
+somb_alpha     = .3;
 
 tempo_estado   = room_speed * 3;
 tempo          = tempo_estado;

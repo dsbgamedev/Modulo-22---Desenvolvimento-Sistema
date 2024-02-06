@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Usar as variaveis de movimento, para mover e colidir
+ajusta_depth();
+
 //Colisão horizontal
 if(place_meeting(x + velh, y, obj_chao_td))
 {
@@ -14,7 +17,7 @@ if(place_meeting(x + velh, y, obj_chao_td))
 		{
 			//Estou indo para a direita	
 	       //Eu vou grudar na esquerda do chao
-		   x = _chao.bbox_left - (x - bbox_right)/*sprite_width / 2*/;  
+		   x = _chao.bbox_left + (x - bbox_right)/*sprite_width / 2*/;  
 		}
 		else if(velv < 0)//Estou indo para a esquerda
 		{

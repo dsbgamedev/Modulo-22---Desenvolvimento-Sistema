@@ -9,6 +9,7 @@ meu_acel	  = .2;
 acel		  = meu_acel;
 roll_vel      = 5;
 somb_scale    = .6;
+somb_alpha    = .2;
 			
 face		  = 0;
 sprite		  = sprite_index;
