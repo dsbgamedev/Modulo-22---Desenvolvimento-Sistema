@@ -4,6 +4,9 @@
 //herdando as informações do pai
 event_inherited();
 
+//Debug para testar geral
+global.debug = false;
+
 max_vel		  =  3;
 meu_acel	  = .2;
 acel		  = meu_acel;
@@ -56,6 +59,7 @@ keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("J"), ord("C"));
 keyboard_set_map(ord("L"), ord("Z"));
 keyboard_set_map(ord("K"), ord("X"));
+keyboard_set_map(vk_enter, vk_space);		
 
 
 ajusta_sprite = function(_indice_array)
@@ -125,7 +129,6 @@ controla_player = function()
 		velv = lerp(velv, 0, acel);
 	}
 }
-
 
 estado_parado = function()
 {
@@ -311,6 +314,21 @@ estado_rolando = function()
 		image_spd = 6 / room_speed;
 	}
 }
+
+estado_indo_dialogo = function ()
+{
+	estado_txt = "Indo para o diálogo";		
+}
+
+estado_dialogo = function()
+{
+	estado_txt    = "Dialogo";
+	velh		  = 0;
+	velv		  = 0;
+	face		  = 1;
+	ajusta_sprite (0);	
+}
+
 
 
 //Metodos dentro de metodos

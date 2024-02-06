@@ -14,9 +14,8 @@ if(image_index > 1)
 //desenha_sombra(spr_sombra, somb_scale, , .2);//Script Funcoes, desenha_sombra
 draw_self();
 
-
 //Debug do meu estado
-if(debug)
+if(global.debug)
 {
 	draw_set_halign(1);
 	draw_set_valign(1);

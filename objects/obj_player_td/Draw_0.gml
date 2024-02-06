@@ -7,7 +7,7 @@ desenha_sombra(spr_sombra, somb_scale, , .2);
 draw_sprite_ext(sprite, image_ind,x,y, xscale,image_yscale,image_angle, image_blend, image_alpha);
 
 //Debug do estado
-if(debug)
+if(global.debug)
 {
 	draw_set_valign(1);
 	draw_set_halign(1);

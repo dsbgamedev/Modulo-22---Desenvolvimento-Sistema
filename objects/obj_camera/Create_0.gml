@@ -61,7 +61,7 @@ segue_player = function()
 	segue_alvo();
 	
 	//Se eu apertei espaço eu vou seguir o inimigo
-	if(keyboard_check_released(vk_space)) estado = segue_inimigo;
+	//if(keyboard_check_released(vk_space)) estado = segue_inimigo;
 	
 }
 

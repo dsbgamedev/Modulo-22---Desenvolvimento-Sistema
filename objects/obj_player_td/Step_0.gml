@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 
+if(keyboard_check_released(vk_tab)) global.debug = !global.debug;
+
 //Checando se eu estou no gelo
 //Vai retornar false (-4) e se eu não estou colidindo
 //Vai retornar o id de quem colidiu comigo (Do gelo)
