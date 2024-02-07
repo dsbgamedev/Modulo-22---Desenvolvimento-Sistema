@@ -13,6 +13,7 @@ acel		  = meu_acel;
 roll_vel      = 5;
 somb_scale    = .6;
 somb_alpha    = .2;
+
 			
 face		  = 0;
 sprite		  = sprite_index;
@@ -21,6 +22,7 @@ estado		  = noone;
 estado_txt    = "parado";
 			
 debug		  = false;
+npc_dialogo   = noone;
 
 attack        = false;
 shield        = false;
@@ -65,7 +67,7 @@ keyboard_set_map(vk_enter, vk_space);
 ajusta_sprite = function(_indice_array)
 {
 	
-	//Checando ase a sprite que eu estou usando é a que eu deveria estar usando
+	//Checando se a sprite que eu estou usando é a que eu deveria estar usando
 	//Sprite de parado
 	//Sprite de ataque
 	//Isso quer dizer que eu acabei de chegar nesse estado (se a minha sprite esta errada)
@@ -317,7 +319,42 @@ estado_rolando = function()
 
 estado_indo_dialogo = function ()
 {
-	estado_txt = "Indo para o diálogo";		
+	estado_txt = "Indo para o diálogo";
+	velh = 0;
+	velv = 0;
+	
+	ajusta_sprite (1);
+	
+	//Checando se eu estou na direita ou esquerda
+	//Me movendo na horizontal SE eu não estou na posição correta
+	if(npc_dialogo)
+	{
+		var _x  = npc_dialogo.x;
+		var _y  = npc_dialogo.y + npc_dialogo.margem ;
+		
+		if(bbox_top != _y) 
+		{
+		    //Ajustando o velv
+			velv = sign(_y - bbox_top);
+			//Ajustando a face
+			face = velv < 0 ? 1 : 3;
+			y = round(y);
+		}
+		else  if(x != _x)
+		{
+			face = 0;
+			//Me movo
+			velh = sign(_x - x);		
+			//Eu mudo meu xscale dele com base no velh
+			xscale = velh;
+			x = round(x);//round arredonda numero
+		}
+		else
+		{
+			//Estou na posição correta, vou para o dialogo
+			estado = estado_dialogo;
+		}
+	}
 }
 
 estado_dialogo = function()

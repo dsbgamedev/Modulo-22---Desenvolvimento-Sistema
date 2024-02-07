@@ -1,14 +1,15 @@
 /// @description Iniciando variáveis
 // You can write your code in this editor
 
-larg   = 100;
-alt    = 100;
+larg   = 30;
+alt    = 20;
 margem = 5;
+
 
 debug_area = function()
 {
 	//Testando
-	var _y = bbox_bottom + margem;
+	var _y = bbox_bottom +  margem;
 	draw_rectangle(x - larg / 2, _y, x + larg / 2, _y + alt, true);
 }
 
@@ -29,13 +30,18 @@ dialogo_area = function()
 		{
 			with(_player)
 			{
-			//Vai par ao estado dialogo
-			estado = estado_indo_dialogo;
+				if(_player.estado != estado_dialogo)
+				{
+					//Vai par ao estado dialogo
+					estado = estado_indo_dialogo;
+				
+					//Passando quem é o npc desse dialogo
+					npc_dialogo = other.id;
+				}
 			}
 		}
 		if(keyboard_check_pressed(vk_escape))
 		{
-			//_player.estado = _player.estado_parado;
 			_player.estado = _player.estado_parado;
 		}
 	}
