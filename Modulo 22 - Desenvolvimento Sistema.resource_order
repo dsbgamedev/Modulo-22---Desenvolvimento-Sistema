@@ -79,6 +79,7 @@
     {"name":"Window_0","order":1,"path":"sprites/Window_0/Window_0.yy",},
     {"name":"obj_entidade","order":2,"path":"objects/obj_entidade/obj_entidade.yy",},
     {"name":"Idle_up_strip4","order":2,"path":"sprites/Idle_up_strip4/Idle_up_strip4.yy",},
+    {"name":"obj_dialogo","order":7,"path":"objects/obj_dialogo/obj_dialogo.yy",},
     {"name":"spr_player_shield_right","order":1,"path":"sprites/spr_player_shield_right/spr_player_shield_right.yy",},
     {"name":"Hit_right","order":1,"path":"sprites/Hit_right/Hit_right.yy",},
     {"name":"obj_npc","order":5,"path":"objects/obj_npc/obj_npc.yy",},

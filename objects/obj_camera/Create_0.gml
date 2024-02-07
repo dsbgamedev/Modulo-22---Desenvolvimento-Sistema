@@ -41,7 +41,7 @@ segue_alvo = function()
 	x = lerp(x, alvo.x, .1);
 	y = lerp(y, alvo.y, .1);
 	
-	//Definindo a posição da camera(Movendo a camera depois que o playr se moveu)
+	//Definindo a posição da camera(Movendo a camera depois que o player se moveu)
 	//camera_set_view_pos(view_camera[0], _cam_x, _cam_y);
 
 }

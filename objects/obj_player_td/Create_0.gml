@@ -364,6 +364,13 @@ estado_dialogo = function()
 	velv		  = 0;
 	face		  = 1;
 	ajusta_sprite (0);	
+	
+	//Criando o dialogo
+	//Checando se ele ainda nao existe
+	if(!instance_exists(obj_dialogo))
+	{
+		instance_create_depth(0, 0, 0, obj_dialogo);	
+	}
 }
 
 
