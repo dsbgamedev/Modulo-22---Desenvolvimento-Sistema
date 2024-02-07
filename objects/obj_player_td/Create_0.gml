@@ -369,7 +369,13 @@ estado_dialogo = function()
 	//Checando se ele ainda nao existe
 	if(!instance_exists(obj_dialogo))
 	{
-		instance_create_depth(0, 0, 0, obj_dialogo);	
+		var _obj_dialogo = instance_create_depth(0, 0, 0, obj_dialogo);	
+		//Passando o dialogo do NPC para o objeto dialogo
+		with(npc_dialogo)
+		{
+			//Dialogo do objeto dialogo |  Dialogo do NPC
+			_obj_dialogo.dialogo         = dialogo;
+		}
 	}
 }
 

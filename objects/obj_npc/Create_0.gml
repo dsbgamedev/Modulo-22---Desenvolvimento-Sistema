@@ -1,10 +1,17 @@
 /// @description Iniciando variáveis
 // You can write your code in this editor
 
+//Criando a base do meu diálogo
+dialogo = 
+{
+	texto	: ["Testando 12345 kkkkkkk"],
+	retrato : [],
+	txt_vel : .3
+}
+
 larg   = 30;
 alt    = 20;
 margem = 5;
-
 
 debug_area = function()
 {
