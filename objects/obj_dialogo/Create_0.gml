@@ -19,7 +19,7 @@ cria_dialogo = function(_dialogo)
 	var _escala_x = _gui_w / _spr_w;//vai retornar o tamanho da escala dele
 	var _escala_y = (_gui_h * .2) / _spr_h;	
 	
-	var _txt		= _dialogo.texto[1];
+	var _txt		= _dialogo.texto[0];
 	var _txt_atual  = string_copy(_txt, 1, indice);
 	var _txt_tam    = string_length(_txt);//verifica o tamanho da letra
 	var _txt_vel    = _dialogo.txt_vel;
