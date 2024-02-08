@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_heart_strip5",
+  "name": "spr_heart_strip566",
   "bbox_bottom": 10,
   "bbox_left": 0,
   "bbox_right": 16,
@@ -58,11 +58,11 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d658373d-93ae-4e89-9756-21db91028d40","path":"sprites/spr_heart_strip5/spr_heart_strip5.yy",},},},"Disabled":false,"id":"283de0dc-dacf-4419-8ab2-fcb055375379","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e37b2c0f-2f24-440c-99eb-81f487f817b9","path":"sprites/spr_heart_strip5/spr_heart_strip5.yy",},},},"Disabled":false,"id":"8838df24-f8d7-434c-9c42-d55d20beadf3","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd4e104a-3fa1-4484-8045-a960667d5d7d","path":"sprites/spr_heart_strip5/spr_heart_strip5.yy",},},},"Disabled":false,"id":"22069934-1d4c-4ae6-8127-2f7b15b28c88","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"06fef7cb-d724-4014-90eb-202bcbf5ce29","path":"sprites/spr_heart_strip5/spr_heart_strip5.yy",},},},"Disabled":false,"id":"7761f23c-06bf-471b-97f4-d520af1f293a","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"75c9ce2f-3879-4891-9793-677fd88a2b47","path":"sprites/spr_heart_strip5/spr_heart_strip5.yy",},},},"Disabled":false,"id":"c09a9aa3-4ce9-455e-bffd-14bf1adc06b3","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d658373d-93ae-4e89-9756-21db91028d40","path":"sprites/spr_heart_strip566/spr_heart_strip566.yy",},},},"Disabled":false,"id":"499bd098-e73d-4cd2-9469-4d047c2bf804","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e37b2c0f-2f24-440c-99eb-81f487f817b9","path":"sprites/spr_heart_strip566/spr_heart_strip566.yy",},},},"Disabled":false,"id":"275b1b6c-65df-4e52-a5a4-7fc4f7ab2e21","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd4e104a-3fa1-4484-8045-a960667d5d7d","path":"sprites/spr_heart_strip566/spr_heart_strip566.yy",},},},"Disabled":false,"id":"23a47e7e-4dc9-4d69-8443-7d5f6bf6f3b4","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"06fef7cb-d724-4014-90eb-202bcbf5ce29","path":"sprites/spr_heart_strip566/spr_heart_strip566.yy",},},},"Disabled":false,"id":"485328e8-dca6-47da-9fe9-638b6bb9a832","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"75c9ce2f-3879-4891-9793-677fd88a2b47","path":"sprites/spr_heart_strip566/spr_heart_strip566.yy",},},},"Disabled":false,"id":"ee7a16dd-5eaf-4708-b213-f22eb68910b3","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
