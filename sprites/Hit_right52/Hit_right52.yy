@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Player/Hit.yy",
+    "path": "folders/Sprites/TopDown/Player/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

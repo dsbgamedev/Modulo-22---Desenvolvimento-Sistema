@@ -30,7 +30,7 @@
   "origin": 9,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Player/Attack.yy",
+    "path": "folders/Sprites/TopDown/Player/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

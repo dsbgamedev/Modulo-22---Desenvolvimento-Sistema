@@ -30,7 +30,7 @@
   "origin": 0,
   "parent": {
     "name": "Inimigos",
-    "path": "folders/Sprites/Inimigos.yy",
+    "path": "folders/Sprites/TopDown/Inimigos.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

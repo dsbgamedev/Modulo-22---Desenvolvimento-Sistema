@@ -4,8 +4,8 @@
 //Criando a base do meu diálogo
 dialogo = 
 {
-	texto	: ["Testando 12345 kkkkkkk"],
-	retrato : [],
+	texto	: ["Testando 12345kkkk kksdsdssk 333444gtd s4weer wetfdfdfsdfd sfsdfsdfsdf dsfsdfsdfsd fsdfsdfsdfs dfsdfdsf sdfsdfsdf sdfsd fsdfsdfsdf c1233212 313132132 1321321321 321311331 313131313131", "denovo o texto segue"],
+    retrato : [spr_retrato_npc, spr_retrato_player],
 	txt_vel : .3
 }
 

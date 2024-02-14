@@ -28,7 +28,7 @@
   "origin": 9,
   "parent": {
     "name": "Shield",
-    "path": "folders/Sprites/Player/Shield.yy",
+    "path": "folders/Sprites/TopDown/Player/Shield.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

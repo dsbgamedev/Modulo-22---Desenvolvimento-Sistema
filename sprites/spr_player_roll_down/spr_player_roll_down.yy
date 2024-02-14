@@ -33,7 +33,7 @@
   "origin": 9,
   "parent": {
     "name": "Roll",
-    "path": "folders/Sprites/Player/Roll.yy",
+    "path": "folders/Sprites/TopDown/Player/Roll.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

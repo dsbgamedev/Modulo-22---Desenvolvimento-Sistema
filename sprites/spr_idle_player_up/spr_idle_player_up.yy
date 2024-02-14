@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Player/Idle.yy",
+    "path": "folders/Sprites/TopDown/Player/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

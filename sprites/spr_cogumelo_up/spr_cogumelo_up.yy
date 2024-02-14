@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Cogumelo",
-    "path": "folders/Sprites/Inimigos/Cogumelo.yy",
+    "path": "folders/Sprites/TopDown/Inimigos/Cogumelo.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
