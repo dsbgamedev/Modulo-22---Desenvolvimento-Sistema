@@ -4,6 +4,13 @@
 draw_text(20,20, global.pause);
 
 
+//Escurecendo a tela se o jogo esta pausado
+
+if(global.pause)
+{
+	desenha_pause();
+}
+
 
 
 
