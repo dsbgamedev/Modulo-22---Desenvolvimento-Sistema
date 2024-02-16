@@ -109,6 +109,7 @@
     {"id":{"name":"spr_idle_player_down","path":"sprites/spr_idle_player_down/spr_idle_player_down.yy",},},
     {"id":{"name":"girando_down_Sheet_strip8","path":"sprites/girando_down_Sheet_strip8/girando_down_Sheet_strip8.yy",},},
     {"id":{"name":"Rosto_xaman","path":"sprites/Rosto_xaman/Rosto_xaman.yy",},},
+    {"id":{"name":"obj_jogo","path":"objects/obj_jogo/obj_jogo.yy",},},
     {"id":{"name":"spr_player_direita_escudo_strip3","path":"sprites/spr_player_direita_escudo_strip3/spr_player_direita_escudo_strip3.yy",},},
     {"id":{"name":"spr_sombra","path":"sprites/spr_sombra/spr_sombra.yy",},},
     {"id":{"name":"obj_player_td","path":"objects/obj_player_td/obj_player_td.yy",},},

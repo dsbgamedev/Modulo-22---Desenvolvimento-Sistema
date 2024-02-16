@@ -2,12 +2,12 @@
 // You can write your code in this editor
 
 //Criando a base do meu diálogo
-dialogo = 
+dialogo = //Struct estrutaras e constutores
 {
 	texto	: ["Testando 12345kkkk kksdsdssk 333444gtd s4weer wetfdfdfsdfd sfsdfsdfsdf dsfsdfsdfsd fsdfsdfsdfs dfsdfdsf sdfsdfsdf sdfsd fsdfsdfsdf c1233212 313132132 1321321321 321311331 313131313131", "denovo o texto segue"],
     retrato : [spr_retrato_npc, spr_retrato_player],
 	txt_vel : .3
-}
+};
 
 larg   = 30;
 alt    = 20;
@@ -27,6 +27,7 @@ dialogo_area = function()
 	var _player = collision_rectangle(x - larg / 2, _y, x + larg / 2, _y + alt, obj_player_td, 0, 1);	
 	
 	image_blend = c_white;	
+	
 	//Se o player esta colidindo na área
 	if(_player)
 	{

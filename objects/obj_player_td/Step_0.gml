@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Se o jogo esta pausado, eu não rodo nada daqui
+if(global.pause) exit;
 
 if(keyboard_check_released(vk_tab)) global.debug = !global.debug;
 
