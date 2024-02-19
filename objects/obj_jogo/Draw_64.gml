@@ -10,6 +10,7 @@ if(global.pause)
 	desenha_pause();
 	
 	//Desenha inventario
+	desenha_inventario();
 }
 else
 {

@@ -3,6 +3,9 @@
 
 global.pause = false;
 
+//Definindo o tamanho do gui
+display_set_gui_size(512,288);
+
 desenha_pause = function()
 {
 	var _w = display_get_gui_width();
@@ -33,6 +36,21 @@ desenha_pause = function()
 	//Configurar o efeito de blur
 }
 
+
+//Desenha inventario
+desenha_inventario = function()
+{
+	//Pegando as dimensões da minha tela
+	var _gui_w = display_get_gui_width();
+	var _gui_h = display_get_gui_height();
+	
+	//Verificando o tamanho do fundo inventario
+	show_message(_gui_w);
+	
+	//Desenhando a caixa no meio
+	draw_sprite(spr_inventario_fundo, 0, _gui_w/2, _gui_h/2);
+	
+}
 
 
 
