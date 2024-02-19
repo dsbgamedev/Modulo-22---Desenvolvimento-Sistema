@@ -3,8 +3,6 @@
 
 event_inherited();
 
-
-
 controla_estado();
 muda_estado();
 controla_sprite();
