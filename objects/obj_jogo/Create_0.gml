@@ -9,6 +9,7 @@ ds_grid_clear(global.inventario, 0);
 //Me dando uma arma
 global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
 global.inventario[# 0, 1] = global.armas[| armas.espada_cristal];
+global.inventario[# 0, 0] = global.armas[| armas.espada_ouro];
 
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
@@ -127,8 +128,16 @@ desenha_inventario = function()
 		
 			//Checando se a caixa que estou desenhando agora é a da seleção atual
 			var _selecionado = (_sel_x == j && _sel_y == i); //se for verdade retornar 1 se nao ele retornar 0
-			
 			draw_sprite_stretched(spr_inventario_caixa, _selecionado, _x1, _y1, _grid_w, _grid_h );
+			
+			//Checando se a minha seleção atual existe item
+			var _item_atual = global.inventario [# j, i];
+			//Se a seleção atual possui valor que não seja nulo(0, -1,-2 ou qualquer valor negativo)
+			//Então eu tenho algum item
+			if(_item_atual)
+			{
+				draw_sprite(_item_atual.spr, _item_atual.arma_id, _x1, _y1);
+			}
 			
 		}
 	}
