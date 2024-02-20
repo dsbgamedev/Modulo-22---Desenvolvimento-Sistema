@@ -6,6 +6,10 @@ global.pause = false;
 global.inventario = ds_grid_create(4, 4); //4 colunas 4 linhs
 ds_grid_clear(global.inventario, 0);
 
+//Me dando uma arma
+global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
+global.inventario[# 0, 1] = global.armas[| armas.espada_cristal];
+
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
 

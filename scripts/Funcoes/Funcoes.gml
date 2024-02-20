@@ -28,6 +28,13 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
 	vel     = _vel;
 }
 
+enum armas
+{
+	espada_madeira,
+	espada_cristal,
+	espada_ouro
+}
+
 //Criando a minha lista de armas
 global.armas = ds_list_create();
 
