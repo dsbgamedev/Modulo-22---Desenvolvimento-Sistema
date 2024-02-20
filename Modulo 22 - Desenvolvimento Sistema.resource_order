@@ -47,6 +47,7 @@
     {"name":"Shield","order":6,"path":"folders/Sprites/TopDown/Player/Shield.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Armas","order":9,"path":"folders/Sprites/TopDown/Armas.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_inventario_fundo","order":2,"path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},
