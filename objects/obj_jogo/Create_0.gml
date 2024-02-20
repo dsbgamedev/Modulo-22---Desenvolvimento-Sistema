@@ -43,6 +43,9 @@ desenha_pause = function()
 //Desenha inventario
 desenha_inventario = function()
 {
+	//Variáveis para saber a seleção X e Y
+	static _sel_x = 0, _sel_y = 0;
+	
 	//Pegando as dimensões da minha tela
 	var _gui_w			= display_get_gui_width();
 	var _gui_h			= display_get_gui_height();
@@ -73,7 +76,6 @@ desenha_inventario = function()
 	//Parea determinar o tamanho de cada quadrado eu preciso
 	//levar em conta o tamanho de cada quadrado, com as margens tambem inclusas
  	
-	
 	//Desenhando a caixa no meio
 	//draw_sprite(spr_inventario_fundo, 0, _gui_w/2 - _spr_w/2, _gui_h/2 - _spr_h/2);
 	//Desenhando a caixa com dimensões espeificas
@@ -85,6 +87,10 @@ desenha_inventario = function()
 	//Desenhnado o retangulo na parte das informações do item
 	draw_rectangle( _desc_x, _desc_y , _desc_x + _desc_w , _desc_y + _desc_h , true );
 
+	//Selecionar os items atravez do teclado
+	//if(keyboard_check_released(vk_up)) _sel_y--;	
+	//if(keyboard_check_released(vk_down)) _sel_y++;	
+	
 	//Desenhando os itens no espaço dos itens
 	for(var i = 0; i < _lins; i++)
 	{
@@ -94,7 +100,12 @@ desenha_inventario = function()
 			//Levar a margem da grid em conta eme relação ao j e o i
 			var _x1 = _item_x + _grid_w * j + (_grid_marg_x * j) + _grid_marg_x;
 			var _y1 = _item_y + _grid_h * i + (_grid_marg_y * i) + _grid_marg_y;
-			draw_sprite_stretched(spr_inventario_caixa, 0, _x1, _y1, _grid_w, _grid_h );
+		
+			//Checando se a caixa que estou desenhando agora é a da seleção atual
+			var _selecionado = (_sel_x == j && _sel_y == i); //se for verdade retornar 1 se nao ele retornar 0
+			
+			draw_sprite_stretched(spr_inventario_caixa, _selecionado, _x1, _y1, _grid_w, _grid_h );
+			
 		}
 	}
 
