@@ -39,7 +39,6 @@ desenha_pause = function()
 	//Configurar o efeito de blur
 }
 
-
 //Desenha inventario
 desenha_inventario = function()
 {
@@ -72,6 +71,9 @@ desenha_inventario = function()
 	//Preciso checar o tamanho total subtraindo dele as margens que criei
 	var _grid_w			= (_item_w - _cols * _grid_marg_x) div _cols; //div para pegar numeros inteiros e nao quebrado
 	var _grid_h			= (_item_h - _lins * _grid_marg_y) div _lins;
+	//Passa posição x do mouse dentro da GUI
+	var _mouse_x		= device_mouse_x_to_gui(0);
+	var _mouse_y		= device_mouse_y_to_gui(0);
 	
 	//Parea determinar o tamanho de cada quadrado eu preciso
 	//levar em conta o tamanho de cada quadrado, com as margens tambem inclusas
@@ -89,14 +91,32 @@ desenha_inventario = function()
 
 	//Selecionar os items atravez do teclado
 	//if(keyboard_check_released(vk_up)) _sel_y--;	
-	//if(keyboard_check_released(vk_down)) _sel_y++;	
+	//if(keyboard_check_released(vk_down)) _sel_y++;
+	
+	var _mouse_na_area = _mouse_x == clamp(_mouse_x, _item_x, _item_x + _item_w)&&
+						 _mouse_y == clamp(_mouse_y, _item_y, _item_y + _item_h);
 	
 	//Desenhando os itens no espaço dos itens
 	for(var i = 0; i < _lins; i++)
 	{
 		for(var j = 0; j < _cols; j++)
 		{
-			//draw_sprite(spr_inventario_caixa, 0, _item_x + j * 30, _item_y + i * 30);
+			//Garantir que esse codigo so vai rodar se eu estiver com o mouse 
+			//na area de seleção
+			//Checando a posição do mouse dentro do espaço dos itens
+			//Criando o espaço inicial e levando em conta a margem dos itens
+			//Checando se o mouse esta na area
+			if(_mouse_na_area)
+			{
+				_sel_y = (_mouse_y - _item_y - (_grid_marg_y * i)) div _grid_h;
+		
+				_sel_x = (_mouse_x - _item_x - (_grid_marg_x * j)) div _grid_w;
+			}
+			
+			//Grantindo que o _sel_x e y não passem do limite da minha grid
+			_sel_x = clamp(_sel_x, 0, _cols - 1);
+			_sel_y = clamp(_sel_y, 0, _lins - 1);
+			
 			//Levar a margem da grid em conta eme relação ao j e o i
 			var _x1 = _item_x + _grid_w * j + (_grid_marg_x * j) + _grid_marg_x;
 			var _y1 = _item_y + _grid_h * i + (_grid_marg_y * i) + _grid_marg_y;
