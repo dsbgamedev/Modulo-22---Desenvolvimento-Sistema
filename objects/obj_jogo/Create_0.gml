@@ -3,6 +3,9 @@
 
 global.pause = false;
 
+global.inventario = ds_grid_create(4, 4); //4 colunas 4 linhs
+ds_grid_clear(global.inventario, 0);
+
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
 
@@ -43,12 +46,15 @@ desenha_inventario = function()
 	//Pegando as dimensões da minha tela
 	var _gui_w = display_get_gui_width();
 	var _gui_h = display_get_gui_height();
-	
-	//Verificando o tamanho do fundo inventario
-	show_message(_gui_w);
+	var _spr_w = sprite_get_width(spr_inventario_fundo);
+	var _spr_h = sprite_get_width(spr_inventario_fundo);
+	var _inv_w = _gui_w * .6; //70%
+	var _inv_h = _gui_h * .6; //70%
 	
 	//Desenhando a caixa no meio
-	draw_sprite(spr_inventario_fundo, 0, _gui_w/2, _gui_h/2);
+	//draw_sprite(spr_inventario_fundo, 0, _gui_w/2 - _spr_w/2, _gui_h/2 - _spr_h/2);
+	//Desenhando a caixa com dimensões espeificas
+	draw_sprite_stretched(spr_inventario_fundo, 0, _gui_w/2 - _inv_w/2, _gui_h/2 - _inv_h/2,_inv_w, _inv_h);
 	
 }
 

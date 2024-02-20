@@ -26,6 +26,7 @@
     {"name":"Hit","order":5,"path":"folders/Sprites/Assets None/Heroi/Hit.yy",},
     {"name":"Parado","order":6,"path":"folders/Sprites/Assets None/Heroi/Parado.yy",},
     {"name":"Inimigo","order":2,"path":"folders/Sprites/Assets None/Inimigo.yy",},
+    {"name":"Inventario","order":7,"path":"folders/Sprites/Assets None/Inventario.yy",},
     {"name":"Npc","order":3,"path":"folders/Sprites/Assets None/Npc.yy",},
     {"name":"Portrait","order":4,"path":"folders/Sprites/Assets None/Portrait.yy",},
     {"name":"Tiles","order":5,"path":"folders/Sprites/Assets None/Tiles.yy",},
@@ -46,7 +47,6 @@
     {"name":"Shield","order":6,"path":"folders/Sprites/TopDown/Player/Shield.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Inventario","order":7,"path":"folders/Sprites/Assets None/Inventario.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_inventario_fundo","order":2,"path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},
