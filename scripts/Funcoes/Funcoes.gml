@@ -15,3 +15,17 @@ function ajusta_depth()
 	depth = -y;//Pega o vlaor do Y e inverte colocar no objeto entidade no começo
 }
 
+///@function cria_arma
+function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
+{
+	//Criando o ID das armas
+	arma_id = 0;
+	nome    = _nome;
+}
+
+//Criando a minha arma
+faca = new cria_arma("faca gelo", "faca congelante", spr_chao,3,1);
+var _b = new cria_arma("espada madeira", "espada 2", spr_gelo_td,1,1) 
+
+show_message(faca);
+show_message(_b);
