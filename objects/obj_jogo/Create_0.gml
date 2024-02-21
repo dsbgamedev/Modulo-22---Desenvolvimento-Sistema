@@ -47,6 +47,9 @@ desenha_pause = function()
 //Desenha inventario
 desenha_inventario = function()
 {
+	
+	static _item_mouse =0;
+	
 	//Variáveis para saber a seleção X e Y
 	static _sel_x = 0, _sel_y = 0;
 	
@@ -114,6 +117,11 @@ desenha_inventario = function()
 				_item_sel.usa_item();	
 			}
 		}
+		if(mouse_check_button_released(mb_left))
+		{
+			//Se eu cliquei com o botão esquerdo eu quero poder mover o item
+			_item_mouse = troca_item(_sel_x, _sel_y, _item_mouse);
+		}
 	}
 	
 	var _equipe_x = _inv_x + _inv_w / 2 - _grid_w / 2;
@@ -121,8 +129,13 @@ desenha_inventario = function()
 	//Desenhando a caixa do item equipado
 	draw_sprite_stretched(spr_inventario_caixa, 0,_equipe_x , _equipe_y, _grid_w, _grid_h);
 	//Desenhando o equipamento atual
-	
-	
+	if(global.arma_player)
+	{
+		var _equipe_w = _grid_w * .5;
+		var _equipe_h = _grid_h * .5;
+		draw_sprite_stretched(global.arma_player.spr, global.arma_player.meu_id, _equipe_x + _equipe_w / 2, _equipe_y + _equipe_h / 2,
+							  _equipe_w ,_equipe_h);
+	}
 	//Desenhando os itens no espaço dos itens
 	for(var i = 0; i < _lins; i++)
 	{
@@ -221,7 +234,15 @@ encontra_item = function(_x, _y)
 	return global.inventario[# _x, _y];	
 }
 
-
+troca_item = function(_x, _y, _item)
+{
+	//Pegando o item na posição do inventário	
+	var _item_guardado = global.inventario[# _x, _y];
+	//Colocando item que ele me deu, na posição do inventário
+	global.inventario[# _x, _y] = _item;
+	
+	return _item_guardado;
+}
 
 
 
