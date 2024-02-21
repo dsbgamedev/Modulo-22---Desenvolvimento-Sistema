@@ -55,8 +55,8 @@ desenha_inventario = function()
 	var _gui_h			= display_get_gui_height();
 	var _spr_w			= sprite_get_width(spr_inventario_fundo);
 	var _spr_h			= sprite_get_width(spr_inventario_fundo);
-	var _inv_w			= _gui_w * .6; //70%
-	var _inv_h			= _gui_h * .6; //70%
+	var _inv_w			= _gui_w * .4; //70%
+	var _inv_h			= _gui_h * .4; //70%
 	var _inv_x			= _gui_w / 2 - _inv_w / 2;
 	var _inv_y			= _gui_h / 2 - _inv_h / 2;
 	var _marg_x			= _inv_w * 0.015;
@@ -131,12 +131,37 @@ desenha_inventario = function()
 			draw_sprite_stretched(spr_inventario_caixa, _selecionado, _x1, _y1, _grid_w, _grid_h );
 			
 			//Checando se a minha seleção atual existe item
-			var _item_atual = global.inventario [# j, i];
+			var _item_atual = encontra_item(j,i);
 			//Se a seleção atual possui valor que não seja nulo(0, -1,-2 ou qualquer valor negativo)
 			//Então eu tenho algum item
 			if(_item_atual)
 			{
-				draw_sprite(_item_atual.spr, _item_atual.arma_id, _x1, _y1);
+		
+				var _item_atual_w = _grid_w * .5;
+				var _item_atual_h = _grid_h * .5;
+				//Cria depois de saber o tamanho dele na grid
+				var _item_atual_x = _x1 + _item_atual_w / 2;
+				var _item_atual_y = _y1 + _item_atual_h / 2;
+				
+				//Desenhar a SPRITE do item
+				draw_sprite_stretched(_item_atual.spr, _item_atual.meu_id,
+				_item_atual_x, _item_atual_y,_item_atual_w, _item_atual_h);
+			}
+			
+			//Pegando o item que o cursor esta por cima
+			var _sel_atual = encontra_item(_sel_x, _sel_y);
+			//Se eu tenho algum item na seleção atual, eu desenho ele no espaço de descrição
+			if(_sel_atual)
+			{
+				var _sel_atual_w = _grid_w * .5;
+				var _sel_atual_h = _grid_h * .5;
+				var _sel_atual_x = _desc_x + _desc_w / 2 - _sel_atual_w  / 2;
+				var _sel_atual_y = _desc_y + _sel_atual_h / 2;
+				//Desenhando a spirte
+				draw_sprite_stretched(_sel_atual.spr,_sel_atual.meu_id,
+				_sel_atual_x, _sel_atual_y,_sel_atual_w,_sel_atual_h);
+				//Desenhando o texto
+				draw_text_ext(_desc_x, _desc_y + 20, _sel_atual.desc, 20, _desc_w);
 			}
 			
 		}
@@ -144,6 +169,12 @@ desenha_inventario = function()
 
 }
 
+
+//Encontra item
+encontra_item = function(_x, _y)
+{
+	return global.inventario[# _x, _y];	
+}
 
 
 

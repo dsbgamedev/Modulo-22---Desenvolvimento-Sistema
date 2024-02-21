@@ -20,7 +20,7 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
 {
 	//Criando o ID das armas
 	static qtd_armas = 0;
-	arma_id = qtd_armas++;
+	meu_id = qtd_armas++;
 	nome    = _nome;
 	desc    = _desc;
 	spr     = _spr;

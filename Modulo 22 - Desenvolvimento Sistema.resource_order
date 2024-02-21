@@ -33,6 +33,7 @@
     {"name":"Plataforma","order":3,"path":"folders/Sprites/Plataforma.yy",},
     {"name":"Tiles","order":7,"path":"folders/Sprites/Tiles.yy",},
     {"name":"TopDown","order":4,"path":"folders/Sprites/TopDown.yy",},
+    {"name":"Armas","order":9,"path":"folders/Sprites/TopDown/Armas.yy",},
     {"name":"GUI","order":8,"path":"folders/Sprites/TopDown/GUI.yy",},
     {"name":"Inimigos","order":7,"path":"folders/Sprites/TopDown/Inimigos.yy",},
     {"name":"Cogumelo","order":6,"path":"folders/Sprites/TopDown/Inimigos/Cogumelo.yy",},
@@ -47,7 +48,6 @@
     {"name":"Shield","order":6,"path":"folders/Sprites/TopDown/Player/Shield.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Armas","order":9,"path":"folders/Sprites/TopDown/Armas.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_inventario_fundo","order":2,"path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},
