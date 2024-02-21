@@ -130,11 +130,19 @@ desenha_inventario = function()
 		{
 			if(mouse_check_button_released(mb_left))	
 			{
-				var _novo_item = instance_create_layer(mouse_x,mouse_y, "player", obj_item);
-				//Avisando o item, qual item ele é
-				_novo_item.item = _item_mouse;
-				//Apagando o item do mouse
-				_item_mouse = 0;
+				
+				//Checando quantas armas iguais eu tenho
+				var _qtd_armas = conta_armas(global.arma_player or _qtd_armas > 0);
+				
+				if(_item_mouse != global.arma_player)
+				{
+										
+					var _novo_item = instance_create_layer(mouse_x,mouse_y, "player", obj_item);
+					//Avisando o item, qual item ele é
+					_novo_item.item = _item_mouse;
+					//Apagando o item do mouse
+					_item_mouse = 0;
+				}	
 			}
 		}
 	}
@@ -264,6 +272,20 @@ troca_item = function(_x, _y, _item)
 	global.inventario[# _x, _y] = _item;
 	
 	return _item_guardado;
+}
+
+conta_armas = function(_arma)
+{
+	var _qtd = 0;
+	for(var i = 0; i < ds_grid_height(global.inventario); i++)
+	{
+		for(var j = 0; j < ds_grid_width(global.inventario); j++)
+		{
+			if(global.inventario[# j, i] == _arma) _qtd++;
+		}
+	}
+	
+	return _qtd;
 }
 
 
