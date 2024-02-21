@@ -26,6 +26,14 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
 	spr     = _spr;
 	dano    = _dano;
 	vel     = _vel;
+	
+	
+	usa_item = function()
+	{
+		//Equipando a arma	
+		global.arma_player = global.armas[| meu_id];
+	}
+	
 }
 
 enum armas
@@ -36,7 +44,8 @@ enum armas
 }
 
 //Criando a minha lista de armas
-global.armas = ds_list_create();
+global.armas		= ds_list_create();
+global.arma_player  = noone;
 
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",

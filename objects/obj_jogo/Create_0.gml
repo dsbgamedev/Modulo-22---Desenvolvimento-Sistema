@@ -101,6 +101,28 @@ desenha_inventario = function()
 	var _mouse_na_area = _mouse_x == clamp(_mouse_x, _item_x, _item_x + _item_w)&&
 						 _mouse_y == clamp(_mouse_y, _item_y, _item_y + _item_h);
 	
+	//Usando o item quando eu apertar o botão direito do mouse
+	//Apenas se eu estiver na area correta
+	if(_mouse_na_area)
+	{
+		var _item_sel = global.inventario[# _sel_x, _sel_y]	
+		//Usando item com o botão direito do mouse
+		if(mouse_check_button_released(mb_right))
+		{
+			if(_item_sel)
+			{
+				_item_sel.usa_item();	
+			}
+		}
+	}
+	
+	var _equipe_x = _inv_x + _inv_w / 2 - _grid_w / 2;
+	var _equipe_y =  _inv_y - _grid_h;
+	//Desenhando a caixa do item equipado
+	draw_sprite_stretched(spr_inventario_caixa, 0,_equipe_x , _equipe_y, _grid_w, _grid_h);
+	//Desenhando o equipamento atual
+	
+	
 	//Desenhando os itens no espaço dos itens
 	for(var i = 0; i < _lins; i++)
 	{
@@ -169,11 +191,22 @@ desenha_inventario = function()
 				//_sel_atual_x, _sel_atual_y, _sel_atual_w * _efeito_x, _sel_atual_h);
 				draw_sprite_ext(_sel_atual.spr, _sel_atual.meu_id, _sel_atual_x, _sel_atual_y, _sel_atual_escala * _efeito_x,
 				_sel_atual_escala, 0, c_white, 1);
-			
+				
+				draw_set_font(fnt_inventario);
 				draw_set_halign(1);//centralizando texto
 				//Desenhando o texto
-				draw_text_ext(_sel_atual_x, _sel_atual_y + _sel_atual_h, _sel_atual.desc, 20, _desc_w);
+				//draw_text_ext(_sel_atual_x, _sel_atual_y + _sel_atual_h, _sel_atual.desc, 20, _desc_w);
+				var _sep = string_height("I");
+				//Desenhando a minha fonte em escala
+				draw_set_color(c_black);
+				draw_text_ext_transformed(_sel_atual_x + 1, _sel_atual_y + _sel_atual_h + 1, _sel_atual.desc, _sep,
+				_desc_w * 10, .1, .1, 0);
+				draw_set_color(c_white);//reseta
+				draw_text_ext_transformed(_sel_atual_x, _sel_atual_y + _sel_atual_h, _sel_atual.desc, _sep,
+				_desc_w * 10, .1, .1, 0);
+				//reseta
 				draw_set_halign(-1);
+				draw_set_font(-1);
 			}
 			
 		}

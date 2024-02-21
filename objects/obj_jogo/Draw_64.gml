@@ -3,8 +3,13 @@
 
 draw_text(20,20, global.pause);
 
-//Escurecendo a tela se o jogo esta pausado
+//Desenhando o nome do equipamento atual
+if(global.arma_player)
+{
+	draw_text(20,40, global.arma_player.nome);
+}
 
+//Escurecendo a tela se o jogo esta pausado
 if(global.pause)
 {
 	desenha_pause();

@@ -51,6 +51,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"spr_inventario_fundo","order":2,"path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},
+    {"name":"fnt_inventario","order":1,"path":"fonts/fnt_inventario/fnt_inventario.yy",},
     {"name":"spr_player_frente_escudo_strip4","order":1,"path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},
     {"name":"spr_inventario_caixa","order":1,"path":"sprites/spr_inventario_caixa/spr_inventario_caixa.yy",},
     {"name":"spr_rampa","order":1,"path":"sprites/spr_rampa/spr_rampa.yy",},

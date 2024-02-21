@@ -71,6 +71,7 @@
     {"id":{"name":"spr_player_roll_down","path":"sprites/spr_player_roll_down/spr_player_roll_down.yy",},},
     {"id":{"name":"Funcoes","path":"scripts/Funcoes/Funcoes.yy",},},
     {"id":{"name":"spr_inventario_fundo","path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},},
+    {"id":{"name":"fnt_inventario","path":"fonts/fnt_inventario/fnt_inventario.yy",},},
     {"id":{"name":"spr_player_frente_escudo_strip4","path":"sprites/spr_player_frente_escudo_strip4/spr_player_frente_escudo_strip4.yy",},},
     {"id":{"name":"Idle_downMagico","path":"sprites/Idle_downMagico/Idle_downMagico.yy",},},
     {"id":{"name":"Tile","path":"sprites/Tile/Tile.yy",},},
