@@ -5,7 +5,7 @@ dialogo      = noone;
 indice       = 1;
 pag          = 0;
 player       = noone;
-//escala_caixa = 0;
+escala_caixa = 1;
 
 
 libera_player = function()
@@ -32,7 +32,7 @@ cria_dialogo = function(_dialogo)
 	draw_set_font(fnt_dialogo);
 	
 	//Convertendo e escala da sprite da caixa de texto de pixel para escala(porcentagem)
-	var _escala_x = (_gui_w / _spr_w)/* * escala_caixa*/;//vai retornar o tamanho da escala dele
+	var _escala_x = (_gui_w / _spr_w) * escala_caixa;/* * escala_caixa*///vai retornar o tamanho da escala dele
 	var _escala_y = (_gui_h * .3) / _spr_h;
 	
 	//Aumentando a escala da caixa

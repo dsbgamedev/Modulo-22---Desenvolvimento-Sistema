@@ -153,15 +153,27 @@ desenha_inventario = function()
 			//Se eu tenho algum item na seleção atual, eu desenho ele no espaço de descrição
 			if(_sel_atual)
 			{
-				var _sel_atual_w = _grid_w * .5;
-				var _sel_atual_h = _grid_h * .5;
-				var _sel_atual_x = _desc_x + _desc_w / 2 - _sel_atual_w  / 2;
-				var _sel_atual_y = _desc_y + _sel_atual_h / 2;
+				var _sel_atual_spr_w	= sprite_get_width(_sel_atual.spr);
+				var _sel_atual_w		= _grid_w * .5;
+				var _sel_atual_h		= _grid_h * .5;
+				
+				//Ajustando a escala da sprite da seleção atual
+				var _sel_atual_escala   = _sel_atual_w / _sel_atual_spr_w;
+				
+				var _sel_atual_x		= _desc_x + _desc_w / 2;
+				var _sel_atual_y		= _desc_y + _sel_atual_h ;
+				var _efeito_x			= sin(2 * get_timer() / 1000000);
+	
 				//Desenhando a spirte
-				draw_sprite_stretched(_sel_atual.spr,_sel_atual.meu_id,
-				_sel_atual_x, _sel_atual_y,_sel_atual_w,_sel_atual_h);
+				//draw_sprite_stretched(_sel_atual.spr,_sel_atual.meu_id,
+				//_sel_atual_x, _sel_atual_y, _sel_atual_w * _efeito_x, _sel_atual_h);
+				draw_sprite_ext(_sel_atual.spr, _sel_atual.meu_id, _sel_atual_x, _sel_atual_y, _sel_atual_escala * _efeito_x,
+				_sel_atual_escala, 0, c_white, 1);
+			
+				draw_set_halign(1);//centralizando texto
 				//Desenhando o texto
-				draw_text_ext(_desc_x, _desc_y + 20, _sel_atual.desc, 20, _desc_w);
+				draw_text_ext(_sel_atual_x, _sel_atual_y + _sel_atual_h, _sel_atual.desc, 20, _desc_w);
+				draw_set_halign(-1);
 			}
 			
 		}
