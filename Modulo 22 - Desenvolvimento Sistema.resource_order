@@ -98,6 +98,7 @@
     {"name":"Idle_up_strip5","order":5,"path":"sprites/Idle_up_strip5/Idle_up_strip5.yy",},
     {"name":"spr_player_roll_up","order":2,"path":"sprites/spr_player_roll_up/spr_player_roll_up.yy",},
     {"name":"cogumelo_jump_up_strip4","order":2,"path":"sprites/cogumelo_jump_up_strip4/cogumelo_jump_up_strip4.yy",},
+    {"name":"obj_item","order":9,"path":"objects/obj_item/obj_item.yy",},
     {"name":"modelo2","order":1,"path":"sprites/modelo2/modelo2.yy",},
     {"name":"Idle_right_strip562","order":4,"path":"sprites/Idle_right_strip562/Idle_right_strip562.yy",},
     {"name":"obj_player_pl","order":1,"path":"objects/obj_player_pl/obj_player_pl.yy",},

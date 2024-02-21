@@ -123,7 +123,22 @@ desenha_inventario = function()
 			_item_mouse = troca_item(_sel_x, _sel_y, _item_mouse);
 		}
 	}
-	
+	else//Mouse nao esta na area do inventario
+	{
+		//Se eu cliquei fora dele e estou com item, eu jogo fora o item
+		if(_item_mouse)
+		{
+			if(mouse_check_button_released(mb_left))	
+			{
+				var _novo_item = instance_create_layer(mouse_x,mouse_y, "player", obj_item);
+				//Avisando o item, qual item ele é
+				_novo_item.item = _item_mouse;
+				//Apagando o item do mouse
+				_item_mouse = 0;
+			}
+		}
+	}
+		
 	var _equipe_x = _inv_x + _inv_w / 2 - _grid_w / 2;
 	var _equipe_y =  _inv_y - _grid_h;
 	//Desenhando a caixa do item equipado
@@ -136,6 +151,7 @@ desenha_inventario = function()
 		draw_sprite_stretched(global.arma_player.spr, global.arma_player.meu_id, _equipe_x + _equipe_w / 2, _equipe_y + _equipe_h / 2,
 							  _equipe_w ,_equipe_h);
 	}
+	
 	//Desenhando os itens no espaço dos itens
 	for(var i = 0; i < _lins; i++)
 	{
@@ -223,6 +239,12 @@ desenha_inventario = function()
 			}
 			
 		}
+	}
+	
+	//Desenhando o item do mouse no mouse
+	if(_item_mouse)
+	{
+		draw_sprite_stretched(_item_mouse.spr, _item_mouse.meu_id, _mouse_x, _mouse_y, _grid_w / 2, _grid_h / 2);	
 	}
 
 }

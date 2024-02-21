@@ -34,6 +34,33 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
 		global.arma_player = global.armas[| meu_id];
 	}
 	
+	pega_item = function()
+	{
+		var _cols = ds_grid_width(global.inventario);
+		var _lins = ds_grid_height(global.inventario);
+		//Checar se tem espaço vazio no inventário
+		for(var i = 0; i < _lins; i++)
+		{
+			for(var j = 0; j < _lins; j++)
+			{
+				//Se o slot atual esta vazio, eu entro nele
+				var _atual = global.inventario[# j, i];
+				if(!_atual)
+				{
+					//Eu vou para esse slot
+					global.inventario[# j, i] = global.armas[| meu_id];
+					
+					//Consegui equipar, eu aviso que deu certo
+					return true;
+				}
+			}
+		}
+		
+		//Terminou o laço de repetição e eu não consegui nada
+		//Eu retorno falso
+		return false;
+	}
+	
 }
 
 enum armas
