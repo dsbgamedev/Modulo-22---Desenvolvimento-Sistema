@@ -8,9 +8,9 @@ if(keyboard_check_released(vk_escape)) global.pause = !global.pause;
 //Se o jogo esta pausado, eu vou parar todas as entidades
 if(global.pause)
 {
-	if(instance_exists(obj_entidade))
+	if(instance_exists(obj_entidade_td))
 	{
-		with(obj_entidade)	
+		with(obj_entidade_td)	
 		{
 			velh = 0;
 			velv = 0;

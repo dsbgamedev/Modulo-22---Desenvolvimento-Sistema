@@ -3,7 +3,7 @@
 
 //Desenhando as sombras de todo mundo!
 //Desenhar de todos que forem uma entidade
-with(obj_entidade)
+with(obj_entidade_td)
 {
 	desenha_sombra(spr_sombra, somb_scale, , somb_alpha);
 }

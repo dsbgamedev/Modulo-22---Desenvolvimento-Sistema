@@ -16,8 +16,8 @@
     "path": "folders/Objects/TopDow.yy",
   },
   "parentObjectId": {
-    "name": "obj_entidade",
-    "path": "objects/obj_entidade/obj_entidade.yy",
+    "name": "obj_entidade_td",
+    "path": "objects/obj_entidade_td/obj_entidade_td.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

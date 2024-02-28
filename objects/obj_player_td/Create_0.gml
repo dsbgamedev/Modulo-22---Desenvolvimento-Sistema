@@ -222,6 +222,8 @@ estado_movendo = function()
 
 estado_ataque = function()
 {
+	static _meu_dano = noone;
+	
 	estado_txt = "Ataque";
 	
 	controla_player();
@@ -233,10 +235,27 @@ estado_ataque = function()
 	velh       = 0;
 	velv       = 0;
 	
+	//Preciso criar o dano
+	//Só crio o meu dano se eu ainda não tenho um dano
+	if(!_meu_dano)
+	{
+		var _dano_x  = x + lengthdir_x(sprite_width, face * 90);
+		var _dano_y  = y + lengthdir_y(sprite_width, face * 90);
+		//A face esta olhando para cima? Se sim o valor de add é a metade da sprite
+		//caso contrario o valor de add é0
+		var _add     = face == 1 ? sprite_height / 2 : 0;
+		
+		_meu_dano =  instance_create_depth(_dano_x, _dano_y - sprite_height/2 + _add,depth,obj_dano_td);
+	}
+		
 	//Saindo do estado de ataque
 	if(image_ind + image_spd >= image_numb)
 	{
 		estado = estado_parado;
+		
+		//Resetando o meu dano
+		instance_destroy(_meu_dano);
+		_meu_dano = noone;
 	}
 }
 
@@ -367,9 +386,9 @@ estado_dialogo = function()
 	
 	//Criando o dialogo
 	//Checando se ele ainda nao existe
-	if(!instance_exists(obj_dialogo))
+	if(!instance_exists(obj_dialogo_td))
 	{
-		var _obj_dialogo = instance_create_depth(0, 0, 0, obj_dialogo);	
+		var _obj_dialogo = instance_create_depth(0, 0, 0, obj_dialogo_td);	
 		_obj_dialogo.player = id;
 		//Passando o dialogo do NPC para o objeto dialogo
 		with(npc_dialogo)

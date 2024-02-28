@@ -137,7 +137,7 @@ desenha_inventario = function()
 				if(_item_mouse != global.arma_player)
 				{
 										
-					var _novo_item = instance_create_layer(mouse_x,mouse_y, "player", obj_item);
+					var _novo_item = instance_create_layer(mouse_x,mouse_y, "player", obj_item_td);
 					//Avisando o item, qual item ele é
 					_novo_item.item = _item_mouse;
 					//Apagando o item do mouse

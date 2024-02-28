@@ -1,12 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_inimigo_td",
+  "name": "obj_npc_td",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":8,"eventType":6,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -15,8 +14,8 @@
     "path": "folders/Objects/TopDow.yy",
   },
   "parentObjectId": {
-    "name": "obj_inimigo_pai_td",
-    "path": "objects/obj_inimigo_pai_td/obj_inimigo_pai_td.yy",
+    "name": "obj_chao_td",
+    "path": "objects/obj_chao_td/obj_chao_td.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -34,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_cogumelo_down",
-    "path": "sprites/spr_cogumelo_down/spr_cogumelo_down.yy",
+    "name": "spr_npc_char",
+    "path": "sprites/spr_npc_char/spr_npc_char.yy",
   },
   "spriteMaskId": null,
   "visible": true,

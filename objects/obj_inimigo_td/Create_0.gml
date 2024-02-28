@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-max_vel        = 2;
+max_vel        =  2;
 somb_alpha     = .3;
 
 tempo_estado   = room_speed * 3;
@@ -15,7 +15,7 @@ campo_visao    = 100;
 tempo_persegue = room_speed * 2;
 t_persegue     = tempo_persegue;
 
-estado         = "parado";
+estado         = "bobao";
 destino_x      = 0;
 destino_y      = 0;
 alvo           = noone;
@@ -82,7 +82,7 @@ muda_estado = function()
 olhando = function()
 {
 
-	var _player = collision_circle(x, y, campo_visao, obj_player_td, false, true);	 
+	var _player = collision_circle(x, y,campo_visao, obj_player_td, false, true);	 
 	//Se o player entrou no campo de visão do inimigo, eu sigo ele 
 	if(_player  && t_persegue <= 0)
 	{
@@ -282,7 +282,12 @@ controla_estado = function()
 				
 		break;
 		#endregion
-			
+		
+		case "bobao":
+			velh = 0;
+			velv = 0;
+			break;
+		
 	}
 
 }
