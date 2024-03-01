@@ -14,6 +14,8 @@ if(image_index > 1)
 //desenha_sombra(spr_sombra, somb_scale, , .2);//Script Funcoes, desenha_sombra
 draw_self();
 
+draw_text(x,y - sprite_height, vida_atual);
+
 //Debug do meu estado
 if(global.debug)
 {

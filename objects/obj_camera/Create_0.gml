@@ -72,7 +72,7 @@ segue_nada = function()
 
 segue_inimigo = function()
 {
-	alvo = obj_inimigo_td;
+	alvo = obj_inimigo_cogumelo_td;
 	
 	segue_alvo();
 	

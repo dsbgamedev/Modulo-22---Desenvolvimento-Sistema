@@ -110,7 +110,7 @@
     {"name":"girando_right_Sheet_strip7","order":1,"path":"sprites/girando_right_Sheet_strip7/girando_right_Sheet_strip7.yy",},
     {"name":"spr_npc_char","order":1,"path":"sprites/spr_npc_char/spr_npc_char.yy",},
     {"name":"Rosto_Player","order":2,"path":"sprites/Rosto_Player/Rosto_Player.yy",},
-    {"name":"obj_inimigo_td","order":4,"path":"objects/obj_inimigo_td/obj_inimigo_td.yy",},
+    {"name":"obj_inimigo_cogumelo_td","order":4,"path":"objects/obj_inimigo_cogumelo_td/obj_inimigo_cogumelo_td.yy",},
     {"name":"Hit_up","order":2,"path":"sprites/Hit_up/Hit_up.yy",},
     {"name":"spr_player_attack_up","order":2,"path":"sprites/spr_player_attack_up/spr_player_attack_up.yy",},
     {"name":"spr_gelo_td","order":2,"path":"sprites/spr_gelo_td/spr_gelo_td.yy",},
