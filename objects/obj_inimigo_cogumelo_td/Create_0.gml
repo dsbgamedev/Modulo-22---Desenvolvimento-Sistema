@@ -244,13 +244,12 @@ controla_estado = function()
 			}
 			
 			//Sendo empurrado
+			velh = lengthdir_x(1, dano_dir);
+			velv = lengthdir_y(1, dano_dir);
 			
-			
-			image_blend = c_yellow;
 			
 			if(timer_dano < 0)
 			{
-				image_blend = c_white;
 				timer_dano  = tempo_dano;
 				estado      = "parado";
 			}

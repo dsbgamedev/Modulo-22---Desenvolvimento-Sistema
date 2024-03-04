@@ -8,6 +8,7 @@ vida_atual = vida_max;
 dano       = 0;
 tempo_dano = room_speed / 2;
 timer_dano = tempo_dano;
+dano_dir   = 0;
 
 max_vel        =  2;
 
@@ -35,13 +36,12 @@ image_speed    = 8 / room_speed;
 
 #region comportamentos / metodos
 
-knockback = function(_x, _y)
-{
-	var _dir = point_direction(_x, _y, x, y);
-	velh     = lengthdir_x(1, _dir);
-	velv     = lengthdir_y(1, _dir);
-	
-}
+//knockback = function(_x, _y)
+//{
+//	var _dir = point_direction(_x, _y, x, y);
+//	velh     = lengthdir_x(1, _dir);
+//	velv     = lengthdir_y(1, _dir);
+//}
 
 controla_sprite =  function ()
 {
@@ -90,11 +90,10 @@ toma_dano = function(_dano = 1)
 	//Defina um valor de dano que ele deve tomar
 	//Tiro 1 de vida
 	//Só levo dano se eu AINDA não estou levando dano
-	if(estado!= dano)
-	{
+	
 		estado = "dano";
 		dano   = _dano;
-	}
+
 }
 
 
