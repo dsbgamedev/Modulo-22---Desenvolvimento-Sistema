@@ -6,6 +6,8 @@
 vida_max   = 1;
 vida_atual = vida_max;
 dano       = 0;
+tempo_dano = room_speed / 2;
+timer_dano = tempo_dano;
 
 max_vel        =  2;
 
@@ -26,12 +28,20 @@ destino_x      = 0;
 destino_y      = 0;
 alvo           = noone;
 
-sprites        = [[]];
+sprites        = [];
 
 image_speed    = 8 / room_speed;
 #endregion
 
 #region comportamentos / metodos
+
+knockback = function(_x, _y)
+{
+	var _dir = point_direction(_x, _y, x, y);
+	velh     = lengthdir_x(1, _dir);
+	velv     = lengthdir_y(1, _dir);
+	
+}
 
 controla_sprite =  function ()
 {

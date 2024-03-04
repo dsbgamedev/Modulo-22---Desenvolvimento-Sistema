@@ -10,6 +10,7 @@ if(_qtd)
 	for(var i = 0; i < _qtd; i++)
 	{	
 		_colisoes[| i].toma_dano();
+		_colisoes[| i].knockback(x,y);
 	}
 
 }
@@ -17,7 +18,7 @@ if(_qtd)
 
 //Destruindo a estrutura de dados
 ds_list_destroy(_colisoes);
-
+//instance_destroy();
 
 
 

@@ -233,6 +233,9 @@ controla_estado = function()
 		
 		case "dano":
 			
+			timer_dano--;
+			velh = 0;
+			velv = 0;
 			//Checando se eu devo aplicar o dano
 			if(dano > 0)
 			{
@@ -240,8 +243,18 @@ controla_estado = function()
 				dano = 0;
 			}
 			
+			//Sendo empurrado
+			
+			
 			image_blend = c_yellow;
-		
+			
+			if(timer_dano < 0)
+			{
+				image_blend = c_white;
+				timer_dano  = tempo_dano;
+				estado      = "parado";
+			}
+			
 			break;
 		
 		case "bobao":
