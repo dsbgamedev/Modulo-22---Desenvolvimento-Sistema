@@ -35,5 +35,5 @@
     "path": "sprites/_spr_dano_td/_spr_dano_td.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

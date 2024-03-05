@@ -2,6 +2,9 @@
 // You can write your code in this editor
 event_inherited();
 
+vida_max   = 2;
+vida_atual = vida_max;
+
 debug          = false;
 
 //Definindo as sprites
@@ -231,14 +234,17 @@ controla_estado = function()
 		break;
 		#endregion
 		
+		#region dano
 		case "dano":
 			
 			timer_dano--;
+			timer_pisca--;
 			velh = 0;
 			velv = 0;
 			//Checando se eu devo aplicar o dano
 			if(dano > 0)
 			{
+				timer_pisca = tempo_pisca;
 				vida_atual -= dano;	
 				dano = 0;
 			}
@@ -251,16 +257,42 @@ controla_estado = function()
 			if(timer_dano < 0)
 			{
 				timer_dano  = tempo_dano;
-				estado      = "parado";
+				if(vida_atual <=0 )
+				{
+					estado = "morte";
+				}
+				else
+				{
+					estado = "parado";	
+				}
 			}
 			
 			break;
+		#endregion
 		
+		#region morte
+		case "morte":
+		
+			velh        = 0;
+			velv	    = 0;
+			image_speed = 0;
+			if(image_alpha > 0)
+			{
+				image_alpha = - .01;	
+			}
+			else //Eu ja sumi
+			{
+				instance_destroy();
+			}
+			
+			break;
+			
+		#endregion
+			
 		case "bobao":
 			velh = 0;
 			velv = 0;
 			break;
-		
 	}
 
 }

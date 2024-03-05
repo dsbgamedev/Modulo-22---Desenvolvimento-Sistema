@@ -15,7 +15,8 @@ for(var i = 0; i < _qtd; i++)
 			//Adicionei ele na lista
 			ds_list_add(lista_atacados, _outro);
 			//Aplica o dano
-			_outro.toma_dano();
+			var _dano = global.arma_player != noone ?  global.arma_player.dano : 0;
+			_outro.toma_dano(_dano);
 			_outro.dano_dir = point_direction(x, y, _outro.x, _outro.y);
 	}
 }

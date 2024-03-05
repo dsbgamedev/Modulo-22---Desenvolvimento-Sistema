@@ -161,6 +161,7 @@
     {"id":{"name":"obj_inimigo_cogumelo_td","path":"objects/obj_inimigo_cogumelo_td/obj_inimigo_cogumelo_td.yy",},},
     {"id":{"name":"spr_player_td","path":"sprites/spr_player_td/spr_player_td.yy",},},
     {"id":{"name":"Hit_up","path":"sprites/Hit_up/Hit_up.yy",},},
+    {"id":{"name":"sh_pisca_branco","path":"shaders/sh_pisca_branco/sh_pisca_branco.yy",},},
     {"id":{"name":"Tilesets","path":"sprites/Tilesets/Tilesets.yy",},},
     {"id":{"name":"hit_down51","path":"sprites/hit_down51/hit_down51.yy",},},
     {"id":{"name":"spr_chao","path":"sprites/spr_chao/spr_chao.yy",},},

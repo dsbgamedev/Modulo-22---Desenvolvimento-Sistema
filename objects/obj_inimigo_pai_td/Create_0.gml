@@ -4,11 +4,13 @@
 #region variaveis
 //Variaveis comuns a todos os inimigos
 vida_max   = 1;
-vida_atual = vida_max;
-dano       = 0;
-tempo_dano = room_speed / 2;
-timer_dano = tempo_dano;
-dano_dir   = 0;
+vida_atual  = vida_max;
+dano        = 0;
+tempo_dano  = room_speed / 2;
+timer_dano  = tempo_dano;
+dano_dir    = 0;
+tempo_pisca = 8;
+timer_pisca = 0;
 
 max_vel        =  2;
 

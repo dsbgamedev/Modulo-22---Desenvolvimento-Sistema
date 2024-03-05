@@ -6,6 +6,7 @@ desenha_sombra(spr_sombra, somb_scale, , .2);
 //Desenhar a minha sprite
 draw_sprite_ext(sprite, image_ind,x,y, xscale,image_yscale,image_angle, image_blend, image_alpha);
 
+
 //Debug do estado
 if(global.debug)
 {
