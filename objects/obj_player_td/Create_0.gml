@@ -157,7 +157,7 @@ estado_parado = function()
 	}
 	
 	//Indo para o estado de ataque
-	if(attack)
+	if(attack && global.arma_player)
 	{
 		estado = estado_ataque;
 	}
@@ -203,7 +203,7 @@ estado_movendo = function()
 		somb_scale = .6;
 	}
 	
-	if(attack)
+	if(attack && global.arma_player)
 	{
 		estado = estado_ataque;
 		somb_scale = .6;

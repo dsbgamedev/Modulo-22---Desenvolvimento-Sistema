@@ -290,8 +290,9 @@ controla_estado = function()
 		#endregion
 			
 		case "bobao":
-			velh = 0;
-			velv = 0;
+			velh        = 0;
+			velv        = 0;
+			image_speed = 6 / room_speed;
 			break;
 	}
 

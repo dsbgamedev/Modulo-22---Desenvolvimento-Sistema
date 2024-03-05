@@ -9,7 +9,7 @@ for(var i = 0; i < _qtd; i++)
 {
 	//Salvando o cara atual
 	var _outro = _colisoes[| i];
-	//Checando se o outr NÃO esta na lsita de atacados
+	//Checando se o outro NÃO esta na lsita de atacados
 	if(ds_list_find_index( lista_atacados,_outro) == -1)
 	{
 			//Adicionei ele na lista
