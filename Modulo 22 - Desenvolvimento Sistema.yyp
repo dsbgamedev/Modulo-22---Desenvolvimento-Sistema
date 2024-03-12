@@ -79,6 +79,7 @@
     {"id":{"name":"tl_tile","path":"tilesets/tl_tile/tl_tile.yy",},},
     {"id":{"name":"spr_inventario_caixa","path":"sprites/spr_inventario_caixa/spr_inventario_caixa.yy",},},
     {"id":{"name":"spr_cogumelo_down","path":"sprites/spr_cogumelo_down/spr_cogumelo_down.yy",},},
+    {"id":{"name":"sq_ataque_td","path":"sequences/sq_ataque_td/sq_ataque_td.yy",},},
     {"id":{"name":"hit_down","path":"sprites/hit_down/hit_down.yy",},},
     {"id":{"name":"spr_rampa","path":"sprites/spr_rampa/spr_rampa.yy",},},
     {"id":{"name":"obj_chao_td","path":"objects/obj_chao_td/obj_chao_td.yy",},},
