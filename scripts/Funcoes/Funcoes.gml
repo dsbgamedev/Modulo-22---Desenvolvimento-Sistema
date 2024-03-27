@@ -12,11 +12,11 @@ function desenha_sombra(_sprite, _escala, _cor = c_white, _alpha = .2)
 
 function ajusta_depth()
 {
-	depth = -y;//Pega o vlaor do Y e inverte colocar no objeto entidade no começo
+	depth = -y;//Pega o valor do Y e inverte colocar no objeto entidade no começo
 }
 
 ///@function cria_arma
-function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
+function cria_arma(_nome, _desc, _spr, _dano, _vel, _esp) constructor
 {
 	//Criando o ID das armas
 	static qtd_armas = 0;
@@ -26,7 +26,8 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel) constructor
 	spr     = _spr;
 	dano    = _dano;
 	vel     = _vel;
-	
+	esp     = _esp;
+
 	
 	usa_item = function()
 	{
@@ -76,12 +77,47 @@ global.arma_player  = noone;
 
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",
-					spr_espada, 1, 1);
-var _b = new cria_arma("Espada de cristal", "Espada comum feita de cristal afiada dano medio",
-					spr_espada, 2, 1);
-var _c = new cria_arma("Espada de ouro", "Espada especial feita de ouro para lutas ferozes",
-					spr_espada, 4, .5);
+					spr_espada, 1, 1, 0);
+var _b = new cria_arma("Espada comum", "Espada comum feita de cristal afiada dano medio",
+					spr_espada, 2, 1, especial_espada_comum);
+var _c = new cria_arma("Espada de sangue", "Espada especial feita de ouro para lutas ferozes",
+					spr_espada, 4, .5, 0);
 
 //Salvando as minhas armas na minha lista de armas
 ds_list_add(global.armas, _a, _b, _c);
+
+//Criando a função do ataque especial da espada comum
+function especial_espada_comum()
+{
+	//Criando a layes da sequencia
+	if(instance_exists(obj_player_td))
+	{
+		with(obj_player_td)
+		{
+			
+			//Pegando as minha sequencia
+			var _nova_seq = sequence_get(sq_ataque_td);
+			
+			//Inicio da animação (track debaixo)
+			_nova_seq.tracks[0].keyframes[0].channels[0].spriteIndex = sprite;
+			//Final da animação (track decima)
+			_nova_seq.tracks[1].keyframes[0].channels[0].spriteIndex = sprites[2, face];
+			
+			var _layer = layer_create(depth, "ataque_especial");
+			//Criando a minha sequencia
+			var _seq = layer_sequence_create(_layer, x, y, _nova_seq);
+			
+			//Devolvo a sequencia criada para quem chamou a função
+			return _seq;
+		}
+	}
+	
+	return false;
+}
+
+function ataque_nenhum()
+{
+
+}
+
 

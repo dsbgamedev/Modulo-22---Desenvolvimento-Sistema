@@ -132,8 +132,10 @@ desenha_inventario = function()
 			{
 				
 				//Checando quantas armas iguais eu tenho
+				//var _qtd_armas = conta_armas(global.arma_player);
 				var _qtd_armas = conta_armas(global.arma_player or _qtd_armas > 0);
-				
+								
+				//if(_item_mouse != global.arma_player or _qtd_armas > 0)
 				if(_item_mouse != global.arma_player)
 				{
 										

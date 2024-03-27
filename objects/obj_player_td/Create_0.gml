@@ -13,6 +13,7 @@ acel		  = meu_acel;
 roll_vel      = 5;
 somb_scale    = .6;
 somb_alpha    = .2;
+seq_especial  = noone;
 
 			
 face		  = 0;
@@ -61,7 +62,7 @@ keyboard_set_map(ord("S"), vk_down);
 keyboard_set_map(ord("J"), ord("C"));
 keyboard_set_map(ord("L"), ord("Z"));
 keyboard_set_map(ord("K"), ord("X"));
-keyboard_set_map(vk_enter, vk_space);		
+keyboard_set_map(vk_enter, vk_space);
 
 
 ajusta_sprite = function(_indice_array)
@@ -99,6 +100,11 @@ controla_player = function()
 	attack     = keyboard_check_pressed(ord("C"));//Pressed so roda uma vez
 	shield     = keyboard_check(ord("Z"));
 	roll       = keyboard_check_pressed(ord("X"));
+	
+	if(keyboard_check_pressed(vk_control) && global.arma_player)
+	{
+		estado = estado_ataque_especial;
+	}
 
 	//velh = (_right - _left) * max_vel;
 	//velv = (_down - _up) * max_vel;
@@ -256,6 +262,55 @@ estado_ataque = function()
 		//Resetando o meu dano
 		instance_destroy(_meu_dano);
 		_meu_dano = noone;
+	}
+}
+
+estado_ataque_especial = function()
+{
+	image_alpha = 0;
+	velh = 0;
+	velv = 0;
+	
+	estado_txt =  "Ataque especial";
+	//Preciso ver se eu tenho uma espada
+	if(global.arma_player)
+	{
+		if(!seq_especial)
+		{
+			//Usando o ataque especial dessa espada
+			seq_especial = global.arma_player.esp();
+		}
+	}
+	else
+	{
+		estado = estado_parado;
+	}
+	
+	//Checando se a animação acabou
+	if(seq_especial)
+	{
+		if(layer_sequence_is_finished(seq_especial))
+		{
+			estado = estado_parado;	
+			image_alpha = 1;
+		
+			//Destruindo a sequencia
+			layer_sequence_destroy(seq_especial);
+			//Resetando a seq especial
+			seq_especial = noone;
+		
+			//Se a layer especial existe eu vou destruir ela
+			if(layer_exists("ataque_especial"))
+			{
+					layer_destroy("ataque_especial");
+			}
+		}
+	
+	}
+	else
+	{
+		estado = estado_parado;
+		image_alpha = 1;
 	}
 }
 

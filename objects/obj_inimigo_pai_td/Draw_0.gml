@@ -41,7 +41,7 @@ if(global.debug)
 	//Sabendo onde ï¿½ o destino dele (Debug)
 	draw_circle(destino_x, destino_y, 16, false);
 	
-	//Desenhando meu campo de visï¿½o (Debug)
+	//Desenhando meu campo de visao (Debug)
 	draw_circle(x,y,campo_visao, true)
 
 }
