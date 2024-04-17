@@ -277,7 +277,7 @@ estado_ataque_especial = function()
 	{
 		if(!seq_especial)
 		{
-			//Usando o ataque especial dessa espada
+		//Usando o ataque especial dessa espada
 			seq_especial = global.arma_player.esp();
 		}
 	}

@@ -50,6 +50,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"sq_ataque_td2","order":1,"path":"sequences/sq_ataque_td2/sq_ataque_td2.yy",},
     {"name":"spr_inventario_fundo","order":2,"path":"sprites/spr_inventario_fundo/spr_inventario_fundo.yy",},
     {"name":"_spr_dano_td","order":10,"path":"sprites/_spr_dano_td/_spr_dano_td.yy",},
     {"name":"fnt_inventario","order":1,"path":"fonts/fnt_inventario/fnt_inventario.yy",},
@@ -66,6 +67,7 @@
     {"name":"spr_cogumelo_right","order":1,"path":"sprites/spr_cogumelo_right/spr_cogumelo_right.yy",},
     {"name":"cogumelo_jump_right_strip4","order":1,"path":"sprites/cogumelo_jump_right_strip4/cogumelo_jump_right_strip4.yy",},
     {"name":"Hit_right52","order":1,"path":"sprites/Hit_right52/Hit_right52.yy",},
+    {"name":"obj_projetil_td","order":12,"path":"objects/obj_projetil_td/obj_projetil_td.yy",},
     {"name":"obj_gelo_td","order":3,"path":"objects/obj_gelo_td/obj_gelo_td.yy",},
     {"name":"Idle_right_strip5","order":4,"path":"sprites/Idle_right_strip5/Idle_right_strip5.yy",},
     {"name":"teste","order":2,"path":"rooms/teste/teste.yy",},

@@ -77,7 +77,7 @@ global.arma_player  = noone;
 
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",
-					spr_espada, 1, 1, 0);
+					spr_espada, 1, 1, ataque_especial_madeira);
 var _b = new cria_arma("Espada comum", "Espada comum feita de cristal afiada dano medio",
 					spr_espada, 2, 1, especial_espada_comum);
 var _c = new cria_arma("Espada de sangue", "Espada especial feita de ouro para lutas ferozes",
@@ -95,20 +95,76 @@ function especial_espada_comum()
 		with(obj_player_td)
 		{
 			
-			//Pegando as minha sequencia
-			var _nova_seq = sequence_get(sq_ataque_td);
+			////Pegando as minha sequencia
+			//var _nova_seq = sequence_get(sq_ataque_td);
 			
-			//Inicio da animação (track debaixo)
-			_nova_seq.tracks[0].keyframes[0].channels[0].spriteIndex = sprite;
-			//Final da animação (track decima)
-			_nova_seq.tracks[1].keyframes[0].channels[0].spriteIndex = sprites[2, face];
+			////Inicio da animação (track debaixo)
+			//_nova_seq.tracks[0].keyframes[0].channels[0].spriteIndex = sprite;
+			////Final da animação (track decima)
+			//_nova_seq.tracks[1].keyframes[0].channels[0].spriteIndex = sprites[2, face];
+			
+			var _nova_seq = ajusta_sprite_sequencia([sprite, sprites[2, face]], sq_ataque_td);
 			
 			var _layer = layer_create(depth, "ataque_especial");
 			//Criando a minha sequencia
 			var _seq = layer_sequence_create(_layer, x, y, _nova_seq);
 			
 			//Devolvo a sequencia criada para quem chamou a função
+			show_debug_message("NOVA SEQUENCIA");
+			show_debug_message(_seq);
 			return _seq;
+ 		}
+	}
+	show_debug_message("É FALSO");
+	return false;
+	show_debug_message(false);
+}
+
+//Função para ajustar sprites na sequencia
+function ajusta_sprite_sequencia(_sprites, _sequencia)
+{
+	//5 Tracks - mudar sprite da 0 e da 4
+	//Pegando a sequÊcia
+	var _nova_seq = sequence_get(_sequencia);
+	
+	//Checando o tamanho do vetor
+	var _qtd = array_length(_sprites);
+	//Indo da track 0 até a track equivalente ao tamanho do array
+	for(var i = 0; i < _qtd; i++)
+	{
+		//Pegando o valor atual do array
+		var _atual = _sprites[i];
+		
+		//Só vou mexer na track que tem um valor
+		if(_atual)
+		{
+			_nova_seq.tracks[i].keyframes[0].channels[0].spriteIndex = _atual;
+		}
+	}
+	//Retornadno a sequencia modificada
+	return _nova_seq;
+}
+
+function ataque_especial_madeira()
+{
+	if(instance_exists(obj_player_td))
+	{
+		with(obj_player_td)
+		{
+			//Modificando e pegando a sequência
+			var _nova_seq = ajusta_sprite_sequencia([sprites[2, face]], sq_ataque_td2);
+			
+			var _layer    =  layer_create(depth, "ataque_especial");
+			var _seq      =  layer_sequence_create(_layer, x,y,_nova_seq);
+			
+			//Fazendo a sequencia olhar para o lado certo
+			layer_sequence_xscale(_seq, xscale);
+			
+			//Criar o projetil
+			var _tiro = instance_create_depth(x,y,depth, obj_projetil_td);
+			
+			
+			return _seq;			
 		}
 	}
 	
@@ -117,7 +173,7 @@ function especial_espada_comum()
 
 function ataque_nenhum()
 {
-
+	show_message("puf");
 }
 
 
