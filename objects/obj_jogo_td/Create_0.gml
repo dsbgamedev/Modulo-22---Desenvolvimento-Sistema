@@ -14,6 +14,27 @@ global.inventario[# 0, 0] = global.armas[| armas.espada_ouro];
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
 
+
+//Desenhando a vida do player
+///@function desenha_coracoes(x,y)
+desenha_coracoes = function(_x, _y)
+{
+	//Desenhando 3 corações vazios
+	//Desenhando a quantidade de vida total dividido por 2 de corações
+	var _w = sprite_get_width(spr_heart) / 1.5;
+	for (var i=0; i< global.max_vida_player; i += 2 )
+	{
+		draw_sprite(spr_heart, 0, _x + i * _w, _y);
+	}
+	
+	//Desenhando os corações preenchidos
+	for(var i=0; i < global.max_vida_player; i += 2)
+	{
+		draw_sprite(spr_heart, 2, _x + i * _w, _y);
+	}
+}
+
+
 desenha_pause = function()
 {
 	var _w = display_get_gui_width();

@@ -75,6 +75,11 @@ enum armas
 global.armas		= ds_list_create();
 global.arma_player  = noone;
 
+
+//Variáveis de vida do player
+global.max_vida_player = 6; //cada coração 2 de vida
+global.vida_player = global.max_vida_player;
+
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",
 					spr_espada, 1, 1, ataque_especial_madeira);

@@ -61,6 +61,7 @@
     {"name":"spr_player_attack_right","order":1,"path":"sprites/spr_player_attack_right/spr_player_attack_right.yy",},
     {"name":"spr_run_player_right","order":1,"path":"sprites/spr_run_player_right/spr_run_player_right.yy",},
     {"name":"Idle_down_strip561","order":3,"path":"sprites/Idle_down_strip561/Idle_down_strip561.yy",},
+    {"name":"spr_heart","order":3,"path":"sprites/spr_heart/spr_heart.yy",},
     {"name":"Window_067","order":1,"path":"sprites/Window_067/Window_067.yy",},
     {"name":"run_right_strip544","order":4,"path":"sprites/run_right_strip544/run_right_strip544.yy",},
     {"name":"TopDown","order":1,"path":"rooms/TopDown/TopDown.yy",},
