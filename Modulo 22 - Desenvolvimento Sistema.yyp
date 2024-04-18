@@ -126,6 +126,7 @@
     {"id":{"name":"attack_up_strip5","path":"sprites/attack_up_strip5/attack_up_strip5.yy",},},
     {"id":{"name":"obj_rampa_pl","path":"objects/obj_rampa_pl/obj_rampa_pl.yy",},},
     {"id":{"name":"Girando_up_Sheet_strip7","path":"sprites/Girando_up_Sheet_strip7/Girando_up_Sheet_strip7.yy",},},
+    {"id":{"name":"sq_ataque_td3","path":"sequences/sq_ataque_td3/sq_ataque_td3.yy",},},
     {"id":{"name":"attack_right_strip5","path":"sprites/attack_right_strip5/attack_right_strip5.yy",},},
     {"id":{"name":"spr_caixa_dialogo","path":"sprites/spr_caixa_dialogo/spr_caixa_dialogo.yy",},},
     {"id":{"name":"spr_retrato_npc","path":"sprites/spr_retrato_npc/spr_retrato_npc.yy",},},

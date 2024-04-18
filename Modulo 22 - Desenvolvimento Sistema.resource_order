@@ -88,6 +88,7 @@
     {"name":"attack_up_strip5","order":2,"path":"sprites/attack_up_strip5/attack_up_strip5.yy",},
     {"name":"obj_rampa_pl","order":2,"path":"objects/obj_rampa_pl/obj_rampa_pl.yy",},
     {"name":"Girando_up_Sheet_strip7","order":2,"path":"sprites/Girando_up_Sheet_strip7/Girando_up_Sheet_strip7.yy",},
+    {"name":"sq_ataque_td3","order":2,"path":"sequences/sq_ataque_td3/sq_ataque_td3.yy",},
     {"name":"attack_right_strip5","order":1,"path":"sprites/attack_right_strip5/attack_right_strip5.yy",},
     {"name":"obj_entidade_td","order":2,"path":"objects/obj_entidade_td/obj_entidade_td.yy",},
     {"name":"Idle_up_strip4","order":2,"path":"sprites/Idle_up_strip4/Idle_up_strip4.yy",},

@@ -161,14 +161,23 @@ function ataque_especial_madeira()
 			layer_sequence_xscale(_seq, xscale);
 			
 			//Criar o projetil
-			var _tiro = instance_create_depth(x,y,depth, obj_projetil_td);
-			
+			var _tiro = instance_create_depth(x, y - sprite_height / 2, depth, obj_projetil_td);
+			_tiro.image_speed = 0;
+			_tiro.image_index = 0;
+			_tiro.speed       = 7;
+			_tiro.direction   = face * 90;
+			_tiro.image_angle = face * 90 - 90;
 			
 			return _seq;			
 		}
 	}
 	
 	return false;
+}
+
+function ataque_especial_sangue ()
+{
+	
 }
 
 function ataque_nenhum()

@@ -31,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_espada",
+    "path": "sprites/spr_espada/spr_espada.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
