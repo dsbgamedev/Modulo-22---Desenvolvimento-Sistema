@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 var _colisoes = ds_list_create();
-var _qtd = instance_place_list(x, y, obj_inimigo_pai_td, _colisoes, 0);
+var _qtd = instance_place_list(x, y, obj_entidade_td, _colisoes, 0);
 
 //Checar se quem eu colidi NÃO esta na lsita dos atacados
 for(var i = 0; i < _qtd; i++)
@@ -12,12 +12,16 @@ for(var i = 0; i < _qtd; i++)
 	//Checando se o outro NÃO esta na lsita de atacados
 	if(ds_list_find_index( lista_atacados,_outro) == -1)
 	{
-			//Adicionei ele na lista
-			ds_list_add(lista_atacados, _outro);
-			//Aplica o dano
-			var _dano = global.arma_player != noone ?  global.arma_player.dano : 0;
-			_outro.toma_dano(_dano);
-			_outro.dano_dir = point_direction(x, y, _outro.x, _outro.y);
+			if(_outro != meu_pai)
+			{
+				//Adicionei ele na lista
+				ds_list_add(lista_atacados, _outro);
+				//Aplica o dano
+				var _dano = global.arma_player != noone ?  global.arma_player.dano : 0;
+				_outro.toma_dano(_dano);
+				_outro.dano_dir = point_direction(x, y, _outro.x, _outro.y);
+				//_outro.image_blend = c_red;
+			}
 	}
 }
 

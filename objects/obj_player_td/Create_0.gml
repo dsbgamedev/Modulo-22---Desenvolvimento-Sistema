@@ -4,6 +4,11 @@
 //herdando as informações do pai
 event_inherited();
 
+toma_dano = function()
+{
+		
+}
+
 //Debug para testar geral
 global.debug = false;
 
@@ -251,7 +256,9 @@ estado_ataque = function()
 		//caso contrario o valor de add é0
 		var _add     = face == 1 ? sprite_height / 2 : 0;
 		
-		_meu_dano =  instance_create_depth(_dano_x, _dano_y - sprite_height/2 + _add,depth,obj_dano_td);
+		_meu_dano         =  instance_create_depth(_dano_x, _dano_y - sprite_height/2 + _add,depth,obj_dano_td);
+		_meu_dano.meu_pai = id; 
+		
 	}
 		
 	//Saindo do estado de ataque

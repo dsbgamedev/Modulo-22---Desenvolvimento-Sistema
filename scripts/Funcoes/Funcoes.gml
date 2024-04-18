@@ -81,7 +81,7 @@ var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que
 var _b = new cria_arma("Espada comum", "Espada comum feita de cristal afiada dano medio",
 					spr_espada, 2, 1, especial_espada_comum);
 var _c = new cria_arma("Espada de sangue", "Espada especial feita de ouro para lutas ferozes",
-					spr_espada, 4, .5, 0);
+					spr_espada, 4, .5, ataque_especial_sangue);
 
 //Salvando as minhas armas na minha lista de armas
 ds_list_add(global.armas, _a, _b, _c);
@@ -177,8 +177,36 @@ function ataque_especial_madeira()
 
 function ataque_especial_sangue ()
 {
+	if(instance_exists(obj_player_td))
+	{
+		with(obj_player_td)
+		{
+			var _layer  = layer_create(-10000, "ataque_especial");
+			var _seq    = layer_sequence_create(_layer, x, y, sq_ataque_td3);
+			
+			return _seq;
+		}
+	}
+	
+	return false;
+}
+
+function cria_screenshake()
+{
+	var _shake = fx_create("_filter_screenshake");	
+	
+	//Criando a layer dele
+	var _layer = layer_create(-10000,"shake");
+	layer_set_fx(_layer, _shake);
 	
 }
+
+function termina_screenshake()
+{
+	layer_destroy("shake");
+}
+
+
 
 function ataque_nenhum()
 {
