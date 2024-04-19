@@ -28,9 +28,13 @@ desenha_coracoes = function(_x, _y)
 	}
 	
 	//Desenhando os corações preenchidos
-	for(var i=0; i < global.max_vida_player; i += 2)
+	for(var i = 0; i < global.vida_player; i += 2)
 	{
-		draw_sprite(spr_heart, 2, _x + i * _w, _y);
+		//Garantindo que o img vai ficar com o valor de 1 se
+		//A ultima vida for um número impar
+		var _img = ((global.vida_player - i) != 1) + 1;
+		
+		draw_sprite(spr_heart, _img, _x + i * _w, _y);
 	}
 }
 

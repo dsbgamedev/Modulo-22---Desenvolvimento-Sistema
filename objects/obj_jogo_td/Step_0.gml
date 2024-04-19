@@ -4,6 +4,18 @@
 //Pausando o jogo ao apertar esc
 if(keyboard_check_released(vk_escape)) global.pause = !global.pause;
 
+//Perdendo vida ao apertar backspace
+if(keyboard_check_released(vk_backspace)) 
+{
+	global.vida_player--;
+	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
+}
+
+if(keyboard_check_released(vk_shift))
+{
+	global.vida_player += 2;
+	global.vida_player = global.max_vida_player;
+}
 
 //Se o jogo esta pausado, eu vou parar todas as entidades
 if(global.pause)
