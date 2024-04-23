@@ -4,11 +4,6 @@
 //herdando as informações do pai
 event_inherited();
 
-toma_dano = function()
-{
-		
-}
-
 //Debug para testar geral
 global.debug = false;
 
@@ -20,6 +15,8 @@ somb_scale    = .6;
 somb_alpha    = .2;
 seq_especial  = noone;
 
+tempo_invencivel = room_speed * 2;
+timer_invencivel = tempo_invencivel;
 			
 face		  = 0;
 sprite		  = sprite_index;
@@ -54,8 +51,10 @@ sprites       = [
 				//Sprites Defesa
 				[spr_player_shield_right, spr_player_shield_up, spr_player_shield_right, spr_player_shield_down],
 				//Rolando
-				[spr_player_roll_right, spr_player_roll_up, spr_player_roll_right, spr_player_roll_down]
-			    ];
+				[spr_player_roll_right, spr_player_roll_up, spr_player_roll_right, spr_player_roll_down],
+				//Dano
+				[spr_player_hurt_right, spr_player_hurt_up, spr_player_hurt_right, spr_player_hurt_down]
+				];
 			   
 sprites_index =	0;		   
 
@@ -398,6 +397,21 @@ estado_rolando = function()
 	}
 }
 
+estado_dano = function()
+{
+	velh = 0;
+	velv = 0;	
+	estado_txt = "Tomando dano";
+	ajusta_sprite (5);
+	
+	//Saindo do estado depois de meio segundo
+	if(timer_invencivel > room_speed / 2)
+	{
+		estado = estado_parado;	
+	}
+	
+}
+
 estado_indo_dialogo = function ()
 {
 	estado_txt = "Indo para o diálogo";
@@ -461,97 +475,32 @@ estado_dialogo = function()
 	}
 }
 
-
-
-//Metodos dentro de metodos
-estado = estado_parado;//Se nao usa parentese() eu não executo o metodo, ele vai apenas guardar.
-
-
-/******Uma manei de fazer
-max_vel      = 5;
-meu_acel     = .2;
-acel         = meu_acel;
-
-face	     = 0;
-sprite       = sprite_index;
-xscale       = 1;
-estado       = noone;
-estado_txt   = "parado";
-
-debug        = false;
-
-
-
-//Mapeando a esquerda
-keyboard_set_map(ord("A"), vk_left);
-keyboard_set_map(ord("D"), vk_right);
-keyboard_set_map(ord("W"), vk_up);
-keyboard_set_map(ord("S"), vk_down);
-
-estado_parado = function()
+efeito_dano = function ()
 {
-	estado_txt = "parado";
-	//Ficando parado
-	velh = 0;
-	velv = 0;
-	
-	var _up    = keyboard_check(vk_up);
-	var _down  = keyboard_check(vk_down);
-	var _left  = keyboard_check(vk_left);
-	var _right = keyboard_check(vk_right);
-	
-	//Indo para baixo
-	switch(face)
+	//Se o timer ainda nao chegou no tempo de invecibilidade
+	//Aumento o valor dele
+	//Faço ele piscar transparente
+	if(timer_invencivel < tempo_invencivel)
 	{
-		case 0: sprite = spr_idle_player_right; xscale = 1;break;
-		case 1: sprite = spr_idle_player_up;break;
-		case 2: sprite = spr_idle_player_right; xscale = -1;break;
-		case 3: sprite = spr_idle_player_down;break;
+		timer_invencivel++;
+		image_alpha = abs(sin(get_timer() / 2000000));
+	}
+	else
+	{
+		image_alpha = 1;	
 	}
 	
-	//Saindo do estado de parado
-	if((_up xor _down) or (_left xor _right))
+}
+
+toma_dano = function(_dano = 1)
+{
+	//Só pode tomar dano se o timer invencivel não acabou
+	if(timer_invencivel >= tempo_invencivel)
 	{
-		estado = estado_movendo;
+		estado			 = estado_dano;
+		timer_invencivel = 0;
+		global.vida_player -= _dano;
 	}
 }
 
-estado_movendo = function()
-{
-	estado_txt = "movendo";
-	
-	//Definindo a sprite correta
-	//Indo para baixo
-	switch(face)
-	{
-		case 0: sprite = spr_player_run_right; xscale = 1;break;
-		case 1: sprite = spr_player_run_up;break;
-		case 2: sprite = spr_player_run_right; xscale = -1;break;
-		case 3: sprite = spr_player_run_down;break;
-	}	
-	//Saindo do estado de movendo
-	if(abs(velv) <= 0.2 && abs(velh) <= 0.2)
-	{
-		estado = estado_parado;	
-	}
-}
-
-//Metodos dentro de metodos
-estado = estado_parado;//Se nao usa parentese() eu não executo o metodo, ele vai apenas guardar.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+estado = estado_parado;

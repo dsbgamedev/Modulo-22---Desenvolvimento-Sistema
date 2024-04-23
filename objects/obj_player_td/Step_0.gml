@@ -8,6 +8,9 @@ if(global.pause)
 	velv = 0;
 	exit;
 }
+
+if(keyboard_check_released(vk_shift)) toma_dano();
+
 if(keyboard_check_released(vk_tab)) global.debug = !global.debug;
 
 //Checando se eu estou no gelo
@@ -36,6 +39,7 @@ else //Se eu não colidi, o valor do acel é o MEU acel
 //show_debug_message(imagem_index);//
 show_debug_message(image_numb);
 estado(); // Recebeu o metodo estado_parado e executa ele
+efeito_dano();
 
 
 

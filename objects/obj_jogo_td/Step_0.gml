@@ -4,12 +4,12 @@
 //Pausando o jogo ao apertar esc
 if(keyboard_check_released(vk_escape)) global.pause = !global.pause;
 
-//Perdendo vida ao apertar backspace
-if(keyboard_check_released(vk_backspace)) 
-{
-	global.vida_player--;
-	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
-}
+////Perdendo vida ao apertar backspace
+//if(keyboard_check_released(vk_backspace)) 
+//{
+//	global.vida_player--;
+//	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
+//}
 
 if(keyboard_check_released(vk_shift))
 {

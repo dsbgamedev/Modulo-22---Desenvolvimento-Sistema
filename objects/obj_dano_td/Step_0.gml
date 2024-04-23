@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 var _colisoes = ds_list_create();
-var _qtd = instance_place_list(x, y, obj_entidade_td, _colisoes, 0);
+var _qtd = instance_place_list(x, y, obj_inimigo_pai_td, _colisoes, 0);
 
 //Checar se quem eu colidi NÃO esta na lsita dos atacados
 for(var i = 0; i < _qtd; i++)
