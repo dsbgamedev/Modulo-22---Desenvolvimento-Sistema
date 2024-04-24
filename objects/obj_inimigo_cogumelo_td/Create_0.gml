@@ -193,6 +193,8 @@ controla_estado = function()
 			//Ficando vermelho
 			image_blend = c_red;
 			
+			aplica_dano_player();
+			
 			//Ataquei o player eu reseto o t_persegue
 			//Dessa forma eu preciso esperar um tempo para perseguir o player
 			t_persegue = tempo_persegue;

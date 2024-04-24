@@ -11,6 +11,7 @@ timer_dano  = tempo_dano;
 dano_dir    = 0;
 tempo_pisca = 8;
 timer_pisca = 0;
+meu_dano    = 1;
 
 max_vel        =  2;
 
@@ -96,6 +97,19 @@ toma_dano = function(_dano = 1)
 		estado = "dano";
 		dano   = _dano;
 
+}
+
+aplica_dano_player = function()
+{
+	//Checando se eu estou colidindo com o player
+	var _player = instance_place(x, y, obj_player_td);
+	
+	//Se eu toquei no player, então eu aplico dano no bobao
+	if(_player)
+	{
+		_player.toma_dano(meu_dano);
+		//Agora eu volto a descansar
+	}
 }
 
 
