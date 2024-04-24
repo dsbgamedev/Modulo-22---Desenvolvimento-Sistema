@@ -13,7 +13,10 @@ acel		  = meu_acel;
 roll_vel      = 5;
 somb_scale    = .6;
 somb_alpha    = .2;
+dano_dir      = 0;
 seq_especial  = noone;
+
+
 
 tempo_invencivel = room_speed * 2;
 timer_invencivel = tempo_invencivel;
@@ -399,15 +402,19 @@ estado_rolando = function()
 
 estado_dano = function()
 {
-	velh = 0;
-	velv = 0;	
+	
 	estado_txt = "Tomando dano";
 	ajusta_sprite (5);
+	
+	velh = lengthdir_x(1, dano_dir);
+	velv = lengthdir_y(1, dano_dir);
 	
 	//Saindo do estado depois de meio segundo
 	if(timer_invencivel > room_speed / 2)
 	{
 		estado = estado_parado;	
+		velh = 0;
+		velv = 0;	
 	}
 	
 }
@@ -497,6 +504,8 @@ toma_dano = function(_dano = 1)
 	//Só pode tomar dano se o timer invencivel não acabou
 	if(timer_invencivel >= tempo_invencivel)
 	{
+		if(estado == estado_defesa or estado == estado_rolando) return
+		//Só roda esse se a condição de cima nao executar
 		estado			 = estado_dano;
 		timer_invencivel = 0;
 		global.vida_player -= _dano;

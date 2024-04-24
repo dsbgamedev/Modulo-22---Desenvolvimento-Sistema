@@ -108,12 +108,10 @@ aplica_dano_player = function()
 	if(_player)
 	{
 		_player.toma_dano(meu_dano);
+		_player.dano_dir = point_direction(0, 0, velh, velv);
 		//Agora eu volto a descansar
 	}
 }
-
-
-
 
 // Inherit the parent event
 //event_inherited();
