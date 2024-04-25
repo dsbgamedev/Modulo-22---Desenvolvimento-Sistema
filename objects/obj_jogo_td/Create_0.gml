@@ -11,6 +11,10 @@ global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
 global.inventario[# 0, 1] = global.armas[| armas.espada_cristal];
 global.inventario[# 0, 0] = global.armas[| armas.espada_ouro];
 
+global.inventario[# 1, 0] = global.cosumiveis[| consumiveis.pocao_vermelha];
+global.inventario[# 1, 1] = global.cosumiveis[| consumiveis.pocao_coracao];
+
+
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
 
@@ -139,7 +143,14 @@ desenha_inventario = function()
 		{
 			if(_item_sel)
 			{
-				_item_sel.usa_item();	
+				_item_sel.usa_item();
+				
+				//Checando se este item é sonsumivel
+				if(_item_sel._tipo == item_tipo.consumiveis)
+				{
+					//Apagando item
+					global.inventario[# _sel_x, _sel_y] = 0;
+				}
 			}
 		}
 		if(mouse_check_button_released(mb_left))

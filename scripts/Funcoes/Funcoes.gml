@@ -19,14 +19,15 @@ function ajusta_depth()
 function cria_arma(_nome, _desc, _spr, _dano, _vel, _esp) constructor
 {
 	//Criando o ID das armas
+	static _tipo     = item_tipo.armas; 
 	static qtd_armas = 0;
-	meu_id = qtd_armas++;
-	nome    = _nome;
-	desc    = _desc;
-	spr     = _spr;
-	dano    = _dano;
-	vel     = _vel;
-	esp     = _esp;
+	meu_id           = qtd_armas++;
+	nome			 = _nome;
+	desc			 = _desc;
+	spr				 = _spr;
+	dano			 = _dano;
+	vel				 = _vel;
+	esp				 = _esp;
 
 	
 	usa_item = function()
@@ -64,6 +65,32 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel, _esp) constructor
 	
 }
 
+//Que informações eu preciso de um item consumiveis
+function cria_consumivel(_nome, _desc, _spr, _acao) constructor
+{
+	static _tipo = item_tipo.consumiveis;
+	static _id   = 0;
+	meu_id       = _id++;
+	nome         = _nome;
+	desc         = _desc;
+	spr          = _spr;
+	acao         = _acao;
+	
+	usa_item     = acao;	
+}
+
+enum item_tipo
+{
+		armas,
+		consumiveis
+}
+
+enum consumiveis
+{
+	pocao_vermelha,
+	pocao_coracao
+}
+
 enum armas
 {
 	espada_madeira,
@@ -75,10 +102,13 @@ enum armas
 global.armas		= ds_list_create();
 global.arma_player  = noone;
 
+//Estruturas com os itens consumiveis
+global.cosumiveis = ds_list_create();
+
 
 //Variáveis de vida do player
 global.max_vida_player = 6; //cada coração 2 de vida
-global.vida_player = global.max_vida_player;
+global.vida_player = 3;
 
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",
@@ -90,6 +120,30 @@ var _c = new cria_arma("Espada de sangue", "Espada especial feita de ouro para l
 
 //Salvando as minhas armas na minha lista de armas
 ds_list_add(global.armas, _a, _b, _c);
+
+#region acoes dos consumiveis
+function acao_pocao_vermelho()
+{
+	//Usando a poção vermelhas
+	global.vida_player += 2;
+	//Limitando a vida do player
+	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
+	
+}
+
+function acao_pocao_coracao()
+{
+	//Aumentando a quantidade de coração
+	
+}
+
+#endregion
+
+var _a = new cria_consumivel("Poção Vermelha", "Poção vermelha que cura um coração vida", spr_item, acao_pocao_vermelho);
+var _b = new cria_consumivel("Poção coração", "Aumenta em um a quantidade maxima de coração", spr_item, acao_pocao_coracao);
+
+//Salvando os items criados na lista
+ds_list_add(global.cosumiveis, _a, _b);
 
 //Criando a função do ataque especial da espada comum
 function especial_espada_comum()
@@ -150,6 +204,7 @@ function ajusta_sprite_sequencia(_sprites, _sequencia)
 	return _nova_seq;
 }
 
+#region acoes das armas
 function ataque_especial_madeira()
 {
 	if(instance_exists(obj_player_td))
@@ -195,6 +250,7 @@ function ataque_especial_sangue ()
 	
 	return false;
 }
+#endregion
 
 function cria_screenshake()
 {
@@ -210,8 +266,6 @@ function termina_screenshake()
 {
 	layer_destroy("shake");
 }
-
-
 
 function ataque_nenhum()
 {

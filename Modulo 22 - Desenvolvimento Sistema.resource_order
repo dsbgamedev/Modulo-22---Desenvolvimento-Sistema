@@ -37,6 +37,7 @@
     {"name":"GUI","order":8,"path":"folders/Sprites/TopDown/GUI.yy",},
     {"name":"Inimigos","order":7,"path":"folders/Sprites/TopDown/Inimigos.yy",},
     {"name":"Cogumelo","order":6,"path":"folders/Sprites/TopDown/Inimigos/Cogumelo.yy",},
+    {"name":"Items","order":11,"path":"folders/Sprites/TopDown/Items.yy",},
     {"name":"NPCs","order":6,"path":"folders/Sprites/TopDown/NPCs.yy",},
     {"name":"Player","order":5,"path":"folders/Sprites/TopDown/Player.yy",},
     {"name":"Attack","order":5,"path":"folders/Sprites/TopDown/Player/Attack.yy",},
