@@ -11,7 +11,6 @@
     {"name":"inst_179E61","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_5757E95E","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_2027B8D9","path":"rooms/TopDown/TopDown.yy",},
-    {"name":"inst_56BBEF3D","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_7CEF8E8C","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_20C1C454","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_E6D9DD1","path":"rooms/TopDown/TopDown.yy",},
@@ -100,12 +99,12 @@
     {"name":"inst_6E90F2EF","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_AE5CD69","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_1D777204","path":"rooms/TopDown/TopDown.yy",},
-    {"name":"inst_4DC6C4D9","path":"rooms/TopDown/TopDown.yy",},
-    {"name":"inst_7C68930C","path":"rooms/TopDown/TopDown.yy",},
-    {"name":"inst_41BED1DC","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_6890402B","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_17F42BC9","path":"rooms/TopDown/TopDown.yy",},
     {"name":"inst_382C7934","path":"rooms/TopDown/TopDown.yy",},
+    {"name":"inst_56BBEF3D","path":"rooms/TopDown/TopDown.yy",},
+    {"name":"inst_11E7B08","path":"rooms/TopDown/TopDown.yy",},
+    {"name":"inst_18606D29","path":"rooms/TopDown/TopDown.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -123,13 +122,12 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_382C7934","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_inimigo_cogumelo_td","path":"objects/obj_inimigo_cogumelo_td/obj_inimigo_cogumelo_td.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":435.0,"y":264.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Item","depth":-4700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4DC6C4D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":336.0,"y":210.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7C68930C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"propertyId":{"name":"item","path":"objects/obj_item_td/obj_item_td.yy",},"value":"global.armas[| armas.espada_ouro]",},
-          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":192.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_41BED1DC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"propertyId":{"name":"item","path":"objects/obj_item_td/obj_item_td.yy",},"value":"global.armas[| armas.espada_cristal]",},
-          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":336.0,"y":176.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_11E7B08","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"propertyId":{"name":"item","path":"objects/obj_item_td/obj_item_td.yy",},"value":"global.cosumiveis[|consumiveis.pocao_vermelha]",},
+          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":362.0,"y":159.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_18606D29","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_item_td","path":"objects/obj_item_td/obj_item_td.yy",},"propertyId":{"name":"item","path":"objects/obj_item_td/obj_item_td.yy",},"value":"global.cosumiveis[|consumiveis.pocao_coracao]",},
+          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":394.0,"y":191.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Npc","depth":-4600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6E90F2EF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_npc_td","path":"objects/obj_npc_td/obj_npc_td.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":160.0,},
