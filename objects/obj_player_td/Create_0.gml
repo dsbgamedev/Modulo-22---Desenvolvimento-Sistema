@@ -342,8 +342,8 @@ estado_defesa = function()
 	
 	if(defendi)
 	{
-		_novo_velh = 2;
-		_novo_velv = 0;
+		_novo_velh = lengthdir_x(2, dano_dir);
+		_novo_velv = lengthdir_y(2, dano_dir);
 		defendi    = false;
 	}
 	
@@ -527,9 +527,13 @@ toma_dano = function(_dano = 1)
 		//Então eu posso defender mesmo
 		var _defesa  = _ang_dif < 90 && estado == estado_defesa;
 		
-		if((_defesa) or estado == estado_rolando) return;
-		
-		
+		if(_defesa)
+		{
+			 defendi = true;
+			 return;
+		}
+		if(estado == estado_rolando) return;
+				
 		//Só roda esse se a condição de cima nao executar
 		estado			 = estado_dano;
 		timer_invencivel = 0;
