@@ -14,6 +14,7 @@ roll_vel      = 5;
 somb_scale    = .6;
 somb_alpha    = .2;
 dano_dir      = 0;
+defendi       = false;
 seq_especial  = noone;
 
 
@@ -325,6 +326,7 @@ estado_ataque_especial = function()
 
 estado_defesa = function()
 {
+	static _novo_velh = 0, _novo_velv = 0;
 	estado_txt = "Defesa";
 	ajusta_sprite(3);
 	
@@ -332,13 +334,25 @@ estado_defesa = function()
 	controla_player();
 	
 	//Garantindo que eu estou parado
-	velh = 0;
-	velh = 0;
+	velh = _novo_velh;
+	velh = _novo_velv;
+	
+	_novo_velh = lerp(_novo_velh, 0, .1);
+	_novo_velv = lerp(_novo_velh, 0, .1);
+	
+	if(defendi)
+	{
+		_novo_velh = 2;
+		_novo_velv = 0;
+		defendi    = false;
+	}
 	
 	//Saindo do estado de defesa
 	if(!shield)
 	{
 		estado = estado_parado;
+		_novo_velh = 0;
+		_novo_velv = 0;
 	}
 
 }
@@ -504,7 +518,18 @@ toma_dano = function(_dano = 1)
 	//Só pode tomar dano se o timer invencivel não acabou
 	if(timer_invencivel >= tempo_invencivel)
 	{
-		if(estado == estado_defesa or estado == estado_rolando) return
+		//Pegando a diferença do meu ângulo e a do inimigo
+		//Primeiro eu pego o meu ângulo suando a minha face
+		//Girando o ângulo do player para facilitar
+		var _ang_dif = abs(angle_difference((face * 90 - 180), dano_dir));//passa uma angulo, e ou outro angulo e mostra a diferença entre os dois.
+		
+		//Se a difrença entre os nossos angulos for baixa(e eu estiver defendendo)
+		//Então eu posso defender mesmo
+		var _defesa  = _ang_dif < 90 && estado == estado_defesa;
+		
+		if((_defesa) or estado == estado_rolando) return;
+		
+		
 		//Só roda esse se a condição de cima nao executar
 		estado			 = estado_dano;
 		timer_invencivel = 0;

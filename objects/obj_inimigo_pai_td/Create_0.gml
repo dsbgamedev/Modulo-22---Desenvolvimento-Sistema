@@ -107,8 +107,8 @@ aplica_dano_player = function()
 	//Se eu toquei no player, então eu aplico dano no bobao
 	if(_player)
 	{
-		_player.toma_dano(meu_dano);
 		_player.dano_dir = point_direction(0, 0, velh, velv);
+		_player.toma_dano(meu_dano);
 		//Agora eu volto a descansar
 	}
 }
