@@ -42,6 +42,9 @@ image_spd     = 6 / room_speed;
 //Quantidade de imagens na minha sprite
 image_numb    = 1;
 
+//Criando a camera
+var _cam = instance_create_layer(x,y,layer,obj_camera);
+
 troquei = false;
 
 

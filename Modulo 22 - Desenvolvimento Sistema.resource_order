@@ -112,6 +112,8 @@
     {"name":"obj_player_pl","order":1,"path":"objects/obj_player_pl/obj_player_pl.yy",},
     {"name":"spr_idle_player_right","order":1,"path":"sprites/spr_idle_player_right/spr_idle_player_right.yy",},
     {"name":"spr_sprite","order":2,"path":"sprites/spr_sprite/spr_sprite.yy",},
+    {"name":"obj_transicao_trigger","order":13,"path":"objects/obj_transicao_trigger/obj_transicao_trigger.yy",},
+    {"name":"TopDown2","order":3,"path":"rooms/TopDown2/TopDown2.yy",},
     {"name":"obj_inimigo_pai_td","order":10,"path":"objects/obj_inimigo_pai_td/obj_inimigo_pai_td.yy",},
     {"name":"girando_right_Sheet_strip7","order":1,"path":"sprites/girando_right_Sheet_strip7/girando_right_Sheet_strip7.yy",},
     {"name":"spr_player_hurt_down","order":2,"path":"sprites/spr_player_hurt_down/spr_player_hurt_down.yy",},

@@ -161,7 +161,9 @@
     {"id":{"name":"spr_idle_player_right","path":"sprites/spr_idle_player_right/spr_idle_player_right.yy",},},
     {"id":{"name":"fnt_dialogo","path":"fonts/fnt_dialogo/fnt_dialogo.yy",},},
     {"id":{"name":"spr_sprite","path":"sprites/spr_sprite/spr_sprite.yy",},},
+    {"id":{"name":"obj_transicao_trigger","path":"objects/obj_transicao_trigger/obj_transicao_trigger.yy",},},
     {"id":{"name":"cogumelo_jump_down_strip4","path":"sprites/cogumelo_jump_down_strip4/cogumelo_jump_down_strip4.yy",},},
+    {"id":{"name":"TopDown2","path":"rooms/TopDown2/TopDown2.yy",},},
     {"id":{"name":"obj_inimigo_pai_td","path":"objects/obj_inimigo_pai_td/obj_inimigo_pai_td.yy",},},
     {"id":{"name":"girando_right_Sheet_strip7","path":"sprites/girando_right_Sheet_strip7/girando_right_Sheet_strip7.yy",},},
     {"id":{"name":"spr_player_hurt_down","path":"sprites/spr_player_hurt_down/spr_player_hurt_down.yy",},},
@@ -184,6 +186,7 @@
     {"roomId":{"name":"TopDown","path":"rooms/TopDown/TopDown.yy",},},
     {"roomId":{"name":"Plataforma","path":"rooms/Plataforma/Plataforma.yy",},},
     {"roomId":{"name":"teste","path":"rooms/teste/teste.yy",},},
+    {"roomId":{"name":"TopDown2","path":"rooms/TopDown2/TopDown2.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
