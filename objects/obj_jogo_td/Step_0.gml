@@ -4,6 +4,9 @@
 //Pausando o jogo ao apertar esc
 if(keyboard_check_released(vk_escape)) global.pause = !global.pause;
 
+//Testando o meu save
+if(keyboard_check_released(vk_numpad0)) salva_jogo();
+
 ////Perdendo vida ao apertar backspace
 //if(keyboard_check_released(vk_backspace)) 
 //{

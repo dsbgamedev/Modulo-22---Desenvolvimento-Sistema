@@ -19,6 +19,29 @@ global.inventario[# 1, 1] = global.cosumiveis[| consumiveis.pocao_coracao];
 display_set_gui_size(512,288);
 
 
+//Sistema de save usando JSON
+//a posição do player
+salva_jogo = function()
+{
+	//criando a struct com os meus dados
+	var _dados = 
+	{
+		//Criando uma struct com os dados do player
+		player :
+		{
+			meu_x : obj_player_td.x,
+			meu_y : obj_player_td.y
+		},
+	}
+	
+	//Converter os dados em um JSON
+	var _string = json_stringify(_dados);
+	
+	show_message(_string);
+}
+
+
+
 //Desenhando a vida do player
 ///@function desenha_coracoes(x,y)
 desenha_coracoes = function(_x, _y)
