@@ -5,6 +5,9 @@
 //Eu crio ele
 if(!transicao)
 {
+	//Destruindo a transição se alguma outra ja existiu
+	if(instance_exists(obj_transicao)) instance_destroy(obj_transicao);
+	
 	transicao = instance_create_depth(0, 0, -1000000, obj_transicao);	
 	transicao.room_destino = room_destino;	
 	transicao.destino_x    = destino_x;
