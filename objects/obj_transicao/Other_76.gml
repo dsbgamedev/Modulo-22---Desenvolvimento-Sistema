@@ -23,10 +23,13 @@ if(_evento == "sequence event")
 			//Posicionando o player
 			player.x  = destino_x;
 			player.y  = destino_y;
+			//Ativando novamente o meu alarme
+			alarm[0]  =  room_speed / 1.5;
+			
 		break;
 		//Quando a mensagem for finalizou, ele se mata e limpa tudo
 		case "Finalizou":
-			layer_destroy(lay);
+		
 			instance_destroy();
 		break;
 	}	

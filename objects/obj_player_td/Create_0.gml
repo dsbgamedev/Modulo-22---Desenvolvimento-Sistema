@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+transicao = false;
+
 //herdando as informações do pai
 event_inherited();
 

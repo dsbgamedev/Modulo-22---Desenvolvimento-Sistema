@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //Se o jogo esta pausado, eu não rodo nada daqui
-if(global.pause) 
+if(global.pause or transicao) 
 {
 	velh = 0;
 	velv = 0;

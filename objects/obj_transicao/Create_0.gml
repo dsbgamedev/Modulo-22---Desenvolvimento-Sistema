@@ -6,6 +6,9 @@ destino_x    = 0;
 destino_y    = 0;
 player       = noone;
 
+//Ativando o meu alarme
+alarm[0] =  room_speed / 2;
+
 create_sequencia = function(_sequencia)
 {
 	//Criando a transição na posição correta
