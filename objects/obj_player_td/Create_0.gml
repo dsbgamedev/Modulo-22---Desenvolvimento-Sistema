@@ -511,7 +511,7 @@ efeito_dano = function ()
 		timer_invencivel++;
 		image_alpha = abs(sin(get_timer() / 2000000));
 	}
-	else
+	else if(estado != estado_ataque_especial)
 	{
 		image_alpha = 1;	
 	}

@@ -19,7 +19,7 @@ function ajusta_depth()
 function cria_arma(_nome, _desc, _spr, _dano, _vel, _esp) constructor
 {
 	//Criando o ID das armas
-	static _tipo     = item_tipo.armas; 
+	tipo     = item_tipo.armas; 
 	static qtd_armas = 0;
 	meu_id           = qtd_armas++;
 	nome			 = _nome;
@@ -68,7 +68,7 @@ function cria_arma(_nome, _desc, _spr, _dano, _vel, _esp) constructor
 //Que informações eu preciso de um item consumiveis
 function cria_consumivel(_nome, _desc, _spr, _acao) constructor
 {
-	static _tipo = item_tipo.consumiveis;
+	tipo = item_tipo.consumiveis;
 	static _id   = 0;
 	meu_id       = _id++;
 	nome         = _nome;

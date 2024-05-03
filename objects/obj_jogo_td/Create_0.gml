@@ -23,6 +23,19 @@ display_set_gui_size(512,288);
 //a posição do player
 salva_jogo = function()
 {
+	//Convertendo o invetario em array
+	var _inv;
+	
+	for(var i = 0; i < ds_grid_height(global.inventario); i++)
+	{
+		for(var j = 0; j < ds_grid_width(global.inventario); j++)
+		{
+			//Salvando a informação do meu invetario no vetor 2D
+			_inv[j][i] = global.inventario[# j, i];
+		}
+	}
+	
+	
 	//criando a struct com os meus dados
 	var _dados = 
 	{
@@ -30,17 +43,92 @@ salva_jogo = function()
 		player :
 		{
 			meu_x : obj_player_td.x,
-			meu_y : obj_player_td.y
+			meu_y : obj_player_td.y,
+			rm    : room,
+			vida  : global.vida_player,
+			m_vida: global.max_vida_player,
+			arma  : global.arma_player
 		},
+		
+		inventario : _inv
 	}
 	
 	//Converter os dados em um JSON
 	var _string = json_stringify(_dados);
 	
-	show_message(_string);
+	//Abrindo o meu arquivo
+	var _file = file_text_open_write("Meu save.json");
+	
+	//Gravando as informações
+	file_text_write_string(_file, _string);
+	
+	//Fechando o arquivo
+	file_text_close(_file);
 }
 
-
+//Carregando o jogo do JSON
+carrega_jogo = function()
+{
+	//Abrindo o arquivo
+	var _file = file_text_open_read("Meu save.json");
+	
+	//Pegando os dados do arquivo
+	var _string = file_text_read_string(_file);
+	
+	//fechando o arquivo
+	file_text_close(_file);
+	
+	//Convertendo a string em um struct novamente
+	var _dados = json_parse(_string);
+	
+	//Passando as informações para o PLAYER
+	obj_player_td.x        = _dados.player.meu_x;
+	obj_player_td.y        = _dados.player.meu_y;
+	room                   = _dados.player.rm;
+	global.max_vida_player = _dados.player.m_vida;
+	global.vida_player     = _dados.player.vida;
+	global.arma_player     = _dados.player.arma;
+	
+	//Limpando o inventário
+	ds_grid_clear(global.inventario, 0);
+	
+	//Passando os dados do vetor de inventário para a ds grid de inventário
+	for(var i = 0; i < ds_grid_height(global.inventario); i++)
+	{
+		for(var j = 0; j < ds_grid_width(global.inventario); j++)
+		{
+			//Salvando a informação do meu invetario no vetor 2D
+			global.inventario[# j, i] = _dados.inventario[j][i];
+			
+			//Ele não consegue salvar a estrutura completo porque tem umas funçõe nela
+			//Porem eu consigo saber QUAL ITEM eu tenho lá
+			//Então eu vou mandar ele recriar dentro do invetario o item que
+			//Deveria estar lá
+			//Checando qual é o tipo do item
+			//Checando o ID do item
+			var _item_atual = _dados.inventario[j][i];
+			if(_item_atual)
+			{
+				//Checar qual o tipo de item
+				switch(_item_atual.tipo)
+				{
+					//Caso ele seja uma arma
+					case item_tipo.armas:
+						//Colocando a arma correta no slot
+						global.inventario[# j, i] = global.armas[| _item_atual.meu_id];
+						break;
+						
+					//Caso seja um consumivel
+					case item_tipo.consumiveis:
+						global.inventario[# j, i] = global.cosumiveis[| _item_atual.meu_id];
+						break;
+				}
+			}
+			
+		}
+	}
+	
+}
 
 //Desenhando a vida do player
 ///@function desenha_coracoes(x,y)
@@ -169,7 +257,7 @@ desenha_inventario = function()
 				_item_sel.usa_item();
 				
 				//Checando se este item é sonsumivel
-				if(_item_sel._tipo == item_tipo.consumiveis)
+				if(_item_sel.tipo == item_tipo.consumiveis)
 				{
 					//Apagando item
 					global.inventario[# _sel_x, _sel_y] = 0;
