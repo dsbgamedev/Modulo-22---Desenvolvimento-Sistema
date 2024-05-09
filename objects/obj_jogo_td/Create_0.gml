@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.pause = false;
 
-global.inventario = ds_grid_create(4, 4); //4 colunas 4 linhs
-ds_grid_clear(global.inventario, 0);
 
 //Me dando uma arma
 global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
@@ -21,8 +18,22 @@ display_set_gui_size(512,288);
 
 //Sistema de save usando JSON
 //a posição do player
-salva_jogo = function()
+salva_jogo = function(_save)
 {
+		
+	//Alterando o nome do arquivo
+	var _arquivo = "Meu save" + string(_save + 1) + ".json";
+	//var _arquivo = "Meu save.json"
+	//Meu save1
+	//Meu save2
+	//Meu save3
+	//switch(_save)
+	//{
+	//	case saves.save_01: _arquivo = "Meu save1.json"; break;
+	//	case saves.save_02: _arquivo = "Meu save2.json"; break;
+	//	case saves.save_03: _arquivo = "Meu save3.json"; break;
+	//}
+		
 	//Convertendo o invetario em array
 	var _inv;
 	
@@ -34,8 +45,7 @@ salva_jogo = function()
 			_inv[j][i] = global.inventario[# j, i];
 		}
 	}
-	
-	
+		
 	//criando a struct com os meus dados
 	var _dados = 
 	{
@@ -57,7 +67,7 @@ salva_jogo = function()
 	var _string = json_stringify(_dados);
 	
 	//Abrindo o meu arquivo
-	var _file = file_text_open_write("Meu save.json");
+	var _file = file_text_open_write(_arquivo);
 	
 	//Gravando as informações
 	file_text_write_string(_file, _string);
@@ -67,10 +77,20 @@ salva_jogo = function()
 }
 
 //Carregando o jogo do JSON
-carrega_jogo = function()
+carrega_jogo = function(_save)
 {
+	var _arquivo = "Meu save" + string(_save + 1) + ".json"; 
+	
+	//switch(_save)
+	//{
+	//	case saves.save_01: _arquivo = "Meu save1.json"; break;
+	//	case saves.save_02: _arquivo = "Meu save2.json"; break;
+	//	case saves.save_03: _arquivo = "Meu save3.json"; break;
+	//}
+		
+	
 	//Abrindo o arquivo
-	var _file = file_text_open_read("Meu save.json");
+	var _file = file_text_open_read(_arquivo);
 	
 	//Pegando os dados do arquivo
 	var _string = file_text_read_string(_file);

@@ -125,6 +125,21 @@ enum armas
 	espada_ouro
 }
 
+enum saves
+{
+	save_01,
+	save_02,
+	save_03
+}
+
+global.pause = false;
+
+global.inventario = ds_grid_create(4, 4); //4 colunas 4 linhs
+ds_grid_clear(global.inventario, 0);
+
+//Variavel para saber qual osave do jogo
+global.save = saves.save_01;
+
 //Criando a minha lista de armas
 global.armas		= ds_list_create();
 global.arma_player  = noone;
