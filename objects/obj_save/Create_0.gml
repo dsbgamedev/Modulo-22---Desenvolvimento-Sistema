@@ -41,7 +41,20 @@ meu_efeito = function()
 		image_alpha = lerp(image_alpha, .8, .1);
 		red			= lerp(red, 80, .1);     
 		blue		= lerp(blue, 80, .1);     
-		green		= lerp(green, 200, .1);     
+		green		= lerp(green, 200, .1);    
+		
+		//Checando se a pessoa clicou em mim
+		if(_mouse_click)
+		{
+			var _lay = layer_get_id("inicio");
+			//Pegando a sequence dentro da Layer
+			var _seq = layer_get_all_elements(_lay)[0];
+			
+			//Encontrando dentro do array que é a sequence
+			
+			//Pausando a sequencia
+			layer_sequence_play(_seq);	
+		}
 	}
 	else
 	{
