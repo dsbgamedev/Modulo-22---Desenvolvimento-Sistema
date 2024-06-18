@@ -4,17 +4,113 @@
 
 
 //Me dando uma arma
-global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
-global.inventario[# 0, 1] = global.armas[| armas.espada_cristal];
-global.inventario[# 0, 0] = global.armas[| armas.espada_ouro];
+//global.inventario[# 2, 2] = global.armas[| armas.espada_madeira];
+//global.inventario[# 0, 1] = global.armas[| armas.espada_cristal];
+//global.inventario[# 0, 0] = global.armas[| armas.espada_ouro];
 
-global.inventario[# 1, 0] = global.cosumiveis[| consumiveis.pocao_vermelha];
-global.inventario[# 1, 1] = global.cosumiveis[| consumiveis.pocao_coracao];
+//global.inventario[# 1, 0] = global.cosumiveis[| consumiveis.pocao_vermelha];
+//global.inventario[# 1, 1] = global.cosumiveis[| consumiveis.pocao_coracao];
 
 
 //Definindo o tamanho do gui
 display_set_gui_size(512,288);
 
+dados = noone;
+
+iniciei = false;
+
+inicia_jogo = function(_dados)
+{
+	
+	//Se eu estou na room inicial
+	//Vou ver se a sequencia foi terminada
+	var _seq = pega_sequencia("Inicio");
+	
+	//Checando se a sequencia terminou
+	if(layer_sequence_is_finished(_seq))
+	{
+		//Rodei a função
+		iniciei = true;
+		
+		////Se os dados forem inválidos (false)
+		////Ele inicia jogo normalmente da tela inicial
+		if(room == rm_inicio)
+		{
+			if(!_dados)
+			{
+				room_goto(rm_modelo);
+				//criando player
+				var _player = instance_create_layer(416, 160, "Player", obj_player_td);
+				var _transicao = instance_create_depth( 416, 160, -10000, obj_transicao);
+			}
+			else
+			{
+				//Se eu tenho dados eu vou fazer um pouco diferente
+				//Ir para room correta, e arruma todo o resto
+				//Criando ele na room e posição correta
+				room_goto(_dados.player.rm);
+				show_message(room_get_name(_dados.player.rm));
+				var _player  = instance_create_layer(0, 0, "Player", obj_player_td);
+				with(_player)
+				{
+					x = _dados.player.meu_x;
+					y = _dados.player.meu_y;
+				}
+				
+				global.max_vida_player = _dados.player.m_vida;
+				global.vida_player     = _dados.player.vida;
+				global.arma_player     = _dados.player.arma;
+				
+				//Terminar de carregar o jogo
+				//Limpando o inventário
+				//ds_grid_clear(global.inventario, 0);
+	
+				//Passando os dados do vetor de inventário para a ds grid de inventário
+				for(var i = 0; i < ds_grid_height(global.inventario); i++)
+				{
+					for(var j = 0; j < ds_grid_width(global.inventario); j++)
+					{
+						//Salvando a informação do meu invetario no vetor 2D
+						global.inventario[# j, i] = _dados.inventario[j][i];
+			
+						//Ele não consegue salvar a estrutura completo porque tem umas funçõe nela
+						//Porem eu consigo saber QUAL ITEM eu tenho lá
+						//Então eu vou mandar ele recriar dentro do invetario o item que
+						//Deveria estar lá
+						//Checando qual é o tipo do item
+						//Checando o ID do item
+						var _item_atual = _dados.inventario[j][i];
+						if(_item_atual)
+						{
+							//Checar qual o tipo de item
+							switch(_item_atual.tipo)
+							{
+								//Caso ele seja uma arma
+								case item_tipo.armas:
+									//Colocando a arma correta no slot
+									global.inventario[# j, i] = global.armas[| _item_atual.meu_id];
+									break;
+						
+								//Caso seja um consumivel
+								case item_tipo.consumiveis:
+									global.inventario[# j, i] = global.cosumiveis[| _item_atual.meu_id];
+									break;
+							}
+						}
+			
+					}
+				}
+				var _transicao = instance_create_depth( 416, 160, -10000, obj_transicao);
+			}
+	
+		}
+		
+			
+	}
+	
+	
+}	
+	
 
 //Sistema de save usando JSON
 //a posição do player
@@ -109,44 +205,44 @@ carrega_jogo = function(_save)
 	global.vida_player     = _dados.player.vida;
 	global.arma_player     = _dados.player.arma;
 	
-	//Limpando o inventário
-	ds_grid_clear(global.inventario, 0);
+	////Limpando o inventário
+	//ds_grid_clear(global.inventario, 0);
 	
-	//Passando os dados do vetor de inventário para a ds grid de inventário
-	for(var i = 0; i < ds_grid_height(global.inventario); i++)
-	{
-		for(var j = 0; j < ds_grid_width(global.inventario); j++)
-		{
-			//Salvando a informação do meu invetario no vetor 2D
-			global.inventario[# j, i] = _dados.inventario[j][i];
+	////Passando os dados do vetor de inventário para a ds grid de inventário
+	//for(var i = 0; i < ds_grid_height(global.inventario); i++)
+	//{
+	//	for(var j = 0; j < ds_grid_width(global.inventario); j++)
+	//	{
+	//		//Salvando a informação do meu invetario no vetor 2D
+	//		global.inventario[# j, i] = _dados.inventario[j][i];
 			
-			//Ele não consegue salvar a estrutura completo porque tem umas funçõe nela
-			//Porem eu consigo saber QUAL ITEM eu tenho lá
-			//Então eu vou mandar ele recriar dentro do invetario o item que
-			//Deveria estar lá
-			//Checando qual é o tipo do item
-			//Checando o ID do item
-			var _item_atual = _dados.inventario[j][i];
-			if(_item_atual)
-			{
-				//Checar qual o tipo de item
-				switch(_item_atual.tipo)
-				{
-					//Caso ele seja uma arma
-					case item_tipo.armas:
-						//Colocando a arma correta no slot
-						global.inventario[# j, i] = global.armas[| _item_atual.meu_id];
-						break;
+	//		//Ele não consegue salvar a estrutura completo porque tem umas funçõe nela
+	//		//Porem eu consigo saber QUAL ITEM eu tenho lá
+	//		//Então eu vou mandar ele recriar dentro do invetario o item que
+	//		//Deveria estar lá
+	//		//Checando qual é o tipo do item
+	//		//Checando o ID do item
+	//		var _item_atual = _dados.inventario[j][i];
+	//		if(_item_atual)
+	//		{
+	//			//Checar qual o tipo de item
+	//			switch(_item_atual.tipo)
+	//			{
+	//				//Caso ele seja uma arma
+	//				case item_tipo.armas:
+	//					//Colocando a arma correta no slot
+	//					global.inventario[# j, i] = global.armas[| _item_atual.meu_id];
+	//					break;
 						
-					//Caso seja um consumivel
-					case item_tipo.consumiveis:
-						global.inventario[# j, i] = global.cosumiveis[| _item_atual.meu_id];
-						break;
-				}
-			}
+	//				//Caso seja um consumivel
+	//				case item_tipo.consumiveis:
+	//					global.inventario[# j, i] = global.cosumiveis[| _item_atual.meu_id];
+	//					break;
+	//			}
+	//		}
 			
-		}
-	}
+	//	}
+	//}
 	
 }
 

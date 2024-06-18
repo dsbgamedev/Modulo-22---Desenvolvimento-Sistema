@@ -1,11 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-meu_efeito();
 
-if(keyboard_check_pressed(vk_enter)) game_restart();
+global.iniciou = false;
 
-//show_debug_message(global.iniciou);
+
+
+
 
 
 

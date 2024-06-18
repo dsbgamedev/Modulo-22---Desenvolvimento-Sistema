@@ -27,9 +27,9 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"room_destino","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"TopDown2","varType":5,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"destino_x","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"69","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"destino_y","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"166","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"room_destino","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"rm_modelo","varType":5,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"destino_x","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"416","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"destino_y","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"160","varType":0,},
   ],
   "solid": false,
   "spriteId": {
@@ -37,5 +37,5 @@
     "path": "sprites/spr_gelo_td/spr_gelo_td.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

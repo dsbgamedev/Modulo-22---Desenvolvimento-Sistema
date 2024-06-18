@@ -10,8 +10,7 @@ if(_evento == "sequence event")
 	
 	//Salvando a mensagem
 	var _mensagem = event_data[? "message"];
-	
-	
+		
 	switch(_mensagem)
 	{
 		//Quando a mensagem for terminei, ele muda de room
@@ -28,8 +27,7 @@ if(_evento == "sequence event")
 			
 		break;
 		//Quando a mensagem for finalizou, ele se mata e limpa tudo
-		case "Finalizou":
-		
+		case "finalizou":
 			instance_destroy();
 		break;
 	}	

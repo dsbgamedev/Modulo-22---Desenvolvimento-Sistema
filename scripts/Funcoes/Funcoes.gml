@@ -137,8 +137,34 @@ global.pause = false;
 global.inventario = ds_grid_create(4, 4); //4 colunas 4 linhs
 ds_grid_clear(global.inventario, 0);
 
-//Variavel para saber qual osave do jogo
-global.save = saves.save_01;
+
+function pega_sequencia(_nome)
+{
+	var _lay = layer_get_id(_nome);
+	//Pegando a sequence dentro da Layer
+	var _seq = layer_get_all_elements(_lay);
+	//Encontrando dentro do array o elemento que é a sequence
+	//Rodando pelo vetor
+	//show_message(_seq);
+	for (var i = 0; i < array_length(_seq); i++)
+	{
+		//Checando se o elemento atual é uma sequencia
+		var _atual = _seq[i];
+		if ( layer_get_element_type(_atual) == layerelementtype_sequence)
+		{
+			//Se o elemento atual for a minha sequência, eu salvo ele na
+			//Variavel sq e termino o loop
+			return _atual;
+		}	
+	}	
+	return false;
+}
+
+
+global.iniciou = false;
+
+//Variavel para saber qual o save do jogo
+global.save = saves.save_02;
 
 //Criando a minha lista de armas
 global.armas		= ds_list_create();
@@ -150,7 +176,7 @@ global.cosumiveis = ds_list_create();
 
 //Variáveis de vida do player
 global.max_vida_player = 6; //cada coração 2 de vida
-global.vida_player = 3;
+global.vida_player = 6;
 
 //Criando a minha arma
 var _a = new cria_arma("Espada de madeira", "Espada simples feita de madeira que no máximo vai machucar um pouco",

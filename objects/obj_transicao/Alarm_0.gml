@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-player.transicao = !player.transicao;
-
+//Só altero o player se ele existe
+if(player)
+{
+	player.transicao = !player.transicao;
+}
 
 
 

@@ -39,7 +39,7 @@
     "path": "folders/Sequences.yy",
   },
   "playback": 0,
-  "playbackSpeed": 60.0,
+  "playbackSpeed": 30.0,
   "playbackSpeedType": 0,
   "showBackdrop": true,
   "showBackdropImage": false,
@@ -72,79 +72,79 @@
     {"resourceType":"GMInstanceTrack","resourceVersion":"1.0","name":"obj_save","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetInstanceKeyframe>","resourceVersion":"1.0","Keyframes":[
           {"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetInstanceKeyframe","resourceVersion":"1.0","Id":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},},},"Disabled":false,"id":"0eb1a14a-a4ff-45a6-a4a0-7b537d56518d","IsCreationKey":false,"Key":0.0,"Length":60.0,"Stretch":false,},
         ],},"modifiers":[
-        {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+        {"resourceType":"LockedModifier","resourceVersion":"1.0",},
       ],"trackColour":4291250418,"tracks":[
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"9d8a3862-2edb-46ef-9498-5b582f3d2947","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":121.66669,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-63.0,},},"Disabled":false,"id":"6136b0e4-4ff9-4345-93d9-43509c8860c0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"c888b62f-a878-4b7d-a431-0544d9b9a488","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"scale","builtinName":15,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},},"Disabled":false,"id":"d3ad6773-e883-453d-95a4-0d325f9619d2","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
       ],"traits":0,},
     {"resourceType":"GMInstanceTrack","resourceVersion":"1.0","name":"obj_save","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetInstanceKeyframe>","resourceVersion":"1.0","Keyframes":[
           {"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetInstanceKeyframe","resourceVersion":"1.0","Id":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},},},"Disabled":false,"id":"519c792a-8e6a-42d1-8f7e-f04ac158ce82","IsCreationKey":false,"Key":0.0,"Length":60.0,"Stretch":false,},
         ],},"modifiers":[
-        {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+        {"resourceType":"LockedModifier","resourceVersion":"1.0",},
       ],"trackColour":4291250418,"tracks":[
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"9ffc004d-fc42-4d1b-8eda-a1f365949e91","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-48.999985,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-63.0,},},"Disabled":false,"id":"4be8f60e-4b53-4fad-81d4-d05d7cc4fb27","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"db3fc363-3c75-4fbe-ab44-4cd6cacdad32","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"scale","builtinName":15,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},},"Disabled":false,"id":"b2587ef4-99a3-45c1-9815-c86613b8931a","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
       ],"traits":0,},
     {"resourceType":"GMInstanceTrack","resourceVersion":"1.0","name":"obj_save","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetInstanceKeyframe>","resourceVersion":"1.0","Keyframes":[
           {"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetInstanceKeyframe","resourceVersion":"1.0","Id":{"name":"obj_save","path":"objects/obj_save/obj_save.yy",},},},"Disabled":false,"id":"16ed258c-e47c-46dc-aa82-f33d9a349337","IsCreationKey":false,"Key":0.0,"Length":60.0,"Stretch":false,},
         ],},"modifiers":[
-        {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+        {"resourceType":"LockedModifier","resourceVersion":"1.0",},
       ],"trackColour":4291250418,"tracks":[
-        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
-              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"28a0add0-5160-4a12-9ffb-289231fb0d5e","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
+        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
+              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"b1c36907-7b36-4364-9c52-eed84d1c5806","IsCreationKey":true,"Key":59.9998,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-219.66666,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-63.0,},},"Disabled":false,"id":"e82922a3-a21c-4b2d-a3ad-b7023bb7a6f7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
-        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
+        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"f4a38262-a453-49e9-9454-baef85bf2ce0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
-        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"scale","builtinName":15,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
-              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},},"Disabled":false,"id":"36de4a41-c70d-424f-8926-9f3d26f84ab5","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
+        {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"scale","builtinName":15,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
+              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":1.0,},},"Disabled":false,"id":"b880fc08-bee4-4e01-bee1-1284763f603f","IsCreationKey":true,"Key":59.9998,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[
-            {"resourceType":"InvisibleModifier","resourceVersion":"1.0",},
+            {"resourceType":"LockedModifier","resourceVersion":"1.0",},
           ],"trackColour":4291250418,"tracks":[],"traits":0,},
       ],"traits":0,},
     {"resourceType":"GMTextTrack","resourceVersion":"1.0","name":"A LENDA DO RUIVINHO","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"1.0","Keyframes":[
@@ -160,6 +160,7 @@
             ],},"modifiers":[],"trackColour":4285286642,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-165.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-101.0,},},"Disabled":false,"id":"c8bb0db1-d6bd-47ea-a3cc-6c97256a3818","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-164.38889,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-119.0,},},"Disabled":false,"id":"104f89e5-12a1-4e42-8556-e4c41df2427f","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-165.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-101.0,},},"Disabled":false,"id":"4cd78881-caf4-44cb-a287-97c1b554734f","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[],"trackColour":4285286642,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
@@ -183,6 +184,7 @@
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-159.33331,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-101.0,},},"Disabled":false,"id":"1b04374d-436c-44b2-9a22-1229a455c18f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-159.33331,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-101.0,},},"Disabled":false,"id":"4fe203a0-5edc-4a90-8c42-10f256cf9810","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
+              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-159.33331,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-119.0,},},"Disabled":false,"id":"c3914382-1a1f-4127-a5f3-fe301b8d0607","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-163.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-101.0,},},"Disabled":false,"id":"ed3a4032-5e71-4686-950d-29246ff72742","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[],"trackColour":4285286642,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
@@ -276,7 +278,10 @@
             ],},"modifiers":[],"trackColour":4282970839,"tracks":[],"traits":0,},
       ],"traits":0,},
   ],
-  "visibleRange": null,
+  "visibleRange": {
+    "x": 0.0,
+    "y": 59.9999,
+  },
   "volume": 1.0,
   "xorigin": 0,
   "yorigin": 0,

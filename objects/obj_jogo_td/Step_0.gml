@@ -6,21 +6,15 @@ if(keyboard_check_released(vk_escape)) global.pause = !global.pause;
 
 //Testando o meu save
 if(keyboard_check_released(vk_numpad0)) salva_jogo(global.save);
-//Carrega jogo
 if(keyboard_check_released(vk_numpad1)) carrega_jogo(global.save);
 
-////Perdendo vida ao apertar backspace
-//if(keyboard_check_released(vk_backspace)) 
-//{
-//	global.vida_player--;
-//	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
-//}
+//if(keyboard_check_pressed(vk_up)) 
 
-if(keyboard_check_released(vk_shift))
+if(!iniciei)
 {
-	global.vida_player += 2;
-	global.vida_player = global.max_vida_player;
+	inicia_jogo(dados);
 }
+
 
 //Se o jogo esta pausado, eu vou parar todas as entidades
 if(global.pause)
@@ -37,6 +31,21 @@ if(global.pause)
 	
 }
 
+//Testando o meu save
+//if(keyboard_check_released())
+
+////Perdendo vida ao apertar backspace
+//if(keyboard_check_released(vk_backspace)) 
+//{
+//	global.vida_player--;
+//	global.vida_player = clamp(global.vida_player, 0, global.max_vida_player);
+//}
+
+//if(keyboard_check_released(vk_shift))
+//{
+//	global.vida_player += 2;
+//	global.vida_player = global.max_vida_player;
+//}
 
 
 

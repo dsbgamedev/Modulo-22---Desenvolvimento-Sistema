@@ -14,8 +14,8 @@
     "resourceVersion": "1.0",
     "Keyframes": [
       {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
-              "Finalizou",
-            ],},},"Disabled":false,"id":"36d4bf05-91d7-44af-b0ff-6c501c5d98a6","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
+              "finalizou",
+            ],},},"Disabled":false,"id":"6e9621ef-cafd-409c-88d6-90b0a65b22eb","IsCreationKey":false,"Key":59.9999,"Length":1.0,"Stretch":false,},
     ],
   },
   "eventStubScript": null,

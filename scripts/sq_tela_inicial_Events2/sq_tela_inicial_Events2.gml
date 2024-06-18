@@ -4,7 +4,7 @@ function sq_tela_inicial_event_create()
 {
 	//começar pausando
 	//Peganado a minha layer
-	var _lay = layer_get_id("inicio");
+	var _lay = layer_get_id("Inicio");
 	//Pegando a sequence dentro da Layer
 	var _seq = layer_get_all_elements(_lay)[0];
 	//Pausando a sequencia

@@ -13,8 +13,14 @@ create_sequencia = function(_sequencia)
 {
 	//Criando a transição na posição correta
 	lay          = layer_create(depth, "transicao");
-	layer_sequence_create(lay,obj_player_td.x, obj_player_td.y, _sequencia);
-	
+	if(player)
+	{
+		layer_sequence_create(lay, player.x, player.y, _sequencia);
+	}
+	else
+	{
+		layer_sequence_create(lay, x, y, _sequencia);	
+	}
 }
 
 create_sequencia(sq_transicao_td1);
