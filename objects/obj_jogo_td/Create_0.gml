@@ -100,7 +100,7 @@ inicia_jogo = function(_dados)
 			
 					}
 				}
-				var _transicao = instance_create_depth( 416, 160, -10000, obj_transicao);
+				var _transicao = instance_create_depth( _player.x, _player.y, -10000, obj_transicao);
 			}
 	
 		}

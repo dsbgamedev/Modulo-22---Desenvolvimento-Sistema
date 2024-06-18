@@ -37,5 +37,5 @@
     "path": "sprites/spr_gelo_td/spr_gelo_td.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

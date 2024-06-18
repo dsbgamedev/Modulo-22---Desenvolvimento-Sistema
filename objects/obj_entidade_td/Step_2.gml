@@ -40,7 +40,7 @@ if(_chao)
 	{
 		//Estou indo para a direita	
 	    //Eu vou grudar na esquerda do chao
-		y = _chao.bbox_top /*- sprite_height / 2*/;  
+		y = _chao.bbox_top + (y - bbox_top)/*- sprite_height / 2*/;  
 	}
 	else if(velv < 0)//Estou indo para a esquerda
 	{

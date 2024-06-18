@@ -9,7 +9,7 @@ player       = noone;
 //Ativando o meu alarme
 alarm[0] =  room_speed / 2;
 
-create_sequencia = function(_sequencia)
+cria_sequencia = function(_sequencia)
 {
 	//Criando a transição na posição correta
 	lay          = layer_create(depth, "transicao");
@@ -23,7 +23,7 @@ create_sequencia = function(_sequencia)
 	}
 }
 
-create_sequencia(sq_transicao_td1);
+cria_sequencia(sq_transicao_td1);
 
 
 
