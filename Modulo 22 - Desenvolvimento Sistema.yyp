@@ -180,6 +180,7 @@
     {"id":{"name":"Rosto_Player","path":"sprites/Rosto_Player/Rosto_Player.yy",},},
     {"id":{"name":"obj_transicao","path":"objects/obj_transicao/obj_transicao.yy",},},
     {"id":{"name":"obj_inimigo_cogumelo_td","path":"objects/obj_inimigo_cogumelo_td/obj_inimigo_cogumelo_td.yy",},},
+    {"id":{"name":"te","path":"notes/te/te.yy",},},
     {"id":{"name":"spr_tela3","path":"sprites/spr_tela3/spr_tela3.yy",},},
     {"id":{"name":"spr_player_td","path":"sprites/spr_player_td/spr_player_td.yy",},},
     {"id":{"name":"Hit_up","path":"sprites/Hit_up/Hit_up.yy",},},

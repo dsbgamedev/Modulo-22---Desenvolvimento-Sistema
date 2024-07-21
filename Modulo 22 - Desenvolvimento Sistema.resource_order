@@ -129,6 +129,7 @@
     {"name":"Rosto_Player","order":2,"path":"sprites/Rosto_Player/Rosto_Player.yy",},
     {"name":"obj_transicao","order":14,"path":"objects/obj_transicao/obj_transicao.yy",},
     {"name":"obj_inimigo_cogumelo_td","order":4,"path":"objects/obj_inimigo_cogumelo_td/obj_inimigo_cogumelo_td.yy",},
+    {"name":"te","order":1,"path":"notes/te/te.yy",},
     {"name":"spr_tela3","order":15,"path":"sprites/spr_tela3/spr_tela3.yy",},
     {"name":"Hit_up","order":2,"path":"sprites/Hit_up/Hit_up.yy",},
     {"name":"spr_player_hurt_up","order":1,"path":"sprites/spr_player_hurt_up/spr_player_hurt_up.yy",},
